@@ -1,0 +1,7 @@
+# SPYDER: Evidence-Grounded Agentic Criminal Network Investigation
+# Core project dependencies tested on Python 3.12 - 3.14
+
+pydantic>=2.10.0,<3.0.0
+scikit-learn>=1.6.0,<2.0.0
+numpy>=2.0.0,<3.0.0
+pytest>=9.0.0,<10.0.0

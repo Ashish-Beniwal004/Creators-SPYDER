@@ -1,0 +1,16 @@
+{
+  "description": "Sanitized unlabelled target entity pairs for SPYDER Phase 2E pilot evaluation.",
+  "total_pairs": 10,
+  "pairs": [
+    ["OID#4418", "OID#8864"],
+    ["OID#4418", "OID#5590"],
+    ["OID#6819", "OID#8595"],
+    ["OID#8595", "OID#8827"],
+    ["OID#4866", "OID#6315"],
+    ["OID#4866", "OID#5631"],
+    ["OID#6612", "OID#7994"],
+    ["OID#7661", "OID#7994"],
+    ["OID#1964", "OID#2568"],
+    ["OID#4381", "OID#6449"]
+  ]
+}

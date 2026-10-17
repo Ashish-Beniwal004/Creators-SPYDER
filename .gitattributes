@@ -1,0 +1,4 @@
+# Preserve byte-for-byte integrity and line endings for all benchmark datasets and artifacts
+* text=auto eol=lf
+*.json -text
+*.jsonl -text

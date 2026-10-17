@@ -1,0 +1,366 @@
+{
+  "evaluation_timestamp": "2026-10-13T15:14:55.959858+00:00",
+  "run_id": "FULL_TEST_RUN_20261013_145250",
+  "dataset_mode": "full_test",
+  "total_cases": 200,
+  "system_a_metrics": {
+    "total_cases": 200,
+    "true_positives": 100,
+    "false_positives": 60,
+    "true_negatives": 40,
+    "false_negatives": 0,
+    "accuracy": 0.7,
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1_score": 0.7692,
+    "specificity": 0.4,
+    "false_positive_rate": 0.6,
+    "accuracy_ci_95": [
+      0.6332,
+      0.7593
+    ],
+    "precision_ci_95": [
+      0.5479,
+      0.6963
+    ],
+    "recall_ci_95": [
+      0.963,
+      1.0
+    ],
+    "specificity_ci_95": [
+      0.3094,
+      0.498
+    ]
+  },
+  "system_b_metrics": {
+    "total_cases": 200,
+    "true_positives": 40,
+    "false_positives": 0,
+    "true_negatives": 100,
+    "false_negatives": 60,
+    "accuracy": 0.7,
+    "precision": 1.0,
+    "recall": 0.4,
+    "f1_score": 0.5714,
+    "specificity": 1.0,
+    "false_positive_rate": 0.0,
+    "accuracy_ci_95": [
+      0.6332,
+      0.7593
+    ],
+    "precision_ci_95": [
+      0.9124,
+      1.0
+    ],
+    "recall_ci_95": [
+      0.3094,
+      0.498
+    ],
+    "specificity_ci_95": [
+      0.963,
+      1.0
+    ]
+  },
+  "system_a_eval_metrics": {
+    "total_cases": 200,
+    "supported_decision_rate": 0.8,
+    "unsupported_decision_rate": 0.0,
+    "insufficient_evidence_rate": 0.2,
+    "valid_citation_rate": 1.0,
+    "invalid_citation_count": 0,
+    "total_positive_predictions": 160,
+    "sound_positive_predictions": 18,
+    "unsound_positive_predictions": 142,
+    "evidentiary_soundness_rate": 0.1125,
+    "unsound_breakdown": {
+      "CDR_COMMUNICATION_ALONE": 82,
+      "INADEQUATE_EVIDENCE_INSUFFICIENT EVIDENCE": 60
+    },
+    "retrieval_evaluation": {
+      "relevant_document_unit": "Pre-established qualifying evidence documents in corpus (RULE_CO_OFFENDER_INCIDENT_REPORT_PRIMARY, RULE_ALIAS_INCIDENT_REPORT_PRIMARY, RULE_ALIAS_RESOLUTION_FIELD_RECORD)",
+      "total_relevant_docs_in_corpus": 120,
+      "retrieved_relevant_docs_top_5": 111,
+      "micro_average_doc_recall_at_5": 0.925,
+      "case_level_any_hit_recall_at_5": 0.8,
+      "cases_with_all_relevant_docs_retrieved": 71,
+      "positive_cases_count": 100,
+      "missing_evidence_note": "In missing_evidence positive cases (N=20), the primary qualifying report is deliberately withheld from the retrieval corpus, so available qualifying docs in corpus = 0."
+    }
+  },
+  "system_b_eval_metrics": {
+    "total_cases": 200,
+    "supported_decision_rate": 0.2,
+    "unsupported_decision_rate": 0.0,
+    "insufficient_evidence_rate": 0.8,
+    "valid_citation_rate": 1.0,
+    "invalid_citation_count": 0,
+    "total_positive_predictions": 40,
+    "sound_positive_predictions": 40,
+    "unsound_positive_predictions": 0,
+    "evidentiary_soundness_rate": 1.0,
+    "unsound_breakdown": {},
+    "retrieval_evaluation": {
+      "relevant_document_unit": "Pre-established qualifying evidence documents in corpus (RULE_CO_OFFENDER_INCIDENT_REPORT_PRIMARY, RULE_ALIAS_INCIDENT_REPORT_PRIMARY, RULE_ALIAS_RESOLUTION_FIELD_RECORD)",
+      "total_relevant_docs_in_corpus": 120,
+      "retrieved_relevant_docs_top_5": 111,
+      "micro_average_doc_recall_at_5": 0.925,
+      "case_level_any_hit_recall_at_5": 0.8,
+      "cases_with_all_relevant_docs_retrieved": 71,
+      "positive_cases_count": 100,
+      "missing_evidence_note": "In missing_evidence positive cases (N=20), the primary qualifying report is deliberately withheld from the retrieval corpus, so available qualifying docs in corpus = 0."
+    }
+  },
+  "per_condition_breakdown": {
+    "clean_evidence": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.85,
+        "accuracy_ci_95": [
+          0.7093,
+          0.9294
+        ],
+        "precision": 0.7692,
+        "recall": 1.0,
+        "f1": 0.8696,
+        "specificity": 0.7,
+        "fpr": 0.3,
+        "tp": 20,
+        "fp": 6,
+        "fn": 0,
+        "tn": 14,
+        "evidentiary_soundness_rate": 0.0,
+        "retrieval_doc_recall_at_5": 1.0,
+        "retrieval_case_recall_at_5": 1.0
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "accuracy_ci_95": [
+          0.9124,
+          1.0
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 20,
+        "fp": 0,
+        "fn": 0,
+        "tn": 20,
+        "evidentiary_soundness_rate": 1.0,
+        "retrieval_doc_recall_at_5": 1.0,
+        "retrieval_case_recall_at_5": 1.0
+      }
+    },
+    "alias_ambiguity": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.5,
+        "accuracy_ci_95": [
+          0.352,
+          0.648
+        ],
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "specificity": 0.0,
+        "fpr": 1.0,
+        "tp": 20,
+        "fp": 20,
+        "fn": 0,
+        "tn": 0,
+        "evidentiary_soundness_rate": 0.0,
+        "retrieval_doc_recall_at_5": 0.875,
+        "retrieval_case_recall_at_5": 1.0
+      },
+      "system_b": {
+        "accuracy": 0.5,
+        "accuracy_ci_95": [
+          0.352,
+          0.648
+        ],
+        "precision": null,
+        "recall": 0.0,
+        "f1": null,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 20,
+        "tn": 20,
+        "evidentiary_soundness_rate": null,
+        "retrieval_doc_recall_at_5": 0.875,
+        "retrieval_case_recall_at_5": 1.0
+      }
+    },
+    "missing_evidence": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.875,
+        "accuracy_ci_95": [
+          0.7389,
+          0.9454
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889,
+        "specificity": 0.75,
+        "fpr": 0.25,
+        "tp": 20,
+        "fp": 5,
+        "fn": 0,
+        "tn": 15,
+        "evidentiary_soundness_rate": 0.0,
+        "retrieval_doc_recall_at_5": null,
+        "retrieval_case_recall_at_5": 0.0
+      },
+      "system_b": {
+        "accuracy": 0.5,
+        "accuracy_ci_95": [
+          0.352,
+          0.648
+        ],
+        "precision": null,
+        "recall": 0.0,
+        "f1": null,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 20,
+        "tn": 20,
+        "evidentiary_soundness_rate": null,
+        "retrieval_doc_recall_at_5": null,
+        "retrieval_case_recall_at_5": 0.0
+      }
+    },
+    "distractors": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.775,
+        "accuracy_ci_95": [
+          0.625,
+          0.8768
+        ],
+        "precision": 0.6897,
+        "recall": 1.0,
+        "f1": 0.8163,
+        "specificity": 0.55,
+        "fpr": 0.45,
+        "tp": 20,
+        "fp": 9,
+        "fn": 0,
+        "tn": 11,
+        "evidentiary_soundness_rate": 0.6207,
+        "retrieval_doc_recall_at_5": 1.0,
+        "retrieval_case_recall_at_5": 1.0
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "accuracy_ci_95": [
+          0.9124,
+          1.0
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 20,
+        "fp": 0,
+        "fn": 0,
+        "tn": 20,
+        "evidentiary_soundness_rate": 1.0,
+        "retrieval_doc_recall_at_5": 1.0,
+        "retrieval_case_recall_at_5": 1.0
+      }
+    },
+    "mixed_difficulty": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.5,
+        "accuracy_ci_95": [
+          0.352,
+          0.648
+        ],
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "specificity": 0.0,
+        "fpr": 1.0,
+        "tp": 20,
+        "fp": 20,
+        "fn": 0,
+        "tn": 0,
+        "evidentiary_soundness_rate": 0.0,
+        "retrieval_doc_recall_at_5": 0.9,
+        "retrieval_case_recall_at_5": 1.0
+      },
+      "system_b": {
+        "accuracy": 0.5,
+        "accuracy_ci_95": [
+          0.352,
+          0.648
+        ],
+        "precision": null,
+        "recall": 0.0,
+        "f1": null,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 20,
+        "tn": 20,
+        "evidentiary_soundness_rate": null,
+        "retrieval_doc_recall_at_5": 0.9,
+        "retrieval_case_recall_at_5": 1.0
+      }
+    }
+  },
+  "paired_comparison": {
+    "contingency_matrix": {
+      "both_correct_n11": 80,
+      "sys_a_correct_only_n10": 60,
+      "sys_b_correct_only_n01": 60,
+      "both_incorrect_n00": 0,
+      "total_cases": 200,
+      "agreement_count": 80,
+      "disagreement_count": 120,
+      "agreement_rate": 0.4
+    },
+    "mcnemar_test": {
+      "n10": 60,
+      "n01": 60,
+      "total_discordant": 120,
+      "mcnemar_chi2": 0.0,
+      "p_value": 1.0,
+      "statistically_significant": false,
+      "assumptions": "Paired nominal 2x2 data; independent bernoulli trials across disjoint network components."
+    }
+  },
+  "evidentiary_soundness_audit": {
+    "operational_definition": "A positive relationship prediction is evidentially sound if and only if it is supported by at least one verified PoliceIncidentReport documenting a solved burglary case with joint suspect participation within the evaluation window (2020-01-01 to 2020-06-30). Predictions made from CallDetailRecord (CDR) wiretap logs alone, proximity, or unresolved street aliases are designated evidentially unsound.",
+    "system_a": {
+      "total_positive_predictions": 160,
+      "sound_positive_predictions": 18,
+      "unsound_positive_predictions": 142,
+      "evidentiary_soundness_rate": 0.1125,
+      "unsound_breakdown": {
+        "CDR_COMMUNICATION_ALONE": 82,
+        "INADEQUATE_EVIDENCE_INSUFFICIENT EVIDENCE": 60
+      }
+    },
+    "system_b": {
+      "total_positive_predictions": 40,
+      "sound_positive_predictions": 40,
+      "unsound_positive_predictions": 0,
+      "evidentiary_soundness_rate": 1.0,
+      "unsound_breakdown": {}
+    },
+    "audit_takeaways": {
+      "system_a_unsound_findings": "Of System A's 160 positive predictions, 82 cited ONLY CallDetailRecords (CDRs), claiming relationship based on phone contact without proof of a solved burglary offense. Another 60 positive predictions cited independent reports, distractors, or incomplete alias records that do not substantiate joint burglary. Only 18 positive predictions (all in distractors condition) cited a genuine qualifying joint burglary report.",
+      "system_b_sound_findings": "100% (40 / 40) of System B's positive predictions cited verified joint solved burglary incident reports cleared by arrest within the evaluation window. In the remaining 160 cases, System B correctly returned 'Insufficient Evidence' rather than making ungrounded accusations."
+    }
+  },
+  "summary_findings": "SPYDER Phase 2G.1 Audited Full Benchmark Evaluation Summary (N=200 cases):\n- System A (RAG-only): Accuracy=0.7000 [95% CI: (0.6332, 0.7593)], Precision=0.6250, Recall=1.0000, Specificity=0.4000, F1=0.7692, Evidentiary Soundness=0.1125 (18/160)\n- System B (RAG + Verification): Accuracy=0.7000 [95% CI: (0.6332, 0.7593)], Precision=1.0000, Recall=0.4000, Specificity=1.0000, F1=0.5714, Evidentiary Soundness=1.0000 (40/40)\nPaired McNemar Analysis: Discordant=120, McNemar chi2=0.0, exact p-value=1.000000."
+}

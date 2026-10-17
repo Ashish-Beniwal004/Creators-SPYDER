@@ -1,0 +1,35 @@
+{
+  "manifest_version": "1.0",
+  "run_id": "FULL_TEST_RUN_20261013_145250",
+  "dataset_mode": "full_test",
+  "execution_timestamp": "2026-10-13T14:52:50.608887+00:00",
+  "corpus_sha256": "72d00c6250a73a385fef10792b38fa30aaae8b8a96dff94420e092980caf1349",
+  "targets_sha256": "125e012b794440c6db8170bb4aa9c385472780bddc1174c6ba7e76096c711cd0",
+  "parameters": {
+    "top_k": 5,
+    "pipeline_metadata": {
+      "pipeline_name": "SPYDER_Phase2E_Experimental_Pipeline",
+      "version": "1.0.0",
+      "evaluation_window": [
+        "2020-01-01",
+        "2020-06-30"
+      ],
+      "deterministic": true,
+      "random_seed": 42,
+      "retriever_type": "TfidfVectorizer + CosineSimilarity",
+      "top_k": 5,
+      "enable_re_retrieval": false,
+      "python_version": "3.14.0"
+    },
+    "dataset_config": {
+      "dataset_mode": "full_test",
+      "corpus_path": "E:\\LMA SPYDER\\phase2_corpus\\test_retrieval_documents.jsonl",
+      "targets_path": "E:\\LMA SPYDER\\phase2_experiment\\test_target_pairs.json"
+    }
+  },
+  "total_cases": 200,
+  "system_a_output_file": "phase2_experiment\\outputs\\system_a_full_test_outputs.json",
+  "system_b_output_file": "phase2_experiment\\outputs\\system_b_full_test_outputs.json",
+  "system_a_output_sha256": "5c804673b4dc70b8fbe3aa70024d19100f0ed661e35a141db27353f523bf7e8b",
+  "system_b_output_sha256": "510ab08293a094ceaf0b161219e6c3da538bdfdc3a4045953e7b846f6874ea31"
+}

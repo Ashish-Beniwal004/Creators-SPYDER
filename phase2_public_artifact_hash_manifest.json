@@ -1,0 +1,45 @@
+{
+  "manifest_version": "2.0",
+  "timestamp": "2026-10-17T12:00:00Z",
+  "audit_phase": "SPYDER Phase 4.4 — Blinded Public Benchmark Release Manifest",
+  "description": "Cryptographic hash manifest for all 6 public frozen artifacts distributed in the blinded SPYDER benchmark release. Case-level ground-truth labels, historical pre-audit score reports, and per-case model predictions are quarantined offline to preserve blind benchmark integrity.",
+  "artifact_count": 6,
+  "files": {
+    "phase2_experiment/test_target_pairs.json": {
+      "sha256": "125e012b794440c6db8170bb4aa9c385472780bddc1174c6ba7e76096c711cd0",
+      "size_bytes": 10526,
+      "description": "Sanitized unlabelled target entity pairs for blind experiment evaluation (200 cases)",
+      "status": "VERIFIED_PUBLIC_FROZEN"
+    },
+    "phase2_corpus/test_retrieval_documents.jsonl": {
+      "sha256": "72d00c6250a73a385fef10792b38fa30aaae8b8a96dff94420e092980caf1349",
+      "size_bytes": 374006,
+      "description": "Sanitized public retrieval corpus (680 documents)",
+      "status": "VERIFIED_PUBLIC_FROZEN"
+    },
+    "phase2_corpus/retrieval_documents.jsonl": {
+      "sha256": "a802aace8dd8c804d03e08252ec3241e23a7a500ed5dac63ccf17aa0f1293ded",
+      "size_bytes": 18257,
+      "description": "Frozen Phase 2B open dev/pilot retrieval corpus (31 documents)",
+      "status": "VERIFIED_PUBLIC_FROZEN"
+    },
+    "phase2_corpus/internal_provenance.jsonl": {
+      "sha256": "ae29dcd873a3f87f01dff4e5dceb3edd041caf64e21f7065d74114ad2f9287bc",
+      "size_bytes": 12916,
+      "description": "Frozen Phase 2B open dev/pilot internal provenance envelopes (31 records)",
+      "status": "VERIFIED_PUBLIC_FROZEN"
+    },
+    "phase2_experiment/outputs/full_test_run_manifest.json": {
+      "sha256": "56fb9056e33bb637dba35e58074b5c0d6362646fc203cd2f9292152adfa054b7",
+      "size_bytes": 1448,
+      "description": "Full-test run manifest with execution timestamps, parameters, and random seeds",
+      "status": "VERIFIED_PUBLIC_FROZEN"
+    },
+    "phase2_experiment/outputs/full_test_scoring_report.json": {
+      "sha256": "146e479f94f01c4190418893958c4ab343571b025f6a25653d1a9caa9083e316",
+      "size_bytes": 11292,
+      "description": "Audited aggregate scoring report (descriptive metrics, Wilson CIs, per-condition breakdown, McNemar test; per-case labels quarantined offline)",
+      "status": "VERIFIED_PUBLIC_FROZEN"
+    }
+  }
+}
