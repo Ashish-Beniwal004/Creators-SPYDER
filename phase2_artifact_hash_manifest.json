@@ -1,0 +1,97 @@
+{
+  "manifest_version": "1.0",
+  "timestamp": "2026-10-13T21:30:00Z",
+  "audit_phase": "SPYDER Phase 2G.2 \u2014 Final Dataset Integrity and Reproducibility Closure",
+  "files": {
+    "phase2_ground_truth_vault/test_manifest.json": {
+      "sha256": "0f5bdc943f9fb51314efb2b1fec8baa2828772feb040980585d0b18f892f12af",
+      "size_bytes": 145012,
+      "description": "Full 200-case test benchmark manifest with case definitions",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_ground_truth_vault/test_ground_truth.json": {
+      "sha256": "3f1e9021538be563ea8de015b076ca3a9e2bb75684ae04dcdbd52c7f3e7b8e33",
+      "size_bytes": 145001,
+      "description": "Quarantined evaluation ground truth vault view",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_experiment/test_target_pairs.json": {
+      "sha256": "125e012b794440c6db8170bb4aa9c385472780bddc1174c6ba7e76096c711cd0",
+      "size_bytes": 10526,
+      "description": "Sanitized unlabelled target entity pairs for experiment runner",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_corpus/test_retrieval_documents.jsonl": {
+      "sha256": "72d00c6250a73a385fef10792b38fa30aaae8b8a96dff94420e092980caf1349",
+      "size_bytes": 374006,
+      "description": "Sanitized public retrieval corpus (680 documents)",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_corpus/test_internal_provenance.jsonl": {
+      "sha256": "e32a102d6a74469799d2488404b049bd602543ff4dba878d26024ef096f77555",
+      "size_bytes": 273706,
+      "description": "Quarantined internal evidence provenance envelopes (700 records)",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_ground_truth_vault/pilot_manifest.json": {
+      "sha256": "ee376e36dde8378109d60eaa7a37102262d717d56a76fe65337dda2098ee9b50",
+      "size_bytes": 8092,
+      "description": "Frozen Phase 2A 10-case pilot manifest",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_ground_truth_vault/ground_truth.json": {
+      "sha256": "87f84a65111bd38a021860247b53362fbf3f92f284a8a2ccd30eeb4089a42963",
+      "size_bytes": 8089,
+      "description": "Frozen Phase 2A 10-case pilot ground truth vault view",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_corpus/retrieval_documents.jsonl": {
+      "sha256": "a802aace8dd8c804d03e08252ec3241e23a7a500ed5dac63ccf17aa0f1293ded",
+      "size_bytes": 18257,
+      "description": "Frozen Phase 2B pilot retrieval corpus (33 documents)",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_corpus/internal_provenance.jsonl": {
+      "sha256": "ae29dcd873a3f87f01dff4e5dceb3edd041caf64e21f7065d74114ad2f9287bc",
+      "size_bytes": 12916,
+      "description": "Frozen Phase 2B pilot internal provenance envelopes (35 records)",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_ground_truth_vault/split_manifest.json": {
+      "sha256": "04dc346d4628d1ad59d6b34d3580f6ddb40548e35921f48cc24a0d6a389d0ffd",
+      "size_bytes": 115853,
+      "description": "Disjoint graph component partition manifest across 4 splits",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_experiment/outputs/system_a_full_test_outputs.json": {
+      "sha256": "5c804673b4dc70b8fbe3aa70024d19100f0ed661e35a141db27353f523bf7e8b",
+      "size_bytes": 200683,
+      "description": "Frozen System A (RAG-only) 200-case raw execution outputs",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_experiment/outputs/system_b_full_test_outputs.json": {
+      "sha256": "510ab08293a094ceaf0b161219e6c3da538bdfdc3a4045953e7b846f6874ea31",
+      "size_bytes": 692878,
+      "description": "Frozen System B (RAG + Verifier) 200-case raw execution outputs",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_experiment/outputs/full_test_run_manifest.json": {
+      "sha256": "56fb9056e33bb637dba35e58074b5c0d6362646fc203cd2f9292152adfa054b7",
+      "size_bytes": 1448,
+      "description": "Full-test run manifest with execution timestamps and parameters",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_experiment/outputs/original_full_test_scoring_report.json": {
+      "sha256": "3fedc24e87e75400a21f8aca21a3b6edb2797121ecfe0ef4706e53d9d72c249c",
+      "size_bytes": 121412,
+      "description": "Preserved original Phase 2G pre-audit scoring report",
+      "status": "VERIFIED_FROZEN"
+    },
+    "phase2_experiment/outputs/full_test_scoring_report.json": {
+      "sha256": "146e479f94f01c4190418893958c4ab343571b025f6a25653d1a9caa9083e316",
+      "size_bytes": 11292,
+      "description": "Audited Phase 2G.1 scoring report with rigorous soundness & Wilson CIs",
+      "status": "VERIFIED_FROZEN"
+    }
+  }
+}

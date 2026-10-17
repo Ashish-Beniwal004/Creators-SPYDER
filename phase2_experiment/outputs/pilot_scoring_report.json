@@ -1,0 +1,353 @@
+{
+  "evaluation_timestamp": "2026-10-13T15:15:03.874422+00:00",
+  "run_id": "PILOT_RUN_20261013_145217",
+  "total_cases": 10,
+  "system_a_metrics": {
+    "total_cases": 10,
+    "true_positives": 5,
+    "false_positives": 2,
+    "true_negatives": 3,
+    "false_negatives": 0,
+    "accuracy": 0.8,
+    "precision": 0.7143,
+    "recall": 1.0,
+    "f1_score": 0.8333,
+    "specificity": 0.6,
+    "false_positive_rate": 0.4,
+    "accuracy_ci_95": [
+      0.4902,
+      0.9433
+    ],
+    "precision_ci_95": [
+      0.3589,
+      0.9178
+    ],
+    "recall_ci_95": [
+      0.5655,
+      1.0
+    ],
+    "specificity_ci_95": [
+      0.2307,
+      0.8824
+    ]
+  },
+  "system_b_metrics": {
+    "total_cases": 10,
+    "true_positives": 4,
+    "false_positives": 0,
+    "true_negatives": 5,
+    "false_negatives": 1,
+    "accuracy": 0.9,
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1_score": 0.8889,
+    "specificity": 1.0,
+    "false_positive_rate": 0.0,
+    "accuracy_ci_95": [
+      0.5959,
+      0.9821
+    ],
+    "precision_ci_95": [
+      0.5101,
+      1.0
+    ],
+    "recall_ci_95": [
+      0.3755,
+      0.9638
+    ],
+    "specificity_ci_95": [
+      0.5655,
+      1.0
+    ]
+  },
+  "per_condition_breakdown": {
+    "clean_evidence": {
+      "cases": [
+        "PILOT_CASE_01",
+        "PILOT_CASE_02"
+      ],
+      "total": 2,
+      "system_a": {
+        "accuracy": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      }
+    },
+    "alias_ambiguity": {
+      "cases": [
+        "PILOT_CASE_03",
+        "PILOT_CASE_04"
+      ],
+      "total": 2,
+      "system_a": {
+        "accuracy": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 0
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      }
+    },
+    "missing_evidence": {
+      "cases": [
+        "PILOT_CASE_05",
+        "PILOT_CASE_06"
+      ],
+      "total": 2,
+      "system_a": {
+        "accuracy": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "system_b": {
+        "accuracy": 0.5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 1
+      }
+    },
+    "distractors": {
+      "cases": [
+        "PILOT_CASE_07",
+        "PILOT_CASE_08"
+      ],
+      "total": 2,
+      "system_a": {
+        "accuracy": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      }
+    },
+    "mixed_difficulty": {
+      "cases": [
+        "PILOT_CASE_09",
+        "PILOT_CASE_10"
+      ],
+      "total": 2,
+      "system_a": {
+        "accuracy": 0.5,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 0
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      }
+    }
+  },
+  "case_comparisons": [
+    {
+      "case_index": 0,
+      "case_id": "PILOT_CASE_01",
+      "target_pair": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 1,
+      "case_id": "PILOT_CASE_02",
+      "target_pair": [
+        "OID#4418",
+        "OID#5590"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 2,
+      "case_id": "PILOT_CASE_03",
+      "target_pair": [
+        "OID#6819",
+        "OID#8595"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 3,
+      "case_id": "PILOT_CASE_04",
+      "target_pair": [
+        "OID#8595",
+        "OID#8827"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 4,
+      "case_id": "PILOT_CASE_05",
+      "target_pair": [
+        "OID#4866",
+        "OID#6315"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 5,
+      "case_id": "PILOT_CASE_06",
+      "target_pair": [
+        "OID#4866",
+        "OID#5631"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 6,
+      "case_id": "PILOT_CASE_07",
+      "target_pair": [
+        "OID#6612",
+        "OID#7994"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 7,
+      "case_id": "PILOT_CASE_08",
+      "target_pair": [
+        "OID#7661",
+        "OID#7994"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 8,
+      "case_id": "PILOT_CASE_09",
+      "target_pair": [
+        "OID#1964",
+        "OID#2568"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 9,
+      "case_id": "PILOT_CASE_10",
+      "target_pair": [
+        "OID#4381",
+        "OID#6449"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    }
+  ],
+  "summary_findings": "Pilot Evaluation Summary (N=10 cases):\n- System A (RAG-only): Accuracy=0.80, Precision=0.71, Recall=1.00, Specificity=0.60, F1=0.83\n- System B (RAG + Verifier): Accuracy=0.90, Precision=1.00, Recall=0.80, Specificity=1.00, F1=0.89\nKey observation: System B completely eliminates False Positives induced by unverified aliases (Cases 04, 10) and prevents ungrounded relationship inference from CDR communication alone (Case 05)."
+}

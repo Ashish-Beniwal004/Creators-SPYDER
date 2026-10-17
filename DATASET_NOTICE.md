@@ -67,11 +67,11 @@ A core question in publishing machine learning benchmarks is whether to include 
 1. **Public Reproducibility:** Including test labels allows external researchers to run `evaluator.py` and execute the full test suite immediately upon cloning.
 2. **Blind Benchmark Integrity:** Publishing test labels or case-level prediction ledgers on an open GitHub repository exposes them to search engines, web scrapers, and frontier LLM pretraining corpora. This causes benchmark contamination, destroying the validity of future blind evaluations.
 
-### 4.2 Publication Policy: Blinded Public Benchmark
-SPYDER resolves this trade-off by establishing a **Blinded Public Benchmark Release**:
-* **Public Release Assets:** The unlabelled evaluation inputs (`test_target_pairs.json`) and the searchable retrieval corpus (`test_retrieval_documents.jsonl`) are fully public, alongside the audited aggregate scoring report (`full_test_scoring_report.json`) and run manifest (`full_test_run_manifest.json`).
-* **Quarantined Evaluation Assets:** The 200-case test ground-truth labels (`test_ground_truth.json`), test manifest (`test_manifest.json`), test provenance envelopes (`test_internal_provenance.jsonl`), per-case prediction outputs (`system_a_full_test_outputs.json`, `system_b_full_test_outputs.json`), and the historical pre-audit scoring report (`original_full_test_scoring_report.json`) are excluded from public git distribution to prevent benchmark contamination and indirect label deduction.
-* **Pilot Set (Open Dev Split):** The 10-case pilot ground truth (`ground_truth.json`) and pilot provenance (`internal_provenance.jsonl`) are included in the repository to support development, unit testing, and pipeline verification without compromising the 200-case blind test set.
+### 4.2 Publication Policy: Private Collaboration Repository
+SPYDER establishes a **Private Collaboration Repository Release**:
+* **Directly Included Evaluation Assets:** Because repository visibility is confirmed **Private**, the project-owned ground-truth vault (`phase2_ground_truth_vault/test_ground_truth.json`, `test_manifest.json`, `split_manifest.json`), test provenance envelopes (`test_internal_provenance.jsonl`), full-test model predictions (`system_a_full_test_outputs.json`, `system_b_full_test_outputs.json`), and historical pre-audit scoring report (`original_full_test_scoring_report.json`) are included directly in the repository to enable seamless collaborative reproduction and verification by authorized team members.
+* **Excluded Third-Party Raw Data:** In accordance with strict licensing compliance, the raw third-party police network (`israel_lea_inp_burglary_offender_id_network_from_2020-01-01_to_2020-06-30.json`) remains **excluded from Git** pending confirmed redistribution rights from the original data holders.
+* **Pilot Set (Open Dev Split):** The 10-case pilot ground truth (`ground_truth.json`), pilot manifest, pilot provenance (`internal_provenance.jsonl`), and pilot outputs are included in the repository to support development and smoke testing.
 
 ### 4.3 Teammate-Access Procedure for the Quarantined Vault
 Teammates, authorized evaluators, and peer reviewers requiring access to the 200-case test ground truth can access or reconstruct the vault through two authorized procedures:

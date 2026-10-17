@@ -1,0 +1,216 @@
+{
+  "pilot_version": "1.0",
+  "random_seed": 42,
+  "source_dataset": "israel_lea_inp_burglary_offender_id_network_from_2020-01-01_to_2020-06-30.json",
+  "total_cases": 10,
+  "positive_cases_count": 5,
+  "negative_cases_count": 5,
+  "cases": [
+    {
+      "case_id": "PILOT_CASE_01",
+      "target_pair": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#6456"
+      ],
+      "components": [
+        1,
+        1
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#4418 and OID#8864 as co-arrestees in residential burglary CID#6456 on 2020-01-17 (normalized coordinates: X=0.5688, Y=0.6008). Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label represents documented joint participation in solved INP burglary incident CID#6456. Ground truth does not imply relationship outside the observed 6-month window."
+    },
+    {
+      "case_id": "PILOT_CASE_02",
+      "target_pair": [
+        "OID#4418",
+        "OID#5590"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        1,
+        4
+      ],
+      "spatial_distance": 0.00847,
+      "temporal_overlap": [],
+      "factual_rationale": "OID#4418 (Comp 1, active Jan 2020) and OID#5590 (Comp 4, active Mar-Jun 2020) operate in adjacent sectors with minimal spatial separation (distance: 0.00847), but share ZERO crime incidents in INP records. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Negative label means no shared crime case was recorded by INP during Jan-Jun 2020. Does not prove real-world non-association outside recorded burglary incidents."
+    },
+    {
+      "case_id": "PILOT_CASE_03",
+      "target_pair": [
+        "OID#6819",
+        "OID#8595"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#5170"
+      ],
+      "components": [
+        5,
+        5
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#6819 and OID#8595 as accomplices in burglary CID#5170 on 2020-02-20 (coords: X=0.3243, Y=0.7725). Accomplice group size is 2. OID#8595 is referenced in retrieved evidence under the alias moniker 'The Wire' / 'Blue Sedan Driver', requiring agent alias resolution.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5170."
+    },
+    {
+      "case_id": "PILOT_CASE_04",
+      "target_pair": [
+        "OID#8595",
+        "OID#8827"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        5,
+        3
+      ],
+      "spatial_distance": 0.04649,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#8595 (Comp 5) and OID#8827 (Comp 3) were both active in February 2020 within coordinate distance 0.04649, but have ZERO shared crimes. Unlinked aliases in the evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset. Lack of connection is evaluated strictly against provided evidence."
+    },
+    {
+      "case_id": "PILOT_CASE_05",
+      "target_pair": [
+        "OID#4866",
+        "OID#6315"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#2293"
+      ],
+      "components": [
+        7,
+        7
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#2293 on 2020-02-25 (coords: X=0.3939, Y=0.5914). Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial evidence (corroborating pre-incident and post-incident wiretap communication logs linking the suspects around the burglary timeline).",
+      "epistemic_limitation": "Factual co-offending confirmed by INP records for CID#2293."
+    },
+    {
+      "case_id": "PILOT_CASE_06",
+      "target_pair": [
+        "OID#4866",
+        "OID#5631"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        7,
+        3
+      ],
+      "spatial_distance": 0.13483,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#4866 (Comp 7) and OID#5631 (Comp 3) were both active in February 2020 but share ZERO crime incidents. Primary records are omitted for their respective incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: independent burglars operating in distinct networks."
+    },
+    {
+      "case_id": "PILOT_CASE_07",
+      "target_pair": [
+        "OID#6612",
+        "OID#7994"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#4927"
+      ],
+      "components": [
+        9,
+        9
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#4927 on 2020-05-17 (coords: X=0.2387, Y=0.6729). Retrieval corpus is padded with 3x irrelevant local incident reports from nearby coordinates and bystander statements.",
+      "epistemic_limitation": "Factual co-offending in CID#4927 in public INP dataset."
+    },
+    {
+      "case_id": "PILOT_CASE_08",
+      "target_pair": [
+        "OID#7661",
+        "OID#7994"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        8,
+        9
+      ],
+      "spatial_distance": 0.02139,
+      "temporal_overlap": [],
+      "factual_rationale": "OID#7661 (Comp 8, June 2020) and OID#7994 (Comp 9, May 2020) operate in high spatial proximity (dist: 0.02139) in the south-west sector, but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: distinct co-offending dyads operating in the same sector."
+    },
+    {
+      "case_id": "PILOT_CASE_09",
+      "target_pair": [
+        "OID#1964",
+        "OID#2568"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#1288"
+      ],
+      "components": [
+        0,
+        0
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented co-offenders in 3-person burglary CID#1288 on 2020-06-19 (coords: X=0.5394, Y=0.5983). Evidence combines alias usage for OID#2568 ('The Locksmith'), missing primary arrest narrative, and distractor noise.",
+      "epistemic_limitation": "Factual co-offending documented in solved INP burglary CID#1288."
+    },
+    {
+      "case_id": "PILOT_CASE_10",
+      "target_pair": [
+        "OID#4381",
+        "OID#6449"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        0,
+        4
+      ],
+      "spatial_distance": 0.01731,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#4381 (Comp 0) and OID#6449 (Comp 4) were both active in June 2020 in adjacent sectors (dist: 0.01731), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no documented co-offending link in observed 6-month INP records."
+    }
+  ]
+}

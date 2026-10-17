@@ -1,0 +1,3843 @@
+{
+  "evaluation_timestamp": "2026-10-13T14:53:34.148761+00:00",
+  "run_id": "FULL_TEST_RUN_20261013_145250",
+  "dataset_mode": "full_test",
+  "total_cases": 200,
+  "system_a_metrics": {
+    "total_cases": 200,
+    "true_positives": 100,
+    "false_positives": 60,
+    "true_negatives": 40,
+    "false_negatives": 0,
+    "accuracy": 0.7,
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1_score": 0.7692,
+    "specificity": 0.4,
+    "false_positive_rate": 0.6
+  },
+  "system_b_metrics": {
+    "total_cases": 200,
+    "true_positives": 40,
+    "false_positives": 0,
+    "true_negatives": 100,
+    "false_negatives": 60,
+    "accuracy": 0.7,
+    "precision": 1.0,
+    "recall": 0.4,
+    "f1_score": 0.5714,
+    "specificity": 1.0,
+    "false_positive_rate": 0.0
+  },
+  "system_a_eval_metrics": {
+    "total_cases": 200,
+    "supported_decision_rate": 0.8,
+    "unsupported_decision_rate": 0.0,
+    "insufficient_evidence_rate": 0.2,
+    "valid_citation_rate": 1.0,
+    "invalid_citation_count": 0,
+    "retrieval_recall_at_k": 1.0,
+    "total_positive_predictions": 160,
+    "sound_positive_predictions": 78,
+    "evidentiary_soundness_rate": 0.4875
+  },
+  "system_b_eval_metrics": {
+    "total_cases": 200,
+    "supported_decision_rate": 0.2,
+    "unsupported_decision_rate": 0.0,
+    "insufficient_evidence_rate": 0.8,
+    "valid_citation_rate": 1.0,
+    "invalid_citation_count": 0,
+    "retrieval_recall_at_k": 1.0,
+    "total_positive_predictions": 40,
+    "sound_positive_predictions": 40,
+    "evidentiary_soundness_rate": 1.0
+  },
+  "per_condition_breakdown": {
+    "clean_evidence": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.85,
+        "precision": 0.7692,
+        "recall": 1.0,
+        "f1": 0.8696,
+        "specificity": 0.7,
+        "fpr": 0.3,
+        "tp": 20,
+        "fp": 6,
+        "fn": 0,
+        "tn": 14,
+        "evidentiary_soundness_rate": 0.2308
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 20,
+        "fp": 0,
+        "fn": 0,
+        "tn": 20,
+        "evidentiary_soundness_rate": 1.0
+      }
+    },
+    "alias_ambiguity": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "specificity": 0.0,
+        "fpr": 1.0,
+        "tp": 20,
+        "fp": 20,
+        "fn": 0,
+        "tn": 0,
+        "evidentiary_soundness_rate": 0.5
+      },
+      "system_b": {
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 20,
+        "tn": 20,
+        "evidentiary_soundness_rate": 1.0
+      }
+    },
+    "missing_evidence": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.875,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889,
+        "specificity": 0.75,
+        "fpr": 0.25,
+        "tp": 20,
+        "fp": 5,
+        "fn": 0,
+        "tn": 15,
+        "evidentiary_soundness_rate": 0.2
+      },
+      "system_b": {
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 20,
+        "tn": 20,
+        "evidentiary_soundness_rate": 1.0
+      }
+    },
+    "distractors": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.775,
+        "precision": 0.6897,
+        "recall": 1.0,
+        "f1": 0.8163,
+        "specificity": 0.55,
+        "fpr": 0.45,
+        "tp": 20,
+        "fp": 9,
+        "fn": 0,
+        "tn": 11,
+        "evidentiary_soundness_rate": 0.931
+      },
+      "system_b": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 20,
+        "fp": 0,
+        "fn": 0,
+        "tn": 20,
+        "evidentiary_soundness_rate": 1.0
+      }
+    },
+    "mixed_difficulty": {
+      "cases_count": 40,
+      "system_a": {
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "specificity": 0.0,
+        "fpr": 1.0,
+        "tp": 20,
+        "fp": 20,
+        "fn": 0,
+        "tn": 0,
+        "evidentiary_soundness_rate": 0.5
+      },
+      "system_b": {
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 20,
+        "tn": 20,
+        "evidentiary_soundness_rate": 1.0
+      }
+    }
+  },
+  "paired_comparison": {
+    "contingency_matrix": {
+      "both_correct_n11": 80,
+      "sys_a_correct_only_n10": 60,
+      "sys_b_correct_only_n01": 60,
+      "both_incorrect_n00": 0,
+      "total_cases": 200,
+      "agreement_count": 80,
+      "disagreement_count": 120,
+      "agreement_rate": 0.4
+    },
+    "mcnemar_test": {
+      "n10": 60,
+      "n01": 60,
+      "total_discordant": 120,
+      "mcnemar_chi2": 0.0,
+      "p_value": 1.0,
+      "statistically_significant": false,
+      "assumptions": "Paired nominal 2x2 data; independent bernoulli trials across disjoint network components."
+    }
+  },
+  "evidentiary_soundness_audit": {
+    "operational_definition": "A positive relationship prediction is evidentially sound if and only if it is supported by at least one verified PoliceIncidentReport documenting a solved burglary case with joint suspect participation within the evaluation window. Predictions made from CallDetailRecord (CDR) wiretap logs alone or unresolved street aliases are designated evidentially unsound.",
+    "system_a": {
+      "total_positive_predictions": 160,
+      "sound_positive_predictions": 78,
+      "unsound_positive_predictions": 82,
+      "evidentiary_soundness_rate": 0.4875
+    },
+    "system_b": {
+      "total_positive_predictions": 40,
+      "sound_positive_predictions": 40,
+      "unsound_positive_predictions": 0,
+      "evidentiary_soundness_rate": 1.0
+    },
+    "missing_evidence_condition_finding": "In missing_evidence positive cases (N=20), the primary joint burglary report is omitted. System A infers 'Supported' based on circumstantial wiretap CDRs alone, achieving label accuracy 0.88 but evidentiary soundness 0.20. System B strictly requires documented solved burglary evidence, returning 'Insufficient Evidence' with evidentiary soundness 1.00."
+  },
+  "case_comparisons": [
+    {
+      "case_index": 0,
+      "case_id": "TEST_CASE_001",
+      "target_pair": [
+        "OID#6516",
+        "OID#9361"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 1,
+      "case_id": "TEST_CASE_002",
+      "target_pair": [
+        "OID#5316",
+        "OID#8242"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 2,
+      "case_id": "TEST_CASE_003",
+      "target_pair": [
+        "OID#5550",
+        "OID#8872"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 3,
+      "case_id": "TEST_CASE_004",
+      "target_pair": [
+        "OID#8946",
+        "OID#9194"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 4,
+      "case_id": "TEST_CASE_005",
+      "target_pair": [
+        "OID#4281",
+        "OID#4352"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 5,
+      "case_id": "TEST_CASE_006",
+      "target_pair": [
+        "OID#5981",
+        "OID#8933"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 6,
+      "case_id": "TEST_CASE_007",
+      "target_pair": [
+        "OID#7353",
+        "OID#9395"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 7,
+      "case_id": "TEST_CASE_008",
+      "target_pair": [
+        "OID#2645",
+        "OID#4355"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 8,
+      "case_id": "TEST_CASE_009",
+      "target_pair": [
+        "OID#541",
+        "OID#627"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 9,
+      "case_id": "TEST_CASE_010",
+      "target_pair": [
+        "OID#2393",
+        "OID#2451"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 10,
+      "case_id": "TEST_CASE_011",
+      "target_pair": [
+        "OID#2773",
+        "OID#3007"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 11,
+      "case_id": "TEST_CASE_012",
+      "target_pair": [
+        "OID#632",
+        "OID#8489"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 12,
+      "case_id": "TEST_CASE_013",
+      "target_pair": [
+        "OID#5376",
+        "OID#5535"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 13,
+      "case_id": "TEST_CASE_014",
+      "target_pair": [
+        "OID#167",
+        "OID#217"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 14,
+      "case_id": "TEST_CASE_015",
+      "target_pair": [
+        "OID#5860",
+        "OID#7620"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 15,
+      "case_id": "TEST_CASE_016",
+      "target_pair": [
+        "OID#5790",
+        "OID#7687"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 16,
+      "case_id": "TEST_CASE_017",
+      "target_pair": [
+        "OID#1094",
+        "OID#1270"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 17,
+      "case_id": "TEST_CASE_018",
+      "target_pair": [
+        "OID#7854",
+        "OID#9111"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 18,
+      "case_id": "TEST_CASE_019",
+      "target_pair": [
+        "OID#5669",
+        "OID#5783"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 19,
+      "case_id": "TEST_CASE_020",
+      "target_pair": [
+        "OID#7950",
+        "OID#9236"
+      ],
+      "ground_truth_label": 1,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 20,
+      "case_id": "TEST_CASE_021",
+      "target_pair": [
+        "OID#3183",
+        "OID#6563"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 21,
+      "case_id": "TEST_CASE_022",
+      "target_pair": [
+        "OID#3063",
+        "OID#5744"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 22,
+      "case_id": "TEST_CASE_023",
+      "target_pair": [
+        "OID#3257",
+        "OID#8735"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 23,
+      "case_id": "TEST_CASE_024",
+      "target_pair": [
+        "OID#2939",
+        "OID#3048"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 24,
+      "case_id": "TEST_CASE_025",
+      "target_pair": [
+        "OID#3197",
+        "OID#4135"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 25,
+      "case_id": "TEST_CASE_026",
+      "target_pair": [
+        "OID#1820",
+        "OID#7788"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 26,
+      "case_id": "TEST_CASE_027",
+      "target_pair": [
+        "OID#2124",
+        "OID#7177"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 27,
+      "case_id": "TEST_CASE_028",
+      "target_pair": [
+        "OID#6357",
+        "OID#7786"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 28,
+      "case_id": "TEST_CASE_029",
+      "target_pair": [
+        "OID#2528",
+        "OID#5781"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 29,
+      "case_id": "TEST_CASE_030",
+      "target_pair": [
+        "OID#5015",
+        "OID#5386"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 30,
+      "case_id": "TEST_CASE_031",
+      "target_pair": [
+        "OID#6573",
+        "OID#7763"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 31,
+      "case_id": "TEST_CASE_032",
+      "target_pair": [
+        "OID#9189",
+        "OID#9205"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 32,
+      "case_id": "TEST_CASE_033",
+      "target_pair": [
+        "OID#7715",
+        "OID#8439"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 33,
+      "case_id": "TEST_CASE_034",
+      "target_pair": [
+        "OID#3697",
+        "OID#7609"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 34,
+      "case_id": "TEST_CASE_035",
+      "target_pair": [
+        "OID#2847",
+        "OID#9083"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 35,
+      "case_id": "TEST_CASE_036",
+      "target_pair": [
+        "OID#2418",
+        "OID#6811"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 36,
+      "case_id": "TEST_CASE_037",
+      "target_pair": [
+        "OID#2535",
+        "OID#4590"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 37,
+      "case_id": "TEST_CASE_038",
+      "target_pair": [
+        "OID#3622",
+        "OID#4649"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 38,
+      "case_id": "TEST_CASE_039",
+      "target_pair": [
+        "OID#4264",
+        "OID#4683"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 39,
+      "case_id": "TEST_CASE_040",
+      "target_pair": [
+        "OID#3227",
+        "OID#5814"
+      ],
+      "ground_truth_label": 0,
+      "condition": "clean_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 40,
+      "case_id": "TEST_CASE_041",
+      "target_pair": [
+        "OID#2395",
+        "OID#3454"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 41,
+      "case_id": "TEST_CASE_042",
+      "target_pair": [
+        "OID#5222",
+        "OID#7559"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 42,
+      "case_id": "TEST_CASE_043",
+      "target_pair": [
+        "OID#2627",
+        "OID#3333"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 43,
+      "case_id": "TEST_CASE_044",
+      "target_pair": [
+        "OID#5675",
+        "OID#8966"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 44,
+      "case_id": "TEST_CASE_045",
+      "target_pair": [
+        "OID#8248",
+        "OID#9212"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 45,
+      "case_id": "TEST_CASE_046",
+      "target_pair": [
+        "OID#1671",
+        "OID#5324"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 46,
+      "case_id": "TEST_CASE_047",
+      "target_pair": [
+        "OID#6764",
+        "OID#7207"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 47,
+      "case_id": "TEST_CASE_048",
+      "target_pair": [
+        "OID#6017",
+        "OID#7083"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 48,
+      "case_id": "TEST_CASE_049",
+      "target_pair": [
+        "OID#5836",
+        "OID#7582"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 49,
+      "case_id": "TEST_CASE_050",
+      "target_pair": [
+        "OID#1219",
+        "OID#1496"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 50,
+      "case_id": "TEST_CASE_051",
+      "target_pair": [
+        "OID#2487",
+        "OID#2981"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 51,
+      "case_id": "TEST_CASE_052",
+      "target_pair": [
+        "OID#104",
+        "OID#1579"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 52,
+      "case_id": "TEST_CASE_053",
+      "target_pair": [
+        "OID#5925",
+        "OID#6707"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 53,
+      "case_id": "TEST_CASE_054",
+      "target_pair": [
+        "OID#5185",
+        "OID#8112"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 54,
+      "case_id": "TEST_CASE_055",
+      "target_pair": [
+        "OID#5386",
+        "OID#7715"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 55,
+      "case_id": "TEST_CASE_056",
+      "target_pair": [
+        "OID#3650",
+        "OID#4714"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 56,
+      "case_id": "TEST_CASE_057",
+      "target_pair": [
+        "OID#547",
+        "OID#613"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 57,
+      "case_id": "TEST_CASE_058",
+      "target_pair": [
+        "OID#2015",
+        "OID#4284"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 58,
+      "case_id": "TEST_CASE_059",
+      "target_pair": [
+        "OID#7115",
+        "OID#7595"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 59,
+      "case_id": "TEST_CASE_060",
+      "target_pair": [
+        "OID#565",
+        "OID#570"
+      ],
+      "ground_truth_label": 1,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 60,
+      "case_id": "TEST_CASE_061",
+      "target_pair": [
+        "OID#5392",
+        "OID#70"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 61,
+      "case_id": "TEST_CASE_062",
+      "target_pair": [
+        "OID#5077",
+        "OID#5645"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 62,
+      "case_id": "TEST_CASE_063",
+      "target_pair": [
+        "OID#5111",
+        "OID#6485"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 63,
+      "case_id": "TEST_CASE_064",
+      "target_pair": [
+        "OID#2186",
+        "OID#6637"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 64,
+      "case_id": "TEST_CASE_065",
+      "target_pair": [
+        "OID#2198",
+        "OID#8315"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 65,
+      "case_id": "TEST_CASE_066",
+      "target_pair": [
+        "OID#6017",
+        "OID#6580"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 66,
+      "case_id": "TEST_CASE_067",
+      "target_pair": [
+        "OID#7083",
+        "OID#7745"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 67,
+      "case_id": "TEST_CASE_068",
+      "target_pair": [
+        "OID#4117",
+        "OID#5907"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 68,
+      "case_id": "TEST_CASE_069",
+      "target_pair": [
+        "OID#6682",
+        "OID#7620"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 69,
+      "case_id": "TEST_CASE_070",
+      "target_pair": [
+        "OID#2178",
+        "OID#8395"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 70,
+      "case_id": "TEST_CASE_071",
+      "target_pair": [
+        "OID#5669",
+        "OID#6142"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 71,
+      "case_id": "TEST_CASE_072",
+      "target_pair": [
+        "OID#6774",
+        "OID#7062"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 72,
+      "case_id": "TEST_CASE_073",
+      "target_pair": [
+        "OID#5201",
+        "OID#6167"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 73,
+      "case_id": "TEST_CASE_074",
+      "target_pair": [
+        "OID#6326",
+        "OID#6477"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 74,
+      "case_id": "TEST_CASE_075",
+      "target_pair": [
+        "OID#1389",
+        "OID#4950"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 75,
+      "case_id": "TEST_CASE_076",
+      "target_pair": [
+        "OID#5783",
+        "OID#9220"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 76,
+      "case_id": "TEST_CASE_077",
+      "target_pair": [
+        "OID#1671",
+        "OID#5910"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 77,
+      "case_id": "TEST_CASE_078",
+      "target_pair": [
+        "OID#1496",
+        "OID#5818"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 78,
+      "case_id": "TEST_CASE_079",
+      "target_pair": [
+        "OID#2933",
+        "OID#4982"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 79,
+      "case_id": "TEST_CASE_080",
+      "target_pair": [
+        "OID#4308",
+        "OID#8847"
+      ],
+      "ground_truth_label": 0,
+      "condition": "alias_ambiguity",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 80,
+      "case_id": "TEST_CASE_081",
+      "target_pair": [
+        "OID#5224",
+        "OID#6140"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 81,
+      "case_id": "TEST_CASE_082",
+      "target_pair": [
+        "OID#5910",
+        "OID#6235"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 82,
+      "case_id": "TEST_CASE_083",
+      "target_pair": [
+        "OID#1837",
+        "OID#4428"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 83,
+      "case_id": "TEST_CASE_084",
+      "target_pair": [
+        "OID#3396",
+        "OID#7034"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 84,
+      "case_id": "TEST_CASE_085",
+      "target_pair": [
+        "OID#2543",
+        "OID#2615"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 85,
+      "case_id": "TEST_CASE_086",
+      "target_pair": [
+        "OID#710",
+        "OID#9508"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 86,
+      "case_id": "TEST_CASE_087",
+      "target_pair": [
+        "OID#7944",
+        "OID#8732"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 87,
+      "case_id": "TEST_CASE_088",
+      "target_pair": [
+        "OID#6781",
+        "OID#7786"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 88,
+      "case_id": "TEST_CASE_089",
+      "target_pair": [
+        "OID#6357",
+        "OID#7062"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 89,
+      "case_id": "TEST_CASE_090",
+      "target_pair": [
+        "OID#5976",
+        "OID#6545"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 90,
+      "case_id": "TEST_CASE_091",
+      "target_pair": [
+        "OID#1222",
+        "OID#1683"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 91,
+      "case_id": "TEST_CASE_092",
+      "target_pair": [
+        "OID#9347",
+        "OID#9396"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 92,
+      "case_id": "TEST_CASE_093",
+      "target_pair": [
+        "OID#9637",
+        "OID#9638"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 93,
+      "case_id": "TEST_CASE_094",
+      "target_pair": [
+        "OID#2497",
+        "OID#4290"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 94,
+      "case_id": "TEST_CASE_095",
+      "target_pair": [
+        "OID#1675",
+        "OID#8299"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 95,
+      "case_id": "TEST_CASE_096",
+      "target_pair": [
+        "OID#7825",
+        "OID#8047"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 96,
+      "case_id": "TEST_CASE_097",
+      "target_pair": [
+        "OID#6563",
+        "OID#7575"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 97,
+      "case_id": "TEST_CASE_098",
+      "target_pair": [
+        "OID#2978",
+        "OID#4112"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 98,
+      "case_id": "TEST_CASE_099",
+      "target_pair": [
+        "OID#7314",
+        "OID#9459"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 99,
+      "case_id": "TEST_CASE_100",
+      "target_pair": [
+        "OID#5665",
+        "OID#5670"
+      ],
+      "ground_truth_label": 1,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 100,
+      "case_id": "TEST_CASE_101",
+      "target_pair": [
+        "OID#5125",
+        "OID#8946"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 101,
+      "case_id": "TEST_CASE_102",
+      "target_pair": [
+        "OID#8634",
+        "OID#9194"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 102,
+      "case_id": "TEST_CASE_103",
+      "target_pair": [
+        "OID#4222",
+        "OID#5007"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 103,
+      "case_id": "TEST_CASE_104",
+      "target_pair": [
+        "OID#2497",
+        "OID#2773"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 104,
+      "case_id": "TEST_CASE_105",
+      "target_pair": [
+        "OID#3007",
+        "OID#4290"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 105,
+      "case_id": "TEST_CASE_106",
+      "target_pair": [
+        "OID#4368",
+        "OID#4717"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 106,
+      "case_id": "TEST_CASE_107",
+      "target_pair": [
+        "OID#6967",
+        "OID#8092"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 107,
+      "case_id": "TEST_CASE_108",
+      "target_pair": [
+        "OID#5550",
+        "OID#7733"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 108,
+      "case_id": "TEST_CASE_109",
+      "target_pair": [
+        "OID#7984",
+        "OID#8872"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 109,
+      "case_id": "TEST_CASE_110",
+      "target_pair": [
+        "OID#589",
+        "OID#7485"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 110,
+      "case_id": "TEST_CASE_111",
+      "target_pair": [
+        "OID#1094",
+        "OID#1211"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 111,
+      "case_id": "TEST_CASE_112",
+      "target_pair": [
+        "OID#1270",
+        "OID#1641"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 112,
+      "case_id": "TEST_CASE_113",
+      "target_pair": [
+        "OID#1297",
+        "OID#2020"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 113,
+      "case_id": "TEST_CASE_114",
+      "target_pair": [
+        "OID#1547",
+        "OID#2116"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 114,
+      "case_id": "TEST_CASE_115",
+      "target_pair": [
+        "OID#1281",
+        "OID#4903"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 115,
+      "case_id": "TEST_CASE_116",
+      "target_pair": [
+        "OID#3735",
+        "OID#7047"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 116,
+      "case_id": "TEST_CASE_117",
+      "target_pair": [
+        "OID#3650",
+        "OID#4489"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 117,
+      "case_id": "TEST_CASE_118",
+      "target_pair": [
+        "OID#2443",
+        "OID#3781"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 118,
+      "case_id": "TEST_CASE_119",
+      "target_pair": [
+        "OID#3350",
+        "OID#8878"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 119,
+      "case_id": "TEST_CASE_120",
+      "target_pair": [
+        "OID#1974",
+        "OID#6046"
+      ],
+      "ground_truth_label": 0,
+      "condition": "missing_evidence",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 120,
+      "case_id": "TEST_CASE_121",
+      "target_pair": [
+        "OID#3175",
+        "OID#3447"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 121,
+      "case_id": "TEST_CASE_122",
+      "target_pair": [
+        "OID#1102",
+        "OID#2180"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 122,
+      "case_id": "TEST_CASE_123",
+      "target_pair": [
+        "OID#3063",
+        "OID#3257"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 123,
+      "case_id": "TEST_CASE_124",
+      "target_pair": [
+        "OID#1725",
+        "OID#3321"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 124,
+      "case_id": "TEST_CASE_125",
+      "target_pair": [
+        "OID#3496",
+        "OID#3506"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 125,
+      "case_id": "TEST_CASE_126",
+      "target_pair": [
+        "OID#6637",
+        "OID#8315"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 126,
+      "case_id": "TEST_CASE_127",
+      "target_pair": [
+        "OID#6682",
+        "OID#6741"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 127,
+      "case_id": "TEST_CASE_128",
+      "target_pair": [
+        "OID#6120",
+        "OID#6996"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 128,
+      "case_id": "TEST_CASE_129",
+      "target_pair": [
+        "OID#2688",
+        "OID#9030"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 129,
+      "case_id": "TEST_CASE_130",
+      "target_pair": [
+        "OID#7485",
+        "OID#7777"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 130,
+      "case_id": "TEST_CASE_131",
+      "target_pair": [
+        "OID#1827",
+        "OID#2066"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 131,
+      "case_id": "TEST_CASE_132",
+      "target_pair": [
+        "OID#4950",
+        "OID#6503"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 132,
+      "case_id": "TEST_CASE_133",
+      "target_pair": [
+        "OID#5077",
+        "OID#5111"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 133,
+      "case_id": "TEST_CASE_134",
+      "target_pair": [
+        "OID#1225",
+        "OID#1930"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 134,
+      "case_id": "TEST_CASE_135",
+      "target_pair": [
+        "OID#1001",
+        "OID#1050"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 135,
+      "case_id": "TEST_CASE_136",
+      "target_pair": [
+        "OID#4982",
+        "OID#8847"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 136,
+      "case_id": "TEST_CASE_137",
+      "target_pair": [
+        "OID#1061",
+        "OID#1645"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 137,
+      "case_id": "TEST_CASE_138",
+      "target_pair": [
+        "OID#1014",
+        "OID#1859"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 138,
+      "case_id": "TEST_CASE_139",
+      "target_pair": [
+        "OID#2178",
+        "OID#2179"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 139,
+      "case_id": "TEST_CASE_140",
+      "target_pair": [
+        "OID#6458",
+        "OID#6459"
+      ],
+      "ground_truth_label": 1,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Supported",
+      "system_b_predicted_label": 1,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Supported"
+    },
+    {
+      "case_index": 140,
+      "case_id": "TEST_CASE_141",
+      "target_pair": [
+        "OID#473",
+        "OID#547"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 141,
+      "case_id": "TEST_CASE_142",
+      "target_pair": [
+        "OID#474",
+        "OID#613"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 142,
+      "case_id": "TEST_CASE_143",
+      "target_pair": [
+        "OID#501",
+        "OID#661"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 143,
+      "case_id": "TEST_CASE_144",
+      "target_pair": [
+        "OID#759",
+        "OID#908"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 144,
+      "case_id": "TEST_CASE_145",
+      "target_pair": [
+        "OID#775",
+        "OID#946"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 145,
+      "case_id": "TEST_CASE_146",
+      "target_pair": [
+        "OID#2978",
+        "OID#6764"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 146,
+      "case_id": "TEST_CASE_147",
+      "target_pair": [
+        "OID#5118",
+        "OID#5675"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 147,
+      "case_id": "TEST_CASE_148",
+      "target_pair": [
+        "OID#4742",
+        "OID#541"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 148,
+      "case_id": "TEST_CASE_149",
+      "target_pair": [
+        "OID#627",
+        "OID#6323"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 149,
+      "case_id": "TEST_CASE_150",
+      "target_pair": [
+        "OID#167",
+        "OID#6208"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 150,
+      "case_id": "TEST_CASE_151",
+      "target_pair": [
+        "OID#4112",
+        "OID#7207"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 151,
+      "case_id": "TEST_CASE_152",
+      "target_pair": [
+        "OID#7575",
+        "OID#7950"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 152,
+      "case_id": "TEST_CASE_153",
+      "target_pair": [
+        "OID#2539",
+        "OID#7003"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 153,
+      "case_id": "TEST_CASE_154",
+      "target_pair": [
+        "OID#5324",
+        "OID#6235"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 154,
+      "case_id": "TEST_CASE_155",
+      "target_pair": [
+        "OID#6343",
+        "OID#6666"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 155,
+      "case_id": "TEST_CASE_156",
+      "target_pair": [
+        "OID#1061",
+        "OID#5941"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 156,
+      "case_id": "TEST_CASE_157",
+      "target_pair": [
+        "OID#1645",
+        "OID#7946"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 157,
+      "case_id": "TEST_CASE_158",
+      "target_pair": [
+        "OID#1958",
+        "OID#8402"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Insufficient Evidence",
+      "system_a_predicted_label": 0,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": true,
+      "notes": "Both systems agreed on Insufficient Evidence"
+    },
+    {
+      "case_index": 158,
+      "case_id": "TEST_CASE_159",
+      "target_pair": [
+        "OID#1751",
+        "OID#5185"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 159,
+      "case_id": "TEST_CASE_160",
+      "target_pair": [
+        "OID#2093",
+        "OID#8112"
+      ],
+      "ground_truth_label": 0,
+      "condition": "distractors",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 160,
+      "case_id": "TEST_CASE_161",
+      "target_pair": [
+        "OID#2418",
+        "OID#4150"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 161,
+      "case_id": "TEST_CASE_162",
+      "target_pair": [
+        "OID#2792",
+        "OID#2807"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 162,
+      "case_id": "TEST_CASE_163",
+      "target_pair": [
+        "OID#7288",
+        "OID#7632"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 163,
+      "case_id": "TEST_CASE_164",
+      "target_pair": [
+        "OID#1820",
+        "OID#5485"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 164,
+      "case_id": "TEST_CASE_165",
+      "target_pair": [
+        "OID#117",
+        "OID#122"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 165,
+      "case_id": "TEST_CASE_166",
+      "target_pair": [
+        "OID#9456",
+        "OID#9470"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 166,
+      "case_id": "TEST_CASE_167",
+      "target_pair": [
+        "OID#1281",
+        "OID#3735"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 167,
+      "case_id": "TEST_CASE_168",
+      "target_pair": [
+        "OID#5424",
+        "OID#8951"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 168,
+      "case_id": "TEST_CASE_169",
+      "target_pair": [
+        "OID#6573",
+        "OID#9205"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 169,
+      "case_id": "TEST_CASE_170",
+      "target_pair": [
+        "OID#5125",
+        "OID#8634"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 170,
+      "case_id": "TEST_CASE_171",
+      "target_pair": [
+        "OID#7003",
+        "OID#7662"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 171,
+      "case_id": "TEST_CASE_172",
+      "target_pair": [
+        "OID#712",
+        "OID#714"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 172,
+      "case_id": "TEST_CASE_173",
+      "target_pair": [
+        "OID#6774",
+        "OID#7788"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 173,
+      "case_id": "TEST_CASE_174",
+      "target_pair": [
+        "OID#1568",
+        "OID#2251"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 174,
+      "case_id": "TEST_CASE_175",
+      "target_pair": [
+        "OID#1585",
+        "OID#5360"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 175,
+      "case_id": "TEST_CASE_176",
+      "target_pair": [
+        "OID#2712",
+        "OID#3255"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 176,
+      "case_id": "TEST_CASE_177",
+      "target_pair": [
+        "OID#1188",
+        "OID#1262"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 177,
+      "case_id": "TEST_CASE_178",
+      "target_pair": [
+        "OID#5016",
+        "OID#7050"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 178,
+      "case_id": "TEST_CASE_179",
+      "target_pair": [
+        "OID#2186",
+        "OID#2198"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 179,
+      "case_id": "TEST_CASE_180",
+      "target_pair": [
+        "OID#5015",
+        "OID#8439"
+      ],
+      "ground_truth_label": 1,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": true,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": false,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 180,
+      "case_id": "TEST_CASE_181",
+      "target_pair": [
+        "OID#2108",
+        "OID#4714"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 181,
+      "case_id": "TEST_CASE_182",
+      "target_pair": [
+        "OID#2112",
+        "OID#4782"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 182,
+      "case_id": "TEST_CASE_183",
+      "target_pair": [
+        "OID#5153",
+        "OID#7378"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 183,
+      "case_id": "TEST_CASE_184",
+      "target_pair": [
+        "OID#2200",
+        "OID#6588"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 184,
+      "case_id": "TEST_CASE_185",
+      "target_pair": [
+        "OID#1296",
+        "OID#5477"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 185,
+      "case_id": "TEST_CASE_186",
+      "target_pair": [
+        "OID#1970",
+        "OID#5604"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 186,
+      "case_id": "TEST_CASE_187",
+      "target_pair": [
+        "OID#2010",
+        "OID#8559"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 187,
+      "case_id": "TEST_CASE_188",
+      "target_pair": [
+        "OID#2684",
+        "OID#5222"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 188,
+      "case_id": "TEST_CASE_189",
+      "target_pair": [
+        "OID#7559",
+        "OID#8681"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 189,
+      "case_id": "TEST_CASE_190",
+      "target_pair": [
+        "OID#1568",
+        "OID#7133"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 190,
+      "case_id": "TEST_CASE_191",
+      "target_pair": [
+        "OID#714",
+        "OID#7476"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 191,
+      "case_id": "TEST_CASE_192",
+      "target_pair": [
+        "OID#2167",
+        "OID#2804"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 192,
+      "case_id": "TEST_CASE_193",
+      "target_pair": [
+        "OID#1837",
+        "OID#8280"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 193,
+      "case_id": "TEST_CASE_194",
+      "target_pair": [
+        "OID#6155",
+        "OID#9236"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 194,
+      "case_id": "TEST_CASE_195",
+      "target_pair": [
+        "OID#6710",
+        "OID#8966"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 195,
+      "case_id": "TEST_CASE_196",
+      "target_pair": [
+        "OID#2395",
+        "OID#634"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 196,
+      "case_id": "TEST_CASE_197",
+      "target_pair": [
+        "OID#2487",
+        "OID#6781"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 197,
+      "case_id": "TEST_CASE_198",
+      "target_pair": [
+        "OID#5016",
+        "OID#5485"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 198,
+      "case_id": "TEST_CASE_199",
+      "target_pair": [
+        "OID#3133",
+        "OID#5836"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    },
+    {
+      "case_index": 199,
+      "case_id": "TEST_CASE_200",
+      "target_pair": [
+        "OID#4512",
+        "OID#7582"
+      ],
+      "ground_truth_label": 0,
+      "condition": "mixed_difficulty",
+      "system_a_decision": "Supported",
+      "system_a_predicted_label": 1,
+      "system_a_correct": false,
+      "system_b_decision": "Insufficient Evidence",
+      "system_b_predicted_label": 0,
+      "system_b_correct": true,
+      "agreement": false,
+      "notes": "System A predicted positive (Supported) while System B rejected as Insufficient Evidence"
+    }
+  ],
+  "summary_findings": "SPYDER Phase 2G Full Benchmark Evaluation Summary (N=200 cases):\n- System A (RAG-only): Accuracy=0.7000, Precision=0.6250, Recall=1.0000, Specificity=0.4000, F1=0.7692, Evidentiary Soundness=0.4875\n- System B (RAG + Verification): Accuracy=0.7000, Precision=1.0000, Recall=0.4000, Specificity=1.0000, F1=0.5714, Evidentiary Soundness=1.0000\nPaired Analysis: Disagreements=120, McNemar chi2=0.0, p-value=1.000000."
+}

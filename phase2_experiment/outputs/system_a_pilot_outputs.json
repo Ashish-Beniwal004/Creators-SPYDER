@@ -1,0 +1,333 @@
+{
+  "run_id": "PILOT_RUN_20261013_145217",
+  "arm": "system_a_rag_only",
+  "execution_timestamp": "2026-10-13T14:52:17.021587+00:00",
+  "parameters": {
+    "top_k": 5,
+    "pipeline_metadata": {
+      "pipeline_name": "SPYDER_Phase2E_Experimental_Pipeline",
+      "version": "1.0.0",
+      "evaluation_window": [
+        "2020-01-01",
+        "2020-06-30"
+      ],
+      "deterministic": true,
+      "random_seed": 42,
+      "retriever_type": "TfidfVectorizer + CosineSimilarity",
+      "top_k": 5,
+      "enable_re_retrieval": false,
+      "python_version": "3.14.0"
+    }
+  },
+  "total_cases": 10,
+  "results": [
+    {
+      "case_index": 0,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#4418",
+      "entity_b": "OID#8864",
+      "target_pair": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "decision": "Supported",
+      "is_supported": true,
+      "rationale": "RAG-only communication inference: Call detail record CDR_055ad8bc documents direct telecommunication between OID#4418 and OID#8864.",
+      "retrieval_query": "OID#4418 OID#8864",
+      "retrieved_doc_ids": [
+        "CDR_055ad8bc",
+        "CDR_5b17362b",
+        "DOC_IR_68ca5aaf"
+      ],
+      "retrieval_scores": {
+        "CDR_055ad8bc": 0.469707,
+        "CDR_5b17362b": 0.458493,
+        "DOC_IR_68ca5aaf": 0.357018
+      },
+      "cited_doc_ids": [
+        "CDR_055ad8bc"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.017554+00:00"
+    },
+    {
+      "case_index": 1,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#4418",
+      "entity_b": "OID#5590",
+      "target_pair": [
+        "OID#4418",
+        "OID#5590"
+      ],
+      "decision": "Insufficient Evidence",
+      "is_supported": false,
+      "rationale": "Retrieved evidence documents establish only independent activity for OID#4418 and OID#5590. No joint incident co-participation or direct communication was found linking the two subjects.",
+      "retrieval_query": "OID#4418 OID#5590",
+      "retrieved_doc_ids": [
+        "CDR_e98c281a",
+        "DOC_IR_b45ea549",
+        "CDR_055ad8bc",
+        "CDR_5b17362b",
+        "DOC_IR_68ca5aaf"
+      ],
+      "retrieval_scores": {
+        "CDR_e98c281a": 0.271983,
+        "DOC_IR_b45ea549": 0.268698,
+        "CDR_055ad8bc": 0.22415,
+        "CDR_5b17362b": 0.218799,
+        "DOC_IR_68ca5aaf": 0.170374
+      },
+      "cited_doc_ids": [
+        "CDR_e98c281a",
+        "DOC_IR_b45ea549",
+        "CDR_055ad8bc",
+        "CDR_5b17362b",
+        "DOC_IR_68ca5aaf"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.018128+00:00"
+    },
+    {
+      "case_index": 2,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#6819",
+      "entity_b": "OID#8595",
+      "target_pair": [
+        "OID#6819",
+        "OID#8595"
+      ],
+      "decision": "Supported",
+      "is_supported": true,
+      "rationale": "RAG-only alias inference: Incident report DOC_IR_c1c7b4bb documents co-offending with accomplice 'The Wire', inferred to be OID#6819 within the retrieved evidence context.",
+      "retrieval_query": "OID#6819 OID#8595",
+      "retrieved_doc_ids": [
+        "DOC_IR_c1c7b4bb",
+        "CDR_063962b6",
+        "DOC_IR_71acf05c"
+      ],
+      "retrieval_scores": {
+        "DOC_IR_c1c7b4bb": 0.398175,
+        "CDR_063962b6": 0.233819,
+        "DOC_IR_71acf05c": 0.212226
+      },
+      "cited_doc_ids": [
+        "DOC_IR_c1c7b4bb"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.018584+00:00"
+    },
+    {
+      "case_index": 3,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#8595",
+      "entity_b": "OID#8827",
+      "target_pair": [
+        "OID#8595",
+        "OID#8827"
+      ],
+      "decision": "Supported",
+      "is_supported": true,
+      "rationale": "RAG-only alias inference: Incident report DOC_IR_c1c7b4bb documents co-offending with accomplice 'The Wire', inferred to be OID#8827 within the retrieved evidence context.",
+      "retrieval_query": "OID#8595 OID#8827",
+      "retrieved_doc_ids": [
+        "DOC_IR_c1c7b4bb",
+        "CDR_5167d606",
+        "DOC_IR_f86bab88"
+      ],
+      "retrieval_scores": {
+        "DOC_IR_c1c7b4bb": 0.398175,
+        "CDR_5167d606": 0.257803,
+        "DOC_IR_f86bab88": 0.234742
+      },
+      "cited_doc_ids": [
+        "DOC_IR_c1c7b4bb"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.019076+00:00"
+    },
+    {
+      "case_index": 4,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#4866",
+      "entity_b": "OID#6315",
+      "target_pair": [
+        "OID#4866",
+        "OID#6315"
+      ],
+      "decision": "Supported",
+      "is_supported": true,
+      "rationale": "RAG-only communication inference: Call detail record CDR_2bc0dc97 documents direct telecommunication between OID#4866 and OID#6315.",
+      "retrieval_query": "OID#4866 OID#6315",
+      "retrieved_doc_ids": [
+        "CDR_2bc0dc97",
+        "CDR_aad75224",
+        "CDR_811729fb"
+      ],
+      "retrieval_scores": {
+        "CDR_2bc0dc97": 0.492338,
+        "CDR_aad75224": 0.486735,
+        "CDR_811729fb": 0.462005
+      },
+      "cited_doc_ids": [
+        "CDR_2bc0dc97"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.019465+00:00"
+    },
+    {
+      "case_index": 5,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#4866",
+      "entity_b": "OID#5631",
+      "target_pair": [
+        "OID#4866",
+        "OID#5631"
+      ],
+      "decision": "Insufficient Evidence",
+      "is_supported": false,
+      "rationale": "Retrieved evidence documents establish only independent activity for OID#4866 and OID#5631. No joint incident co-participation or direct communication was found linking the two subjects.",
+      "retrieval_query": "OID#4866 OID#5631",
+      "retrieved_doc_ids": [
+        "DOC_IR_c1cb6c7a",
+        "CDR_2bc0dc97",
+        "CDR_aad75224",
+        "CDR_811729fb"
+      ],
+      "retrieval_scores": {
+        "DOC_IR_c1cb6c7a": 0.351491,
+        "CDR_2bc0dc97": 0.220143,
+        "CDR_aad75224": 0.217638,
+        "CDR_811729fb": 0.20658
+      },
+      "cited_doc_ids": [
+        "DOC_IR_c1cb6c7a",
+        "CDR_2bc0dc97",
+        "CDR_aad75224",
+        "CDR_811729fb"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.019908+00:00"
+    },
+    {
+      "case_index": 6,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#6612",
+      "entity_b": "OID#7994",
+      "target_pair": [
+        "OID#6612",
+        "OID#7994"
+      ],
+      "decision": "Supported",
+      "is_supported": true,
+      "rationale": "RAG-only communication inference: Call detail record CDR_3f9163f4 documents direct telecommunication between OID#6612 and OID#7994.",
+      "retrieval_query": "OID#6612 OID#7994",
+      "retrieved_doc_ids": [
+        "CDR_3f9163f4",
+        "DOC_IR_eb659cb3"
+      ],
+      "retrieval_scores": {
+        "CDR_3f9163f4": 0.511113,
+        "DOC_IR_eb659cb3": 0.494388
+      },
+      "cited_doc_ids": [
+        "CDR_3f9163f4"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.020295+00:00"
+    },
+    {
+      "case_index": 7,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#7661",
+      "entity_b": "OID#7994",
+      "target_pair": [
+        "OID#7661",
+        "OID#7994"
+      ],
+      "decision": "Insufficient Evidence",
+      "is_supported": false,
+      "rationale": "Retrieved evidence documents establish only independent activity for OID#7661 and OID#7994. No joint incident co-participation or direct communication was found linking the two subjects.",
+      "retrieval_query": "OID#7661 OID#7994",
+      "retrieved_doc_ids": [
+        "CDR_dd3992be",
+        "DOC_IR_015fe5e0",
+        "CDR_3f9163f4",
+        "DOC_IR_eb659cb3"
+      ],
+      "retrieval_scores": {
+        "CDR_dd3992be": 0.261288,
+        "DOC_IR_015fe5e0": 0.259058,
+        "CDR_3f9163f4": 0.255556,
+        "DOC_IR_eb659cb3": 0.247194
+      },
+      "cited_doc_ids": [
+        "CDR_dd3992be",
+        "DOC_IR_015fe5e0",
+        "CDR_3f9163f4",
+        "DOC_IR_eb659cb3"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.020767+00:00"
+    },
+    {
+      "case_index": 8,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#1964",
+      "entity_b": "OID#2568",
+      "target_pair": [
+        "OID#1964",
+        "OID#2568"
+      ],
+      "decision": "Supported",
+      "is_supported": true,
+      "rationale": "RAG-only communication inference: Call detail record CDR_6956df6d documents direct telecommunication between OID#1964 and OID#2568.",
+      "retrieval_query": "OID#1964 OID#2568",
+      "retrieved_doc_ids": [
+        "CDR_6956df6d",
+        "DOC_IR_80e4d5d3",
+        "DOC_IR_bf7db53a"
+      ],
+      "retrieval_scores": {
+        "CDR_6956df6d": 0.515049,
+        "DOC_IR_80e4d5d3": 0.367552,
+        "DOC_IR_bf7db53a": 0.22388
+      },
+      "cited_doc_ids": [
+        "CDR_6956df6d"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.021136+00:00"
+    },
+    {
+      "case_index": 9,
+      "arm": "system_a_rag_only",
+      "entity_a": "OID#4381",
+      "entity_b": "OID#6449",
+      "target_pair": [
+        "OID#4381",
+        "OID#6449"
+      ],
+      "decision": "Supported",
+      "is_supported": true,
+      "rationale": "RAG-only alias inference: Incident report DOC_IR_c40e284d documents co-offending with accomplice 'The Driver', inferred to be OID#6449 within the retrieved evidence context.",
+      "retrieval_query": "OID#4381 OID#6449",
+      "retrieved_doc_ids": [
+        "DOC_IR_c40e284d",
+        "DOC_IR_fa15552e",
+        "CDR_e98c281a",
+        "DOC_IR_b45ea549"
+      ],
+      "retrieval_scores": {
+        "DOC_IR_c40e284d": 0.333552,
+        "DOC_IR_fa15552e": 0.251912,
+        "CDR_e98c281a": 0.213156,
+        "DOC_IR_b45ea549": 0.210582
+      },
+      "cited_doc_ids": [
+        "DOC_IR_c40e284d"
+      ],
+      "verification_data": null,
+      "execution_timestamp": "2026-10-13T14:52:17.021571+00:00"
+    }
+  ]
+}

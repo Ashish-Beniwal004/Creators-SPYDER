@@ -120,26 +120,50 @@ Creators-SPYDER/
 │   ├── system_b.py                          # System B (RAG + Verification) implementation
 │   ├── pilot_target_pairs.json              # Pilot target pairs (10 cases)
 │   ├── test_target_pairs.json               # Frozen unlabelled evaluation target pairs (200 cases)
-│   ├── outputs/                             # Audited aggregate scoring report & run manifest (2 files)
-│   │   ├── full_test_run_manifest.json      # Frozen run manifest (parameters, timestamps, seeds)
-│   │   └── full_test_scoring_report.json    # Audited aggregate scoring report (Wilson CIs, McNemar test)
+│   ├── outputs/                             # Raw outputs, manifests, and scoring reports
+│   │   ├── full_test_run_manifest.json      # Full-test run manifest (parameters, timestamps, seeds)
+│   │   ├── full_test_scoring_report.json    # Audited aggregate scoring report (Wilson CIs, McNemar test)
+│   │   ├── original_full_test_scoring_report.json # Historical pre-audit report with prefix bug
+│   │   ├── system_a_full_test_outputs.json  # System A 200-case raw execution outputs
+│   │   ├── system_b_full_test_outputs.json  # System B 200-case raw execution outputs
+│   │   ├── pilot_run_manifest.json          # Pilot run manifest
+│   │   ├── pilot_scoring_report.json        # Pilot scoring report
+│   │   ├── system_a_pilot_outputs.json      # System A pilot outputs
+│   │   └── system_b_pilot_outputs.json      # System B pilot outputs
 │   └── tests/                               # Runner quarantine, integrity, and scoring tests
-├── phase2_public_artifact_hash_manifest.json# SHA-256 hash manifest for all 6 frozen public artifacts
+├── phase2_ground_truth_vault/               # Private evaluation assets and ground truth
+│   ├── ground_truth.json                    # Pilot ground truth (10 cases)
+│   ├── test_ground_truth.json               # Full evaluation ground truth (200 cases)
+│   ├── pilot_manifest.json                  # Pilot manifest
+│   ├── test_manifest.json                   # Full evaluation test manifest
+│   ├── split_manifest.json                  # Disjoint graph partition manifest
+│   ├── pilot_evidence_sample.json           # Sample evidence fixtures
+│   ├── build_test_benchmark.py              # Deterministic benchmark builder
+│   ├── freeze_pilot.py                      # Pilot benchmark freezer
+│   ├── schemas.py                           # Ground-truth schema definitions
+│   └── tests/                               # Split isolation, leakage, and schema tests (32 tests)
+├── phase1_dataset_audit/                    # Dataset discovery, audit, and governance documentation
+│   ├── DATASET_DECISION.md                  # Canonical dataset selection rationale
+│   ├── dataset_inventory.csv                # Survey of 14 criminal network datasets
+│   ├── public_vs_synthetic_requirements.csv # Allocation matrix of real vs. synthetic layers
+│   └── sources.md                           # Provenance citations and upstream download routes
+├── phase2_artifact_hash_manifest.json       # SHA-256 hash manifest for all 15 frozen project artifacts
+├── phase2_public_artifact_hash_manifest.json# SHA-256 hash manifest for 6 public frozen artifacts
 ├── DATASET_NOTICE.md                        # Dataset provenance, licensing terms, and access policy
 ├── LICENSE                                  # MIT License (original SPYDER code only)
 ├── requirements.txt                         # Core dependencies (pydantic, scikit-learn, numpy, pytest)
-├── .gitignore                               # Quarantines test vault, raw data, and offline prediction outputs
+├── .gitignore                               # Excludes caches and raw third-party police data
 ├── .gitattributes                           # Line-ending and binary Git configurations
 └── README.md                                # This repository overview
 ```
 
 ---
 
-## 5. Setup and Running Public Tests
+## 5. Setup, Testing, and Evaluation Reproduction
 
 ### Installation
 ```bash
-# Clone the repository
+# Clone the private repository
 git clone https://github.com/Ashish-Beniwal004/Creators-SPYDER.git
 cd Creators-SPYDER
 
@@ -154,23 +178,30 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Running the Public Test Suite
-Execute the 120 automated unit, integration, and quarantine regression tests:
+### Running the Complete Test Suite
+Execute the 152 automated tests across all five project test suites:
 ```bash
-python -m pytest phase2_corpus/tests phase2_retrieval/tests phase2_verification/tests phase2_experiment/tests -v
+python -m pytest phase2_corpus/tests phase2_retrieval/tests phase2_verification/tests phase2_experiment/tests phase2_ground_truth_vault/tests -v
 ```
-*Expected Output:* `120 passed in ~3s (Exit Code 0)`.
+*Expected Output:* `148 passed, 4 skipped in ~3s (Exit Code 0)`.
+*(The 4 skipped tests require the raw third-party police network file; when downloaded to `phase1_dataset_audit/data/`, all 152 tests pass).*
 
-### Verifying Public Frozen Artifact Hashes
-Verify that all 6 distributed frozen artifacts match their audited cryptographic SHA-256 baselines:
+### Reproducing Full Benchmark Evaluation
+To re-score the frozen execution outputs against the 200-case ground-truth vault:
+```bash
+python -c "import phase2_experiment.evaluator as ev; ev.evaluate_full_test_runs()"
+```
+
+### Verifying Frozen Artifact Hashes
+Verify all 15 frozen project artifacts against their cryptographic SHA-256 baselines:
 ```bash
 python -c "
 import json, hashlib
-manifest = json.load(open('phase2_public_artifact_hash_manifest.json'))
+manifest = json.load(open('phase2_artifact_hash_manifest.json'))
 for path, meta in manifest['files'].items():
     actual = hashlib.sha256(open(path, 'rb').read()).hexdigest()
     assert actual == meta['sha256'], f'MISMATCH: {path}'
-print(f'All {len(manifest[\"files\"])} public frozen artifact hashes verified successfully!')
+print(f'All {len(manifest[\"files\"])} frozen project artifacts verified successfully!')
 "
 ```
 

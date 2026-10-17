@@ -1,0 +1,4233 @@
+{
+  "manifest_version": "1.0",
+  "random_seed": 42,
+  "source_dataset": "israel_lea_inp_burglary_offender_id_network_from_2020-01-01_to_2020-06-30.json",
+  "total_cases": 200,
+  "positive_cases_count": 100,
+  "negative_cases_count": 100,
+  "cases": [
+    {
+      "case_id": "TEST_CASE_001",
+      "target_pair": [
+        "OID#6516",
+        "OID#9361"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#4794"
+      ],
+      "components": [
+        0,
+        0
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Authentic INP records document OID#6516 and OID#9361 as co-arrestees in residential burglary CID#4794 on 2020-04-20. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4794 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_002",
+      "target_pair": [
+        "OID#5316",
+        "OID#8242"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#3087"
+      ],
+      "components": [
+        1,
+        1
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5316 and OID#8242 as co-arrestees in residential burglary CID#3087 on 2020-01-22. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3087 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_003",
+      "target_pair": [
+        "OID#5550",
+        "OID#8872"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#3445"
+      ],
+      "components": [
+        2,
+        2
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5550 and OID#8872 as co-arrestees in residential burglary CID#3445 on 2020-03-27. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3445 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_004",
+      "target_pair": [
+        "OID#8946",
+        "OID#9194"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#6483"
+      ],
+      "components": [
+        3,
+        3
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#8946 and OID#9194 as co-arrestees in residential burglary CID#6483 on 2020-01-13. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6483 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_005",
+      "target_pair": [
+        "OID#4281",
+        "OID#4352"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#2133"
+      ],
+      "components": [
+        4,
+        4
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Authentic INP records document OID#4281 and OID#4352 as co-arrestees in residential burglary CID#2133 on 2020-03-31. Accomplice group size is 3. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2133 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_006",
+      "target_pair": [
+        "OID#5981",
+        "OID#8933"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#4107"
+      ],
+      "components": [
+        5,
+        5
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5981 and OID#8933 as co-arrestees in residential burglary CID#4107 on 2020-01-18. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4107 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_007",
+      "target_pair": [
+        "OID#7353",
+        "OID#9395"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#5672"
+      ],
+      "components": [
+        6,
+        6
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Authentic INP records document OID#7353 and OID#9395 as co-arrestees in residential burglary CID#5672 on 2020-04-16. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5672 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_008",
+      "target_pair": [
+        "OID#2645",
+        "OID#4355"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#1379"
+      ],
+      "components": [
+        7,
+        7
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#2645 and OID#4355 as co-arrestees in residential burglary CID#1379 on 2020-02-28. Accomplice group size is 3. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1379 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_009",
+      "target_pair": [
+        "OID#541",
+        "OID#627"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#184"
+      ],
+      "components": [
+        8,
+        8
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#541 and OID#627 as co-arrestees in residential burglary CID#184 on 2020-01-29. Accomplice group size is 5. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#184 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_010",
+      "target_pair": [
+        "OID#2393",
+        "OID#2451"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#1041"
+      ],
+      "components": [
+        9,
+        9
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Authentic INP records document OID#2393 and OID#2451 as co-arrestees in residential burglary CID#1041 on 2020-03-08. Accomplice group size is 3. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1041 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_011",
+      "target_pair": [
+        "OID#2773",
+        "OID#3007"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#1483"
+      ],
+      "components": [
+        10,
+        10
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#2773 and OID#3007 as co-arrestees in residential burglary CID#1483 on 2020-02-06. Accomplice group size is 3. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1483 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_012",
+      "target_pair": [
+        "OID#632",
+        "OID#8489"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#4222",
+        "CID#4223"
+      ],
+      "components": [
+        11,
+        11
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#632 and OID#8489 as co-arrestees in residential burglary CID#4222 on 2020-01-08. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4222 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_013",
+      "target_pair": [
+        "OID#5376",
+        "OID#5535"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#3168",
+        "CID#3169"
+      ],
+      "components": [
+        12,
+        12
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5376 and OID#5535 as co-arrestees in residential burglary CID#3168 on 2020-03-17. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3168 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_014",
+      "target_pair": [
+        "OID#167",
+        "OID#217"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#964"
+      ],
+      "components": [
+        13,
+        13
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#167 and OID#217 as co-arrestees in residential burglary CID#964 on 2020-06-15. Accomplice group size is 3. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#964 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_015",
+      "target_pair": [
+        "OID#5860",
+        "OID#7620"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#3918"
+      ],
+      "components": [
+        14,
+        14
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5860 and OID#7620 as co-arrestees in residential burglary CID#3918 on 2020-05-01. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3918 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_016",
+      "target_pair": [
+        "OID#5790",
+        "OID#7687"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#3833"
+      ],
+      "components": [
+        15,
+        15
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5790 and OID#7687 as co-arrestees in residential burglary CID#3833 on 2020-06-09. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3833 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_017",
+      "target_pair": [
+        "OID#1094",
+        "OID#1270"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#472"
+      ],
+      "components": [
+        16,
+        16
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#1094 and OID#1270 as co-arrestees in residential burglary CID#472 on 2020-06-15. Accomplice group size is 4. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#472 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_018",
+      "target_pair": [
+        "OID#7854",
+        "OID#9111"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#6020",
+        "CID#6021"
+      ],
+      "components": [
+        17,
+        17
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Authentic INP records document OID#7854 and OID#9111 as co-arrestees in residential burglary CID#6020 on 2020-04-07. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6020 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_019",
+      "target_pair": [
+        "OID#5669",
+        "OID#5783"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#3649",
+        "CID#3652"
+      ],
+      "components": [
+        18,
+        18
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5669 and OID#5783 as co-arrestees in residential burglary CID#3649 on 2020-03-27. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3649 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_020",
+      "target_pair": [
+        "OID#7950",
+        "OID#9236"
+      ],
+      "label": 1,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [
+        "CID#6064"
+      ],
+      "components": [
+        19,
+        19
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#7950 and OID#9236 as co-arrestees in residential burglary CID#6064 on 2020-06-16. Accomplice group size is 2. Clean evidence contains unambiguous suspect identifiers and corroborating communication logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6064 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_021",
+      "target_pair": [
+        "OID#3183",
+        "OID#6563"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        56,
+        163
+      ],
+      "spatial_distance": 0.0006,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#3183 (Comp 56) and OID#6563 (Comp 163) were both active during 2020-06 with minimal spatial separation (distance: 0.0006), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_022",
+      "target_pair": [
+        "OID#3063",
+        "OID#5744"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        62,
+        197
+      ],
+      "spatial_distance": 0.00107,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#3063 (Comp 62) and OID#5744 (Comp 197) were both active during 2020-03 with minimal spatial separation (distance: 0.00107), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_023",
+      "target_pair": [
+        "OID#3257",
+        "OID#8735"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        62,
+        197
+      ],
+      "spatial_distance": 0.00107,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#3257 (Comp 62) and OID#8735 (Comp 197) were both active during 2020-03 with minimal spatial separation (distance: 0.00107), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_024",
+      "target_pair": [
+        "OID#2939",
+        "OID#3048"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        107,
+        176
+      ],
+      "spatial_distance": 0.00167,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#2939 (Comp 107) and OID#3048 (Comp 176) were both active during 2020-06 with minimal spatial separation (distance: 0.00167), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_025",
+      "target_pair": [
+        "OID#3197",
+        "OID#4135"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        107,
+        176
+      ],
+      "spatial_distance": 0.00167,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#3197 (Comp 107) and OID#4135 (Comp 176) were both active during 2020-06 with minimal spatial separation (distance: 0.00167), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_026",
+      "target_pair": [
+        "OID#1820",
+        "OID#7788"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        83,
+        92
+      ],
+      "spatial_distance": 0.00181,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#1820 (Comp 83) and OID#7788 (Comp 92) were both active during 2020-03 with minimal spatial separation (distance: 0.00181), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_027",
+      "target_pair": [
+        "OID#2124",
+        "OID#7177"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        147,
+        170
+      ],
+      "spatial_distance": 0.00202,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#2124 (Comp 147) and OID#7177 (Comp 170) were both active during 2020-03 with minimal spatial separation (distance: 0.00202), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_028",
+      "target_pair": [
+        "OID#6357",
+        "OID#7786"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        47,
+        48
+      ],
+      "spatial_distance": 0.00206,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#6357 (Comp 47) and OID#7786 (Comp 48) were both active during 2020-03 with minimal spatial separation (distance: 0.00206), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_029",
+      "target_pair": [
+        "OID#2528",
+        "OID#5781"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        106,
+        146
+      ],
+      "spatial_distance": 0.00206,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#2528 (Comp 106) and OID#5781 (Comp 146) were both active during 2020-04 with minimal spatial separation (distance: 0.00206), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_030",
+      "target_pair": [
+        "OID#5015",
+        "OID#5386"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        34,
+        99
+      ],
+      "spatial_distance": 0.00208,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#5015 (Comp 34) and OID#5386 (Comp 99) were both active during 2020-02 with minimal spatial separation (distance: 0.00208), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_031",
+      "target_pair": [
+        "OID#6573",
+        "OID#7763"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        88,
+        155
+      ],
+      "spatial_distance": 0.00218,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#6573 (Comp 88) and OID#7763 (Comp 155) were both active during 2020-06 with minimal spatial separation (distance: 0.00218), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_032",
+      "target_pair": [
+        "OID#9189",
+        "OID#9205"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        88,
+        155
+      ],
+      "spatial_distance": 0.00218,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#9189 (Comp 88) and OID#9205 (Comp 155) were both active during 2020-06 with minimal spatial separation (distance: 0.00218), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_033",
+      "target_pair": [
+        "OID#7715",
+        "OID#8439"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        34,
+        99
+      ],
+      "spatial_distance": 0.00224,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#7715 (Comp 34) and OID#8439 (Comp 99) were both active during 2020-02 with minimal spatial separation (distance: 0.00224), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_034",
+      "target_pair": [
+        "OID#3697",
+        "OID#7609"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        105,
+        142
+      ],
+      "spatial_distance": 0.00239,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#3697 (Comp 105) and OID#7609 (Comp 142) were both active during 2020-01 with minimal spatial separation (distance: 0.00239), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_035",
+      "target_pair": [
+        "OID#2847",
+        "OID#9083"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        104,
+        147
+      ],
+      "spatial_distance": 0.00245,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#2847 (Comp 104) and OID#9083 (Comp 147) were both active during 2020-03 with minimal spatial separation (distance: 0.00245), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_036",
+      "target_pair": [
+        "OID#2418",
+        "OID#6811"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        80,
+        106
+      ],
+      "spatial_distance": 0.00255,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#2418 (Comp 80) and OID#6811 (Comp 106) were both active during 2020-04 with minimal spatial separation (distance: 0.00255), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_037",
+      "target_pair": [
+        "OID#2535",
+        "OID#4590"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        122,
+        191
+      ],
+      "spatial_distance": 0.00272,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#2535 (Comp 122) and OID#4590 (Comp 191) were both active during 2020-04 with minimal spatial separation (distance: 0.00272), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_038",
+      "target_pair": [
+        "OID#3622",
+        "OID#4649"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        122,
+        191
+      ],
+      "spatial_distance": 0.00272,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#3622 (Comp 122) and OID#4649 (Comp 191) were both active during 2020-04 with minimal spatial separation (distance: 0.00272), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_039",
+      "target_pair": [
+        "OID#4264",
+        "OID#4683"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        122,
+        191
+      ],
+      "spatial_distance": 0.00272,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#4264 (Comp 122) and OID#4683 (Comp 191) were both active during 2020-04 with minimal spatial separation (distance: 0.00272), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_040",
+      "target_pair": [
+        "OID#3227",
+        "OID#5814"
+      ],
+      "label": 0,
+      "condition": "clean_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        157,
+        195
+      ],
+      "spatial_distance": 0.00312,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#3227 (Comp 157) and OID#5814 (Comp 195) were both active during 2020-04 with minimal spatial separation (distance: 0.00312), but share ZERO crime incidents. Clean baseline evidence contains independent incident reports demonstrating non-association.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_041",
+      "target_pair": [
+        "OID#2395",
+        "OID#3454"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#1043"
+      ],
+      "components": [
+        20,
+        20
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Authentic INP records document OID#2395 and OID#3454 as accomplices in burglary CID#1043 on 2020-05-20. Accomplice group size is 3. Subject OID#3454 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1043 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_042",
+      "target_pair": [
+        "OID#5222",
+        "OID#7559"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#2945"
+      ],
+      "components": [
+        21,
+        21
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5222 and OID#7559 as accomplices in burglary CID#2945 on 2020-05-27. Accomplice group size is 2. Subject OID#7559 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2945 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_043",
+      "target_pair": [
+        "OID#2627",
+        "OID#3333"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#1357"
+      ],
+      "components": [
+        22,
+        22
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#2627 and OID#3333 as accomplices in burglary CID#1357 on 2020-02-02. Accomplice group size is 3. Subject OID#3333 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1357 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_044",
+      "target_pair": [
+        "OID#5675",
+        "OID#8966"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#3661"
+      ],
+      "components": [
+        23,
+        23
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5675 and OID#8966 as accomplices in burglary CID#3661 on 2020-04-07. Accomplice group size is 2. Subject OID#8966 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3661 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_045",
+      "target_pair": [
+        "OID#8248",
+        "OID#9212"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#6244"
+      ],
+      "components": [
+        24,
+        24
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#8248 and OID#9212 as accomplices in burglary CID#6244 on 2020-01-12. Accomplice group size is 2. Subject OID#9212 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6244 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_046",
+      "target_pair": [
+        "OID#1671",
+        "OID#5324"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#3098"
+      ],
+      "components": [
+        25,
+        25
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#1671 and OID#5324 as accomplices in burglary CID#3098 on 2020-06-30. Accomplice group size is 2. Subject OID#5324 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3098 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_047",
+      "target_pair": [
+        "OID#6764",
+        "OID#7207"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#5118"
+      ],
+      "components": [
+        26,
+        26
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Authentic INP records document OID#6764 and OID#7207 as accomplices in burglary CID#5118 on 2020-05-18. Accomplice group size is 2. Subject OID#7207 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5118 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_048",
+      "target_pair": [
+        "OID#6017",
+        "OID#7083"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#4151"
+      ],
+      "components": [
+        27,
+        27
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#6017 and OID#7083 as accomplices in burglary CID#4151 on 2020-02-28. Accomplice group size is 2. Subject OID#7083 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4151 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_049",
+      "target_pair": [
+        "OID#5836",
+        "OID#7582"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#3892"
+      ],
+      "components": [
+        28,
+        28
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5836 and OID#7582 as accomplices in burglary CID#3892 on 2020-01-05. Accomplice group size is 2. Subject OID#7582 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3892 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_050",
+      "target_pair": [
+        "OID#1219",
+        "OID#1496"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#568"
+      ],
+      "components": [
+        29,
+        29
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#1219 and OID#1496 as accomplices in burglary CID#568 on 2020-06-07. Accomplice group size is 4. Subject OID#1496 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#568 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_051",
+      "target_pair": [
+        "OID#2487",
+        "OID#2981"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#1164"
+      ],
+      "components": [
+        30,
+        30
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#2487 and OID#2981 as accomplices in burglary CID#1164 on 2020-06-11. Accomplice group size is 3. Subject OID#2981 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1164 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_052",
+      "target_pair": [
+        "OID#104",
+        "OID#1579"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#1986"
+      ],
+      "components": [
+        31,
+        31
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#104 and OID#1579 as accomplices in burglary CID#1986 on 2020-02-03. Accomplice group size is 3. Subject OID#1579 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1986 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_053",
+      "target_pair": [
+        "OID#5925",
+        "OID#6707"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#4013"
+      ],
+      "components": [
+        32,
+        32
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5925 and OID#6707 as accomplices in burglary CID#4013 on 2020-06-26. Accomplice group size is 2. Subject OID#6707 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4013 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_054",
+      "target_pair": [
+        "OID#5185",
+        "OID#8112"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#2901"
+      ],
+      "components": [
+        33,
+        33
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5185 and OID#8112 as accomplices in burglary CID#2901 on 2020-03-13. Accomplice group size is 2. Subject OID#8112 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2901 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_055",
+      "target_pair": [
+        "OID#5386",
+        "OID#7715"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#3183"
+      ],
+      "components": [
+        34,
+        34
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#5386 and OID#7715 as accomplices in burglary CID#3183 on 2020-02-11. Accomplice group size is 2. Subject OID#7715 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3183 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_056",
+      "target_pair": [
+        "OID#3650",
+        "OID#4714"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#2052",
+        "CID#2053",
+        "CID#2054",
+        "CID#2055"
+      ],
+      "components": [
+        35,
+        35
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Authentic INP records document OID#3650 and OID#4714 as accomplices in burglary CID#2052 on 2020-02-29. Accomplice group size is 3. Subject OID#4714 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2052 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_057",
+      "target_pair": [
+        "OID#547",
+        "OID#613"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#190"
+      ],
+      "components": [
+        36,
+        36
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Authentic INP records document OID#547 and OID#613 as accomplices in burglary CID#190 on 2020-03-16. Accomplice group size is 5. Subject OID#613 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#190 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_058",
+      "target_pair": [
+        "OID#2015",
+        "OID#4284"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#6432"
+      ],
+      "components": [
+        37,
+        37
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#2015 and OID#4284 as accomplices in burglary CID#6432 on 2020-06-02. Accomplice group size is 2. Subject OID#4284 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6432 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_059",
+      "target_pair": [
+        "OID#7115",
+        "OID#7595"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#5441"
+      ],
+      "components": [
+        38,
+        38
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Authentic INP records document OID#7115 and OID#7595 as accomplices in burglary CID#5441 on 2020-01-16. Accomplice group size is 2. Subject OID#7595 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5441 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_060",
+      "target_pair": [
+        "OID#565",
+        "OID#570"
+      ],
+      "label": 1,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [
+        "CID#209"
+      ],
+      "components": [
+        39,
+        39
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Authentic INP records document OID#565 and OID#570 as accomplices in burglary CID#209 on 2020-06-24. Accomplice group size is 5. Subject OID#570 is referenced under a street alias moniker requiring agent alias resolution against authentic field intelligence.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#209 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_061",
+      "target_pair": [
+        "OID#5392",
+        "OID#70"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        84,
+        125
+      ],
+      "spatial_distance": 0.00338,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#5392 and OID#70 operate in geographic proximity during 2020-02 with distance 0.00338, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_062",
+      "target_pair": [
+        "OID#5077",
+        "OID#5645"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        72,
+        171
+      ],
+      "spatial_distance": 0.00374,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#5077 and OID#5645 operate in geographic proximity during 2020-04 with distance 0.00374, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_063",
+      "target_pair": [
+        "OID#5111",
+        "OID#6485"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        72,
+        171
+      ],
+      "spatial_distance": 0.00374,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#5111 and OID#6485 operate in geographic proximity during 2020-04 with distance 0.00374, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_064",
+      "target_pair": [
+        "OID#2186",
+        "OID#6637"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        65,
+        98
+      ],
+      "spatial_distance": 0.00377,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#2186 and OID#6637 operate in geographic proximity during 2020-04 with distance 0.00377, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_065",
+      "target_pair": [
+        "OID#2198",
+        "OID#8315"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        65,
+        98
+      ],
+      "spatial_distance": 0.00377,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#2198 and OID#8315 operate in geographic proximity during 2020-04 with distance 0.00377, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_066",
+      "target_pair": [
+        "OID#6017",
+        "OID#6580"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        27,
+        198
+      ],
+      "spatial_distance": 0.0038,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#6017 and OID#6580 operate in geographic proximity during 2020-02 with distance 0.0038, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_067",
+      "target_pair": [
+        "OID#7083",
+        "OID#7745"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        27,
+        198
+      ],
+      "spatial_distance": 0.0038,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#7083 and OID#7745 operate in geographic proximity during 2020-02 with distance 0.0038, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_068",
+      "target_pair": [
+        "OID#4117",
+        "OID#5907"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        107,
+        168
+      ],
+      "spatial_distance": 0.00393,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#4117 and OID#5907 operate in geographic proximity during 2020-06 with distance 0.00393, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_069",
+      "target_pair": [
+        "OID#6682",
+        "OID#7620"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        14,
+        66
+      ],
+      "spatial_distance": 0.00405,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#6682 and OID#7620 operate in geographic proximity during 2020-01 with distance 0.00405, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_070",
+      "target_pair": [
+        "OID#2178",
+        "OID#8395"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        78,
+        195
+      ],
+      "spatial_distance": 0.00409,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#2178 and OID#8395 operate in geographic proximity during 2020-03 with distance 0.00409, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_071",
+      "target_pair": [
+        "OID#5669",
+        "OID#6142"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        18,
+        169
+      ],
+      "spatial_distance": 0.00421,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#5669 and OID#6142 operate in geographic proximity during 2020-02 with distance 0.00421, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_072",
+      "target_pair": [
+        "OID#6774",
+        "OID#7062"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        48,
+        92
+      ],
+      "spatial_distance": 0.00427,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#6774 and OID#7062 operate in geographic proximity during 2020-03 with distance 0.00427, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_073",
+      "target_pair": [
+        "OID#5201",
+        "OID#6167"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        109,
+        156
+      ],
+      "spatial_distance": 0.0045,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#5201 and OID#6167 operate in geographic proximity during 2020-01 with distance 0.0045, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_074",
+      "target_pair": [
+        "OID#6326",
+        "OID#6477"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        109,
+        156
+      ],
+      "spatial_distance": 0.0045,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#6326 and OID#6477 operate in geographic proximity during 2020-01 with distance 0.0045, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_075",
+      "target_pair": [
+        "OID#1389",
+        "OID#4950"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        71,
+        194
+      ],
+      "spatial_distance": 0.00473,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#1389 and OID#4950 operate in geographic proximity during 2020-01 with distance 0.00473, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_076",
+      "target_pair": [
+        "OID#5783",
+        "OID#9220"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        18,
+        169
+      ],
+      "spatial_distance": 0.00497,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#5783 and OID#9220 operate in geographic proximity during 2020-02 with distance 0.00497, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_077",
+      "target_pair": [
+        "OID#1671",
+        "OID#5910"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        25,
+        41
+      ],
+      "spatial_distance": 0.00503,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1671 and OID#5910 operate in geographic proximity during 2020-06 with distance 0.00503, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_078",
+      "target_pair": [
+        "OID#1496",
+        "OID#5818"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        29,
+        143
+      ],
+      "spatial_distance": 0.00508,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1496 and OID#5818 operate in geographic proximity during 2020-06 with distance 0.00508, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_079",
+      "target_pair": [
+        "OID#2933",
+        "OID#4982"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        75,
+        196
+      ],
+      "spatial_distance": 0.00511,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#2933 and OID#4982 operate in geographic proximity during 2020-04 with distance 0.00511, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_080",
+      "target_pair": [
+        "OID#4308",
+        "OID#8847"
+      ],
+      "label": 0,
+      "condition": "alias_ambiguity",
+      "shared_crime_ids": [],
+      "components": [
+        75,
+        196
+      ],
+      "spatial_distance": 0.00511,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#4308 and OID#8847 operate in geographic proximity during 2020-04 with distance 0.00511, but share ZERO crimes. Unlinked aliases in retrieved evidence describe distinct individuals and must not be conflated.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_081",
+      "target_pair": [
+        "OID#5224",
+        "OID#6140"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#2947"
+      ],
+      "components": [
+        40,
+        40
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#2947 on 2020-03-30. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2947 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_082",
+      "target_pair": [
+        "OID#5910",
+        "OID#6235"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#3985"
+      ],
+      "components": [
+        41,
+        41
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#3985 on 2020-06-10. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3985 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_083",
+      "target_pair": [
+        "OID#1837",
+        "OID#4428"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#2087"
+      ],
+      "components": [
+        42,
+        42
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#2087 on 2020-06-01. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2087 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_084",
+      "target_pair": [
+        "OID#3396",
+        "OID#7034"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#5363"
+      ],
+      "components": [
+        43,
+        43
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#5363 on 2020-05-30. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5363 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_085",
+      "target_pair": [
+        "OID#2543",
+        "OID#2615"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#1258"
+      ],
+      "components": [
+        44,
+        44
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#1258 on 2020-03-29. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1258 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_086",
+      "target_pair": [
+        "OID#710",
+        "OID#9508"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#5280"
+      ],
+      "components": [
+        45,
+        45
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#5280 on 2020-03-04. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5280 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_087",
+      "target_pair": [
+        "OID#7944",
+        "OID#8732"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#6057",
+        "CID#6058"
+      ],
+      "components": [
+        46,
+        46
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#6057 on 2020-03-30. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6057 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_088",
+      "target_pair": [
+        "OID#6781",
+        "OID#7786"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#5130"
+      ],
+      "components": [
+        47,
+        47
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#5130 on 2020-06-13. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5130 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_089",
+      "target_pair": [
+        "OID#6357",
+        "OID#7062"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#4623"
+      ],
+      "components": [
+        48,
+        48
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#4623 on 2020-03-21. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4623 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_090",
+      "target_pair": [
+        "OID#5976",
+        "OID#6545"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#4103"
+      ],
+      "components": [
+        49,
+        49
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#4103 on 2020-01-17. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4103 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_091",
+      "target_pair": [
+        "OID#1222",
+        "OID#1683"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#572"
+      ],
+      "components": [
+        50,
+        50
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#572 on 2020-04-28. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#572 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_092",
+      "target_pair": [
+        "OID#9347",
+        "OID#9396"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#6549"
+      ],
+      "components": [
+        51,
+        51
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#6549 on 2020-06-26. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6549 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_093",
+      "target_pair": [
+        "OID#9637",
+        "OID#9638"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#6688"
+      ],
+      "components": [
+        52,
+        52
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#6688 on 2020-04-28. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6688 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_094",
+      "target_pair": [
+        "OID#2497",
+        "OID#4290"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#1184"
+      ],
+      "components": [
+        53,
+        53
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#1184 on 2020-02-29. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1184 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_095",
+      "target_pair": [
+        "OID#1675",
+        "OID#8299"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#5862"
+      ],
+      "components": [
+        54,
+        54
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#5862 on 2020-01-07. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5862 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_096",
+      "target_pair": [
+        "OID#7825",
+        "OID#8047"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#6009"
+      ],
+      "components": [
+        55,
+        55
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#6009 on 2020-02-06. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6009 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_097",
+      "target_pair": [
+        "OID#6563",
+        "OID#7575"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#4861"
+      ],
+      "components": [
+        56,
+        56
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#4861 on 2020-06-20. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4861 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_098",
+      "target_pair": [
+        "OID#2978",
+        "OID#4112"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#1671"
+      ],
+      "components": [
+        57,
+        57
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#1671 on 2020-05-27. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1671 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_099",
+      "target_pair": [
+        "OID#7314",
+        "OID#9459"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#5640"
+      ],
+      "components": [
+        58,
+        58
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#5640 on 2020-01-10. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5640 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_100",
+      "target_pair": [
+        "OID#5665",
+        "OID#5670"
+      ],
+      "label": 1,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [
+        "CID#3646"
+      ],
+      "components": [
+        59,
+        59
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented accomplices in burglary CID#3646 on 2020-01-22. Primary joint arrest narrative is withheld from the retrieval corpus. Relationship must be synthesized via circumstantial wiretap logs.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3646 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_101",
+      "target_pair": [
+        "OID#5125",
+        "OID#8946"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        3,
+        89
+      ],
+      "spatial_distance": 0.00517,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#5125 and OID#8946 were active in 2020-01 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_102",
+      "target_pair": [
+        "OID#8634",
+        "OID#9194"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        3,
+        89
+      ],
+      "spatial_distance": 0.00517,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#8634 and OID#9194 were active in 2020-01 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_103",
+      "target_pair": [
+        "OID#4222",
+        "OID#5007"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        108,
+        130
+      ],
+      "spatial_distance": 0.00524,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#4222 and OID#5007 were active in 2020-05 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_104",
+      "target_pair": [
+        "OID#2497",
+        "OID#2773"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        10,
+        53
+      ],
+      "spatial_distance": 0.00543,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#2497 and OID#2773 were active in 2020-02 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_105",
+      "target_pair": [
+        "OID#3007",
+        "OID#4290"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        10,
+        53
+      ],
+      "spatial_distance": 0.00543,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#3007 and OID#4290 were active in 2020-02 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_106",
+      "target_pair": [
+        "OID#4368",
+        "OID#4717"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        10,
+        53
+      ],
+      "spatial_distance": 0.00543,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#4368 and OID#4717 were active in 2020-02 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_107",
+      "target_pair": [
+        "OID#6967",
+        "OID#8092"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        142,
+        170
+      ],
+      "spatial_distance": 0.00556,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#6967 and OID#8092 were active in 2020-03 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_108",
+      "target_pair": [
+        "OID#5550",
+        "OID#7733"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        2,
+        115
+      ],
+      "spatial_distance": 0.00565,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#5550 and OID#7733 were active in 2020-03 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_109",
+      "target_pair": [
+        "OID#7984",
+        "OID#8872"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        2,
+        115
+      ],
+      "spatial_distance": 0.00565,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#7984 and OID#8872 were active in 2020-03 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_110",
+      "target_pair": [
+        "OID#589",
+        "OID#7485"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        69,
+        105
+      ],
+      "spatial_distance": 0.00572,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#589 and OID#7485 were active in 2020-01 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_111",
+      "target_pair": [
+        "OID#1094",
+        "OID#1211"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        16,
+        111
+      ],
+      "spatial_distance": 0.00578,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1094 and OID#1211 were active in 2020-06 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_112",
+      "target_pair": [
+        "OID#1270",
+        "OID#1641"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        16,
+        111
+      ],
+      "spatial_distance": 0.00578,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1270 and OID#1641 were active in 2020-06 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_113",
+      "target_pair": [
+        "OID#1297",
+        "OID#2020"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        16,
+        111
+      ],
+      "spatial_distance": 0.00578,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1297 and OID#2020 were active in 2020-06 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_114",
+      "target_pair": [
+        "OID#1547",
+        "OID#2116"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        16,
+        111
+      ],
+      "spatial_distance": 0.00578,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1547 and OID#2116 were active in 2020-06 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_115",
+      "target_pair": [
+        "OID#1281",
+        "OID#4903"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        86,
+        178
+      ],
+      "spatial_distance": 0.006,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#1281 and OID#4903 were active in 2020-01 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_116",
+      "target_pair": [
+        "OID#3735",
+        "OID#7047"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        86,
+        178
+      ],
+      "spatial_distance": 0.006,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#3735 and OID#7047 were active in 2020-01 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_117",
+      "target_pair": [
+        "OID#3650",
+        "OID#4489"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        30,
+        35
+      ],
+      "spatial_distance": 0.00617,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#3650 and OID#4489 were active in 2020-02 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_118",
+      "target_pair": [
+        "OID#2443",
+        "OID#3781"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        174,
+        180
+      ],
+      "spatial_distance": 0.00618,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#2443 and OID#3781 were active in 2020-03 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_119",
+      "target_pair": [
+        "OID#3350",
+        "OID#8878"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        174,
+        180
+      ],
+      "spatial_distance": 0.00618,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#3350 and OID#8878 were active in 2020-03 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_120",
+      "target_pair": [
+        "OID#1974",
+        "OID#6046"
+      ],
+      "label": 0,
+      "condition": "missing_evidence",
+      "shared_crime_ids": [],
+      "components": [
+        108,
+        130
+      ],
+      "spatial_distance": 0.00618,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#1974 and OID#6046 were active in 2020-05 but share ZERO crime incidents. Primary records are omitted for respective independent incidents; circumstantial checks must verify absence of connection.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_121",
+      "target_pair": [
+        "OID#3175",
+        "OID#3447"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#1818"
+      ],
+      "components": [
+        60,
+        60
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1818 on 2020-01-03. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1818 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_122",
+      "target_pair": [
+        "OID#1102",
+        "OID#2180"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#480"
+      ],
+      "components": [
+        61,
+        61
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#480 on 2020-03-10. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#480 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_123",
+      "target_pair": [
+        "OID#3063",
+        "OID#3257"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#1760"
+      ],
+      "components": [
+        62,
+        62
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1760 on 2020-03-09. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1760 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_124",
+      "target_pair": [
+        "OID#1725",
+        "OID#3321"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#1899"
+      ],
+      "components": [
+        63,
+        63
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1899 on 2020-01-01. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1899 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_125",
+      "target_pair": [
+        "OID#3496",
+        "OID#3506"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#1980"
+      ],
+      "components": [
+        64,
+        64
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1980 on 2020-06-10. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1980 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_126",
+      "target_pair": [
+        "OID#6637",
+        "OID#8315"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#4967"
+      ],
+      "components": [
+        65,
+        65
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#4967 on 2020-04-05. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4967 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_127",
+      "target_pair": [
+        "OID#6682",
+        "OID#6741"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#5007"
+      ],
+      "components": [
+        66,
+        66
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#5007 on 2020-01-21. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5007 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_128",
+      "target_pair": [
+        "OID#6120",
+        "OID#6996"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#4275"
+      ],
+      "components": [
+        67,
+        67
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#4275 on 2020-05-04. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4275 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_129",
+      "target_pair": [
+        "OID#2688",
+        "OID#9030"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#3676",
+        "CID#3678",
+        "CID#3679"
+      ],
+      "components": [
+        68,
+        68
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#3676 on 2020-06-28. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3676 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_130",
+      "target_pair": [
+        "OID#7485",
+        "OID#7777"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#5772"
+      ],
+      "components": [
+        69,
+        69
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#5772 on 2020-01-08. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5772 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_131",
+      "target_pair": [
+        "OID#1827",
+        "OID#2066"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#771",
+        "CID#772"
+      ],
+      "components": [
+        70,
+        70
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#771 on 2020-01-18. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#771 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_132",
+      "target_pair": [
+        "OID#4950",
+        "OID#6503"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#2478"
+      ],
+      "components": [
+        71,
+        71
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#2478 on 2020-03-07. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2478 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_133",
+      "target_pair": [
+        "OID#5077",
+        "OID#5111"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#2714",
+        "CID#2715"
+      ],
+      "components": [
+        72,
+        72
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#2714 on 2020-05-03. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2714 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_134",
+      "target_pair": [
+        "OID#1225",
+        "OID#1930"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#574"
+      ],
+      "components": [
+        73,
+        73
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#574 on 2020-02-13. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#574 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_135",
+      "target_pair": [
+        "OID#1001",
+        "OID#1050"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#315"
+      ],
+      "components": [
+        74,
+        74
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#315 on 2020-02-18. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#315 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_136",
+      "target_pair": [
+        "OID#4982",
+        "OID#8847"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#2532"
+      ],
+      "components": [
+        75,
+        75
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#2532 on 2020-04-24. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2532 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_137",
+      "target_pair": [
+        "OID#1061",
+        "OID#1645"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#415"
+      ],
+      "components": [
+        76,
+        76
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#415 on 2020-02-09. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#415 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_138",
+      "target_pair": [
+        "OID#1014",
+        "OID#1859"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#335"
+      ],
+      "components": [
+        77,
+        77
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#335 on 2020-05-19. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#335 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_139",
+      "target_pair": [
+        "OID#2178",
+        "OID#2179"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#6640"
+      ],
+      "components": [
+        78,
+        78
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#6640 on 2020-03-29. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6640 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_140",
+      "target_pair": [
+        "OID#6458",
+        "OID#6459"
+      ],
+      "label": 1,
+      "condition": "distractors",
+      "shared_crime_ids": [
+        "CID#4743",
+        "CID#4744",
+        "CID#4746"
+      ],
+      "components": [
+        79,
+        79
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#4743 on 2020-03-25. Retrieval corpus is padded with irrelevant local incident reports from nearby coordinates.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4743 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_141",
+      "target_pair": [
+        "OID#473",
+        "OID#547"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        36,
+        166
+      ],
+      "spatial_distance": 0.00625,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#473 and OID#547 operate in high spatial proximity (dist: 0.00625) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_142",
+      "target_pair": [
+        "OID#474",
+        "OID#613"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        36,
+        166
+      ],
+      "spatial_distance": 0.00625,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#474 and OID#613 operate in high spatial proximity (dist: 0.00625) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_143",
+      "target_pair": [
+        "OID#501",
+        "OID#661"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        36,
+        166
+      ],
+      "spatial_distance": 0.00625,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#501 and OID#661 operate in high spatial proximity (dist: 0.00625) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_144",
+      "target_pair": [
+        "OID#759",
+        "OID#908"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        36,
+        166
+      ],
+      "spatial_distance": 0.00625,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#759 and OID#908 operate in high spatial proximity (dist: 0.00625) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_145",
+      "target_pair": [
+        "OID#775",
+        "OID#946"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        36,
+        166
+      ],
+      "spatial_distance": 0.00625,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#775 and OID#946 operate in high spatial proximity (dist: 0.00625) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_146",
+      "target_pair": [
+        "OID#2978",
+        "OID#6764"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        26,
+        57
+      ],
+      "spatial_distance": 0.00627,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#2978 and OID#6764 operate in high spatial proximity (dist: 0.00627) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_147",
+      "target_pair": [
+        "OID#5118",
+        "OID#5675"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        23,
+        141
+      ],
+      "spatial_distance": 0.00642,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#5118 and OID#5675 operate in high spatial proximity (dist: 0.00642) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_148",
+      "target_pair": [
+        "OID#4742",
+        "OID#541"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        8,
+        154
+      ],
+      "spatial_distance": 0.00648,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#4742 and OID#541 operate in high spatial proximity (dist: 0.00648) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_149",
+      "target_pair": [
+        "OID#627",
+        "OID#6323"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        8,
+        154
+      ],
+      "spatial_distance": 0.00648,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#627 and OID#6323 operate in high spatial proximity (dist: 0.00648) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_150",
+      "target_pair": [
+        "OID#167",
+        "OID#6208"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        13,
+        139
+      ],
+      "spatial_distance": 0.00649,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#167 and OID#6208 operate in high spatial proximity (dist: 0.00649) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_151",
+      "target_pair": [
+        "OID#4112",
+        "OID#7207"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        26,
+        57
+      ],
+      "spatial_distance": 0.00666,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#4112 and OID#7207 operate in high spatial proximity (dist: 0.00666) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_152",
+      "target_pair": [
+        "OID#7575",
+        "OID#7950"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        19,
+        56
+      ],
+      "spatial_distance": 0.00669,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#7575 and OID#7950 operate in high spatial proximity (dist: 0.00669) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_153",
+      "target_pair": [
+        "OID#2539",
+        "OID#7003"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        90,
+        176
+      ],
+      "spatial_distance": 0.00677,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#2539 and OID#7003 operate in high spatial proximity (dist: 0.00677) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_154",
+      "target_pair": [
+        "OID#5324",
+        "OID#6235"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        25,
+        41
+      ],
+      "spatial_distance": 0.00701,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#5324 and OID#6235 operate in high spatial proximity (dist: 0.00701) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_155",
+      "target_pair": [
+        "OID#6343",
+        "OID#6666"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        140,
+        168
+      ],
+      "spatial_distance": 0.00723,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#6343 and OID#6666 operate in high spatial proximity (dist: 0.00723) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_156",
+      "target_pair": [
+        "OID#1061",
+        "OID#5941"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        76,
+        100
+      ],
+      "spatial_distance": 0.00725,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#1061 and OID#5941 operate in high spatial proximity (dist: 0.00725) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_157",
+      "target_pair": [
+        "OID#1645",
+        "OID#7946"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        76,
+        100
+      ],
+      "spatial_distance": 0.00725,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#1645 and OID#7946 operate in high spatial proximity (dist: 0.00725) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_158",
+      "target_pair": [
+        "OID#1958",
+        "OID#8402"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        29,
+        143
+      ],
+      "spatial_distance": 0.00749,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1958 and OID#8402 operate in high spatial proximity (dist: 0.00749) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_159",
+      "target_pair": [
+        "OID#1751",
+        "OID#5185"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        33,
+        179
+      ],
+      "spatial_distance": 0.00791,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#1751 and OID#5185 operate in high spatial proximity (dist: 0.00791) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_160",
+      "target_pair": [
+        "OID#2093",
+        "OID#8112"
+      ],
+      "label": 0,
+      "condition": "distractors",
+      "shared_crime_ids": [],
+      "components": [
+        33,
+        179
+      ],
+      "spatial_distance": 0.00791,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#2093 and OID#8112 operate in high spatial proximity (dist: 0.00791) but share ZERO crime incidents. Corpus is padded with irrelevant incident distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_161",
+      "target_pair": [
+        "OID#2418",
+        "OID#4150"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#1081"
+      ],
+      "components": [
+        80,
+        80
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1081 on 2020-04-15. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1081 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_162",
+      "target_pair": [
+        "OID#2792",
+        "OID#2807"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#1499"
+      ],
+      "components": [
+        81,
+        81
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1499 on 2020-03-31. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1499 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_163",
+      "target_pair": [
+        "OID#7288",
+        "OID#7632"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#5619"
+      ],
+      "components": [
+        82,
+        82
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#5619 on 2020-05-16. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5619 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_164",
+      "target_pair": [
+        "OID#1820",
+        "OID#5485"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#3345"
+      ],
+      "components": [
+        83,
+        83
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#3345 on 2020-03-04. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3345 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_165",
+      "target_pair": [
+        "OID#117",
+        "OID#122"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#85"
+      ],
+      "components": [
+        84,
+        84
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#85 on 2020-06-25. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#85 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_166",
+      "target_pair": [
+        "OID#9456",
+        "OID#9470"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#6612",
+        "CID#6613"
+      ],
+      "components": [
+        85,
+        85
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#6612 on 2020-05-23. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#6612 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_167",
+      "target_pair": [
+        "OID#1281",
+        "OID#3735"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#1604"
+      ],
+      "components": [
+        86,
+        86
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1604 on 2020-01-21. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1604 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_168",
+      "target_pair": [
+        "OID#5424",
+        "OID#8951"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#3248"
+      ],
+      "components": [
+        87,
+        87
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#3248 on 2020-03-30. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3248 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_169",
+      "target_pair": [
+        "OID#6573",
+        "OID#9205"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#4869"
+      ],
+      "components": [
+        88,
+        88
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#4869 on 2020-06-30. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#4869 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_170",
+      "target_pair": [
+        "OID#5125",
+        "OID#8634"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#2794",
+        "CID#2795",
+        "CID#2796",
+        "CID#2797",
+        "CID#2798",
+        "CID#2799",
+        "CID#2801",
+        "CID#2802"
+      ],
+      "components": [
+        89,
+        89
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#2794 on 2020-01-27. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2794 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_171",
+      "target_pair": [
+        "OID#7003",
+        "OID#7662"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#5313"
+      ],
+      "components": [
+        90,
+        90
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#5313 on 2020-06-03. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5313 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_172",
+      "target_pair": [
+        "OID#712",
+        "OID#714"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#1913"
+      ],
+      "components": [
+        91,
+        91
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1913 on 2020-05-05. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1913 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_173",
+      "target_pair": [
+        "OID#6774",
+        "OID#7788"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#5125"
+      ],
+      "components": [
+        92,
+        92
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#5125 on 2020-03-24. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#5125 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_174",
+      "target_pair": [
+        "OID#1568",
+        "OID#2251"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#836"
+      ],
+      "components": [
+        93,
+        93
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#836 on 2020-02-04. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#836 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_175",
+      "target_pair": [
+        "OID#1585",
+        "OID#5360"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#3150"
+      ],
+      "components": [
+        94,
+        94
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#3150 on 2020-01-02. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#3150 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_176",
+      "target_pair": [
+        "OID#2712",
+        "OID#3255"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#1444"
+      ],
+      "components": [
+        95,
+        95
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#1444 on 2020-05-09. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#1444 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_177",
+      "target_pair": [
+        "OID#1188",
+        "OID#1262"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#551"
+      ],
+      "components": [
+        96,
+        96
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#551 on 2020-02-06. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#551 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_178",
+      "target_pair": [
+        "OID#5016",
+        "OID#7050"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#2609"
+      ],
+      "components": [
+        97,
+        97
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#2609 on 2020-03-14. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2609 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_179",
+      "target_pair": [
+        "OID#2186",
+        "OID#2198"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#783",
+        "CID#784"
+      ],
+      "components": [
+        98,
+        98
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#783 on 2020-04-18. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#783 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_180",
+      "target_pair": [
+        "OID#5015",
+        "OID#8439"
+      ],
+      "label": 1,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [
+        "CID#2601"
+      ],
+      "components": [
+        99,
+        99
+      ],
+      "spatial_distance": 0.0,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "Documented co-offenders in burglary CID#2601 on 2020-02-02. Evidence combines alias usage, distractor noise, and circumstantial wiretap communications.",
+      "epistemic_limitation": "Label reflects factual joint burglary charge in CID#2601 within evaluation window."
+    },
+    {
+      "case_id": "TEST_CASE_181",
+      "target_pair": [
+        "OID#2108",
+        "OID#4714"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        35,
+        76
+      ],
+      "spatial_distance": 0.00808,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#2108 and OID#4714 were active during 2020-02 in adjacent sectors (dist: 0.00808), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_182",
+      "target_pair": [
+        "OID#2112",
+        "OID#4782"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        35,
+        76
+      ],
+      "spatial_distance": 0.00808,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#2112 and OID#4782 were active during 2020-02 in adjacent sectors (dist: 0.00808), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_183",
+      "target_pair": [
+        "OID#5153",
+        "OID#7378"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        102,
+        142
+      ],
+      "spatial_distance": 0.0088,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#5153 and OID#7378 were active during 2020-01 in adjacent sectors (dist: 0.0088), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_184",
+      "target_pair": [
+        "OID#2200",
+        "OID#6588"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        98,
+        139
+      ],
+      "spatial_distance": 0.00883,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#2200 and OID#6588 were active during 2020-04 in adjacent sectors (dist: 0.00883), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_185",
+      "target_pair": [
+        "OID#1296",
+        "OID#5477"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        112,
+        149
+      ],
+      "spatial_distance": 0.00914,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#1296 and OID#5477 were active during 2020-04 in adjacent sectors (dist: 0.00914), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_186",
+      "target_pair": [
+        "OID#1970",
+        "OID#5604"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        112,
+        149
+      ],
+      "spatial_distance": 0.00914,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#1970 and OID#5604 were active during 2020-04 in adjacent sectors (dist: 0.00914), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_187",
+      "target_pair": [
+        "OID#2010",
+        "OID#8559"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        29,
+        143
+      ],
+      "spatial_distance": 0.00923,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#2010 and OID#8559 were active during 2020-06 in adjacent sectors (dist: 0.00923), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_188",
+      "target_pair": [
+        "OID#2684",
+        "OID#5222"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        21,
+        117
+      ],
+      "spatial_distance": 0.00933,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#2684 and OID#5222 were active during 2020-05 in adjacent sectors (dist: 0.00933), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_189",
+      "target_pair": [
+        "OID#7559",
+        "OID#8681"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        21,
+        117
+      ],
+      "spatial_distance": 0.00933,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#7559 and OID#8681 were active during 2020-05 in adjacent sectors (dist: 0.00933), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_190",
+      "target_pair": [
+        "OID#1568",
+        "OID#7133"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        93,
+        125
+      ],
+      "spatial_distance": 0.00938,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#1568 and OID#7133 were active during 2020-02 in adjacent sectors (dist: 0.00938), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_191",
+      "target_pair": [
+        "OID#714",
+        "OID#7476"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        91,
+        145
+      ],
+      "spatial_distance": 0.00939,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#714 and OID#7476 were active during 2020-05 in adjacent sectors (dist: 0.00939), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_192",
+      "target_pair": [
+        "OID#2167",
+        "OID#2804"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        105,
+        147
+      ],
+      "spatial_distance": 0.00943,
+      "temporal_overlap": [
+        "2020-02"
+      ],
+      "factual_rationale": "OID#2167 and OID#2804 were active during 2020-02 in adjacent sectors (dist: 0.00943), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_193",
+      "target_pair": [
+        "OID#1837",
+        "OID#8280"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        42,
+        140
+      ],
+      "spatial_distance": 0.00957,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#1837 and OID#8280 were active during 2020-06 in adjacent sectors (dist: 0.00957), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_194",
+      "target_pair": [
+        "OID#6155",
+        "OID#9236"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        19,
+        153
+      ],
+      "spatial_distance": 0.00972,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#6155 and OID#9236 were active during 2020-06 in adjacent sectors (dist: 0.00972), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_195",
+      "target_pair": [
+        "OID#6710",
+        "OID#8966"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        23,
+        189
+      ],
+      "spatial_distance": 0.00993,
+      "temporal_overlap": [
+        "2020-04"
+      ],
+      "factual_rationale": "OID#6710 and OID#8966 were active during 2020-04 in adjacent sectors (dist: 0.00993), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_196",
+      "target_pair": [
+        "OID#2395",
+        "OID#634"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        20,
+        163
+      ],
+      "spatial_distance": 0.00995,
+      "temporal_overlap": [
+        "2020-05"
+      ],
+      "factual_rationale": "OID#2395 and OID#634 were active during 2020-05 in adjacent sectors (dist: 0.00995), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_197",
+      "target_pair": [
+        "OID#2487",
+        "OID#6781"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        30,
+        47
+      ],
+      "spatial_distance": 0.01004,
+      "temporal_overlap": [
+        "2020-06"
+      ],
+      "factual_rationale": "OID#2487 and OID#6781 were active during 2020-06 in adjacent sectors (dist: 0.01004), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_198",
+      "target_pair": [
+        "OID#5016",
+        "OID#5485"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        83,
+        97
+      ],
+      "spatial_distance": 0.01046,
+      "temporal_overlap": [
+        "2020-03"
+      ],
+      "factual_rationale": "OID#5016 and OID#5485 were active during 2020-03 in adjacent sectors (dist: 0.01046), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_199",
+      "target_pair": [
+        "OID#3133",
+        "OID#5836"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        28,
+        194
+      ],
+      "spatial_distance": 0.01086,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#3133 and OID#5836 were active during 2020-01 in adjacent sectors (dist: 0.01086), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    },
+    {
+      "case_id": "TEST_CASE_200",
+      "target_pair": [
+        "OID#4512",
+        "OID#7582"
+      ],
+      "label": 0,
+      "condition": "mixed_difficulty",
+      "shared_crime_ids": [],
+      "components": [
+        28,
+        194
+      ],
+      "spatial_distance": 0.01086,
+      "temporal_overlap": [
+        "2020-01"
+      ],
+      "factual_rationale": "OID#4512 and OID#7582 were active during 2020-01 in adjacent sectors (dist: 0.01086), but share ZERO crime incidents. Evidence contains unlinked aliases, omitted primary files, and distractors.",
+      "epistemic_limitation": "Closed-world negative: no shared burglary record observed in INP dataset."
+    }
+  ]
+}

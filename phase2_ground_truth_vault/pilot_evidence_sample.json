@@ -1,0 +1,132 @@
+{
+  "incident_reports": [
+    {
+      "report_id": "DOC_IR_PILOT_01_A",
+      "incident_id": "CID#6456",
+      "incident_date": "2020-01-17 02:40:00",
+      "location_sector": "Sector-Central-East",
+      "normalized_coordinates": [
+        0.5688,
+        0.6008
+      ],
+      "forced_entry_method": "Pry tool marks on rear ground-floor sliding window",
+      "stolen_property": [
+        "Assorted gold jewelry",
+        "Cash box",
+        "Tablet computer"
+      ],
+      "suspects_mentioned": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "narrative": "Patrol units responded to a silent burglar alarm at a commercial premises. Officers observed two individuals exiting through the rear alleyway carrying a dark duffel bag. Suspect 1 (identified as OID#4418) was detained at the corner; Suspect 2 (identified as OID#8864) was apprehended attempting to enter a nearby getaway sedan. Stolen items recovered on scene matched inventory reported by property owner.",
+      "is_distractor": false
+    },
+    {
+      "report_id": "DOC_IR_PILOT_02_B",
+      "incident_id": "CID#3528",
+      "incident_date": "2020-06-07 03:10:00",
+      "location_sector": "Sector-Central-East",
+      "normalized_coordinates": [
+        0.5565,
+        0.5957
+      ],
+      "forced_entry_method": "Forced lock on basement storage bulkhead",
+      "stolen_property": [
+        "Power tools",
+        "Bicycle"
+      ],
+      "suspects_mentioned": [
+        "OID#5590",
+        "OID#6449"
+      ],
+      "narrative": "Investigation into residential burglary in Sector-Central-East. Physical surveillance and forensic latent fingerprints recovered from the exterior frame identified OID#5590 and OID#6449. No other individuals observed.",
+      "is_distractor": false
+    }
+  ],
+  "call_detail_records": [
+    {
+      "cdr_id": "CDR_PILOT_01_01",
+      "call_timestamp": "2020-01-17 01:15:22",
+      "caller_identifier": "OID#4418",
+      "callee_identifier": "OID#8864",
+      "duration_seconds": 145,
+      "cell_tower_sector": "Sector-Central-East",
+      "call_type": "voice_call"
+    }
+  ],
+  "internal_provenance_manifest": [
+    {
+      "document_id": "DOC_IR_PILOT_01_A",
+      "is_synthetic": true,
+      "generator_version": "pilot_v1.0",
+      "generation_seed": 42,
+      "ground_truth_case_id": "PILOT_CASE_01",
+      "target_pair": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "source_incident_cid": "CID#6456",
+      "condition": "clean_evidence",
+      "generation_rule": "RULE_CO_OFFENDER_INCIDENT_REPORT_PRIMARY",
+      "underlying_entity_references": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "creation_timestamp": "2026-10-12T10:00:00Z"
+    },
+    {
+      "document_id": "CDR_PILOT_01_01",
+      "is_synthetic": true,
+      "generator_version": "pilot_v1.0",
+      "generation_seed": 42,
+      "ground_truth_case_id": "PILOT_CASE_01",
+      "target_pair": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "source_incident_cid": "CID#6456",
+      "condition": "clean_evidence",
+      "generation_rule": "RULE_CDR_CO_OFFENDER_PRE_CRIME",
+      "underlying_entity_references": [
+        "OID#4418",
+        "OID#8864"
+      ],
+      "creation_timestamp": "2026-10-12T10:00:00Z"
+    }
+  ],
+  "sanitized_retrieval_corpus_sample": [
+    {
+      "doc_id": "DOC_IR_68ca5aaf",
+      "doc_type": "incident_report",
+      "timestamp": "2020-01-17 02:40:00",
+      "text_content": "INCIDENT REPORT [DOC_IR_68ca5aaf] - CASE INC-2020-7182\nDate: 2020-01-17 02:40:00 | Sector: Sector-Central-East\nEntry Method: Pry tool marks on rear ground-floor sliding window\nStolen Items: Assorted gold jewelry, Cash box, Tablet computer\nSuspects/Persons of Interest: OID#4418, OID#8864\n\nNARRATIVE SUMMARY:\nPatrol units responded to a silent burglar alarm at a commercial premises. Officers observed two individuals exiting through the rear alleyway carrying a dark duffel bag. Suspect 1 (identified as OID#4418) was detained at the corner; Suspect 2 (identified as OID#8864) was apprehended attempting to enter a nearby getaway sedan. Stolen items recovered on scene matched inventory reported by property owner.",
+      "metadata": {
+        "incident_id": "INC-2020-7182",
+        "sector": "Sector-Central-East",
+        "date": "2020-01-17"
+      }
+    },
+    {
+      "doc_id": "CDR_055ad8bc",
+      "doc_type": "call_detail_record",
+      "timestamp": "2020-01-17 01:15:22",
+      "text_content": "COMMUNICATION INTERCEPT LOG [CDR_055ad8bc]\nTimestamp: 2020-01-17 01:15:22 | Type: VOICE_CALL\nCaller: OID#4418 -> Callee: OID#8864\nDuration: 145s | Originating Sector: Sector-Central-East",
+      "metadata": {
+        "sector": "Sector-Central-East",
+        "date": "2020-01-17"
+      }
+    },
+    {
+      "doc_id": "DOC_IR_b45ea549",
+      "doc_type": "incident_report",
+      "timestamp": "2020-06-07 03:10:00",
+      "text_content": "INCIDENT REPORT [DOC_IR_b45ea549] - CASE INC-2020-8341\nDate: 2020-06-07 03:10:00 | Sector: Sector-Central-East\nEntry Method: Forced lock on basement storage bulkhead\nStolen Items: Power tools, Bicycle\nSuspects/Persons of Interest: OID#5590, OID#6449\n\nNARRATIVE SUMMARY:\nInvestigation into residential burglary in Sector-Central-East. Physical surveillance and forensic latent fingerprints recovered from the exterior frame identified OID#5590 and OID#6449. No other individuals observed.",
+      "metadata": {
+        "incident_id": "INC-2020-8341",
+        "sector": "Sector-Central-East",
+        "date": "2020-06-07"
+      }
+    }
+  ]
+}

@@ -35,13 +35,8 @@ scratch/
 *.log
 .env
 local_config.py
-
-# Excluded raw upstream police dataset and candidate slices
+# Excluded raw upstream police dataset and candidate slices (unverified third-party redistribution rights)
 phase1_dataset_audit/data/
-
-# Quarantined ground-truth vault and test provenance (blind benchmark release)
-phase2_ground_truth_vault/
-phase2_corpus/test_internal_provenance.jsonl
 
 # Local PDF documents and build scripts
 *.pdf
@@ -52,7 +47,7 @@ phase2_experiment/PHASE2E1_AUDIT_REPORT.md
 phase2_experiment/PHASE2E_INTEGRATION_REPORT.md
 phase2_verification/PHASE2D_VERIFICATION_REPORT.md
 
-# Excluded intermediate milestone reports and working files (canonical report in docs/FINAL_ACADEMIC_REPORT.md)
+# Excluded intermediate milestone reports (canonical report in docs/FINAL_ACADEMIC_REPORT.md)
 PHASE2G1_SCORING_AUDIT_REPORT.md
 PHASE2G3_METRIC_RECALCULATION.json
 PHASE2G3_RESULTS_ANALYSIS_REPORT.md
@@ -60,14 +55,3 @@ PHASE2G4_ADJUDICATION_RESULTS.json
 PHASE2G4_CLAIMS_REGISTER.md
 PHASE2G4_INDEPENDENT_ADJUDICATION_REPORT.md
 PHASE2G4_STATISTICAL_RECONCILIATION.md
-phase2_artifact_hash_manifest.json
-phase1_dataset_audit/
-phase2_experiment/outputs/pilot_run_manifest.json
-phase2_experiment/outputs/pilot_scoring_report.json
-phase2_experiment/outputs/system_a_pilot_outputs.json
-phase2_experiment/outputs/system_b_pilot_outputs.json
-
-# Quarantined full-test case-level predictions and historical pre-audit report (blind benchmark release)
-phase2_experiment/outputs/original_full_test_scoring_report.json
-phase2_experiment/outputs/system_a_full_test_outputs.json
-phase2_experiment/outputs/system_b_full_test_outputs.json

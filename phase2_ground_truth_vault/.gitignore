@@ -1,0 +1,6 @@
+# Ignore pytest cache, scratch files, and local test artifacts
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.log
