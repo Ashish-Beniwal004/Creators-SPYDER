@@ -1,0 +1,80 @@
+{
+  "project": "SPYDER",
+  "branch": "release/curated-project-handoff",
+  "latest_commit": "3c535b6 chore(release): add private research handoff assets",
+  "test_results": {
+    "passed": 148,
+    "failed": 0,
+    "skipped": 4,
+    "total": 152,
+    "command": "python -m pytest phase2_corpus/tests phase2_retrieval/tests phase2_verification/tests phase2_experiment/tests phase2_ground_truth_vault/tests -v",
+    "exit_code": 0,
+    "skip_reason": "All skipped tests require the excluded raw Israel National Police source dataset."
+  },
+  "benchmark": {
+    "dataset_mode": "full_test",
+    "total_cases": 200,
+    "metric_source": "Historical phase2_experiment/outputs/full_test_scoring_report.json; not independently recalculated during the final pre-push audit.",
+    "system_a": {
+      "accuracy": 0.7,
+      "precision": 0.625,
+      "recall": 1.0,
+      "specificity": 0.4,
+      "false_positive_rate": 0.6,
+      "evidentiary_soundness": 0.1125,
+      "confusion_matrix": {
+        "tp": 100,
+        "fp": 60,
+        "tn": 40,
+        "fn": 0
+      }
+    },
+    "system_b": {
+      "accuracy": 0.7,
+      "precision": 1.0,
+      "recall": 0.4,
+      "specificity": 1.0,
+      "false_positive_rate": 0.0,
+      "evidentiary_soundness": 1.0,
+      "confusion_matrix": {
+        "tp": 40,
+        "fp": 0,
+        "tn": 100,
+        "fn": 60
+      }
+    }
+  },
+  "freeze_and_integrity": {
+    "target_pairs_sha256": "125e012b794440c6db8170bb4aa9c385472780bddc1174c6ba7e76096c711cd0",
+    "manifest_match": true,
+    "private_manifest_entries_verified": 15,
+    "public_manifest_entries_verified": 6,
+    "manifest_mismatches": 0,
+    "all_private_manifest_entries_verified": true,
+    "all_public_manifest_entries_verified": true
+  },
+  "system_b_false_negatives": {
+    "count": 60,
+    "distribution": {
+      "alias_ambiguity": 20,
+      "missing_evidence": 20,
+      "mixed_difficulty": 20
+    },
+    "conditions_with_zero_recall": [
+      "alias_ambiguity",
+      "missing_evidence",
+      "mixed_difficulty"
+    ]
+  },
+  "false_negative_cause_assessment": {
+    "case_level_trace_adjudication": "not performed",
+    "confirmed_root_cause_counts": null,
+    "note": "The stored condition-level distribution does not establish individual causes. Single-pass retrieval and strict verification are implementation characteristics and candidate mechanisms, not confirmed causes for these cases."
+  },
+  "latex_compiler_available": true,
+  "latex_compiler": "MiKTeX 25.12 pdflatex",
+  "report_source": "research_audit/SPYDER_Research_Audit_and_Next_Phase.tex",
+  "pdf_status": "Compiled successfully with pdflatex; PDF is present and readable",
+  "benchmark_files_unmodified": true,
+  "commit_or_push_performed": false
+}
