@@ -242,10 +242,20 @@ def extract_document_facts(doc: SanitizedRetrievalDocument) -> Dict:
     doc_type = doc.doc_type
 
     is_field_interview = bool(re.search(r"field (?:interview|stop)|pedestrian stop", text, re.IGNORECASE))
+    construction_container_burglary = bool(
+        re.search(
+            r"^\s*Entry Method:\s*cut\s+padlock\s+on\s+(?:the\s+)?construction\s+site\s+container\b",
+            text,
+            re.IGNORECASE | re.MULTILINE,
+        )
+    )
     is_burglary = (
         doc_type == "incident_report"
         and not is_field_interview
-        and bool(re.search(r"burglar|burglary|break-in|theft|forced lock|pried|jimmied|cut open", text, re.IGNORECASE))
+        and (
+            bool(re.search(r"burglar|burglary|break-in|forced lock|pried|jimmied|cut open", text, re.IGNORECASE))
+            or construction_container_burglary
+        )
     )
     in_window = is_within_evaluation_window(doc)
     solved_status = determine_solved_status(text) if is_burglary else "not_applicable"
