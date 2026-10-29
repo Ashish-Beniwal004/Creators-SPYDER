@@ -35,6 +35,8 @@ scratch/
 *.log
 .env
 local_config.py
+# Run artifacts are retained locally for review; publish selected reviewed runs explicitly.
+/experiment_runs/
 # Excluded raw upstream police dataset and candidate slices (unverified third-party redistribution rights)
 phase1_dataset_audit/data/
 

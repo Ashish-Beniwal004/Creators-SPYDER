@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-10-29T06:20:12.079587+00:00",
+  "kind": "deterministic_software_diagnostics_not_llm_results",
+  "python": "3.13.2",
+  "datasets": {
+    "pilot": {
+      "run_dir": "experiment_runs\\member3_pilot_20261029T062012079708Z",
+      "corpus_sha256": "a802aace8dd8c804d03e08252ec3241e23a7a500ed5dac63ccf17aa0f1293ded",
+      "arms": {
+        "system_a_rag_only": {
+          "total_cases": 10,
+          "true_positives": 5,
+          "false_positives": 2,
+          "true_negatives": 3,
+          "false_negatives": 0,
+          "accuracy": 0.8,
+          "precision": 0.7143,
+          "recall": 1.0,
+          "f1_score": 0.8333,
+          "specificity": 0.6,
+          "false_positive_rate": 0.4,
+          "accuracy_ci_95": [
+            0.4902,
+            0.9433
+          ],
+          "precision_ci_95": [
+            0.3589,
+            0.9178
+          ],
+          "recall_ci_95": [
+            0.5655,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2307,
+            0.8824
+          ]
+        },
+        "system_b_rag_verification": {
+          "total_cases": 10,
+          "true_positives": 4,
+          "false_positives": 0,
+          "true_negatives": 5,
+          "false_negatives": 1,
+          "accuracy": 0.9,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1_score": 0.8889,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.5959,
+            0.9821
+          ],
+          "precision_ci_95": [
+            0.5101,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.3755,
+            0.9638
+          ],
+          "specificity_ci_95": [
+            0.5655,
+            1.0
+          ]
+        }
+      }
+    },
+    "full_test": {
+      "run_dir": "experiment_runs\\member3_full_test_20261029T062012409350Z",
+      "corpus_sha256": "72d00c6250a73a385fef10792b38fa30aaae8b8a96dff94420e092980caf1349",
+      "arms": {
+        "system_a_rag_only": {
+          "total_cases": 200,
+          "true_positives": 100,
+          "false_positives": 60,
+          "true_negatives": 40,
+          "false_negatives": 0,
+          "accuracy": 0.7,
+          "precision": 0.625,
+          "recall": 1.0,
+          "f1_score": 0.7692,
+          "specificity": 0.4,
+          "false_positive_rate": 0.6,
+          "accuracy_ci_95": [
+            0.6332,
+            0.7593
+          ],
+          "precision_ci_95": [
+            0.5479,
+            0.6963
+          ],
+          "recall_ci_95": [
+            0.963,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.3094,
+            0.498
+          ]
+        },
+        "system_b_rag_verification": {
+          "total_cases": 200,
+          "true_positives": 71,
+          "false_positives": 0,
+          "true_negatives": 100,
+          "false_negatives": 29,
+          "accuracy": 0.855,
+          "precision": 1.0,
+          "recall": 0.71,
+          "f1_score": 0.8304,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.7995,
+            0.8971
+          ],
+          "precision_ci_95": [
+            0.9487,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.6146,
+            0.7899
+          ],
+          "specificity_ci_95": [
+            0.963,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "phase2_verification/verifier.py": "ee38a6521151aefe555a417a655cca14865b9947c50cfadabb908d481a317375",
+    "phase2_experiment/evaluator.py": "452103713ada2b4c3ea3634c636998a9547cf897ca171dca5f76beabffc418b4",
+    "phase2_experiment/score_run.py": "94e3aaf30c0586f9f1c9ab74ed05dfdd7701c0828abf1af2fca2a900037eac6d"
+  }
+}
