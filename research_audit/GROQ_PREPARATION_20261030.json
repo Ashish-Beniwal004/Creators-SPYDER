@@ -1,0 +1,90 @@
+{
+  "recorded_at_utc": "2026-10-30T08:37:46.073614+00:00",
+  "stage": "offline preparation complete; waiting for user to add key and request smoke",
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "live_groq_requests_made": 0,
+  "key_file_ignored": true,
+  "key_file_tracked": false,
+  "source": {
+    "commit": "6f35e83d447cf3040310ccd813e90f7aa9e3cd9c",
+    "branch": "feat/llm-integration-runner",
+    "merge_parent": "d7ec222659dfc739efef75f82ea26488b180821f",
+    "working_tree_status": "M .gitignore\n M FINAL_PROJECT_PLAN.md\n M LLM_INTEGRATION_PLAN.md\n M README.md\nM  phase2_corpus/tests/test_corpus_generation.py\nA  phase2_experiment/SCORING.md\nM  phase2_experiment/evaluator.py\nAM phase2_experiment/score_run.py\nA  phase2_experiment/tests/test_score_run.py\nM  phase2_experiment/tests/test_scoring_audit_and_quarantine.py\nA  phase2_verification/tests/test_alias_grounding.py\nM  phase2_verification/tests/test_verification.py\nM  phase2_verification/verifier.py\n M phase3_llm/README.md\n M phase3_llm/gemini.py\n M phase3_llm/model.py\n M phase3_llm/runner.py\n M phase3_llm/tests/test_pipeline.py\nA  research_audit/MEMBER2_PILOT_EVIDENCE_AUDIT.md\nA  research_audit/MEMBER3_HANDOFF.md\nA  research_audit/member3_deterministic_validation.json\nA  research_audit/member3_environment.txt\n?? MID_SUBMISSION_PROGRESS.md\n?? PILOT_RUNBOOK.md\n?? phase2_experiment/checkpoint.py\n?? phase2_experiment/tests/test_checkpoint.py\n?? phase3_llm/groq.py\n?? phase3_llm/preflight.py\n?? phase3_llm/quota.py\n?? phase3_llm/tests/test_groq.py\n?? phase3_llm/tests/test_repository_integration.py\n?? research_audit/GEMINI_LLM_README_20261030.md\n?? research_audit/GEMINI_PILOT_RUNBOOK_20261030.md\n?? research_audit/OCT30_LIVE_VALIDATION.json",
+    "implementation_hashes": {
+      "__init__.py": "8665218d8685efa501269d9e34da2cbe076e4d0ae6a642d5e8432878a4cdbd2c",
+      "contracts.py": "64d0a88bcee765f9f5bea200b98d768c460a078c45730a815cd29ed9bab44d35",
+      "fixtures.py": "4dfa19f8aea85eae56bfb1dd59651d1fd850ef66ae95f0d3e3f8dcdcfa33955c",
+      "gemini.py": "821837b8cb02f292b53ade999ed83b39b5492f5d74e22741916b1bd726727901",
+      "groq.py": "3d1c8e821475c2a10f62a3f9b13e462586c955317d6f1117219dd581336bee2a",
+      "model.py": "eca1e26bf9ccf85e0458be8ef91d2315e976403473051c110318405506d0395b",
+      "preflight.py": "114d2872c5a1e720570bf110dce3e446ac7416fca1f8d8bd1e8724baeb54a536",
+      "prompts.py": "1ab5d5c7c37e631fd3af187e4f2f2c344e6aece04bb4777a5fe8ed52d5174265",
+      "quota.py": "abddddc07e92bb7ab35a4a8e26542963e2cde6c0b866513d5067d7e43a2ba321",
+      "runner.py": "49c77e8afe5b559b3e74e25477ba0cef7b5ef5cde7fd6922dcac596e59bebcd7",
+      "services.py": "d711fc075d6b60f7389b411a0ad54ea1a6d9301063a970f5cffa2b4acaf8bd24",
+      "systems.py": "29aa1f46c0b66ef0299fb3c1b0bcb7943ba6bd81bfabbb56df9c2f0b79697317"
+    },
+    "repository_dependency_hashes": {
+      "phase2_retrieval/__init__.py": "eeebe2aacceda0af1453d4524790dc74abbe93c646a06a2ed41027a91f1510fd",
+      "phase2_retrieval/retriever.py": "2af5be26b60f8dca0923c93c3ffa40dd507be4b01dce5fb1ff7c6c64d1980e9f",
+      "phase2_retrieval/schemas.py": "c1e14d196024acfdf6df9eb9555698c1764d581658502dced7e9f15934444542",
+      "phase2_verification/__init__.py": "89fdf520720cf6765dc0e8f5d1034129446e66597aa09a412db7ac14358c743a",
+      "phase2_verification/schemas.py": "9ebc63055919aaba130f9ead747b944a5a965590a67977053b5dbdb1171945de",
+      "phase2_verification/verifier.py": "ee38a6521151aefe555a417a655cca14865b9947c50cfadabb908d481a317375",
+      "phase2_ground_truth_vault/build_test_benchmark.py": "4fb8be941cffc5984392dec1f908456b1b6b66f9b90ca2fef6149c068a597da8",
+      "phase2_ground_truth_vault/freeze_pilot.py": "0c63aeb7497642b170437b337cdb6782cdb919d15f9912a9cf587fdc8dea2104",
+      "phase2_ground_truth_vault/schemas.py": "7356e2543e2efb164d467e9aab7c3d6288676024600d8d3d97a49516502b8ebc",
+      "phase2_experiment/__init__.py": "6b7828668b70c4599bbf9cffd0c52fcd6c2d4dcefb19c933991afab439364799",
+      "phase2_experiment/checkpoint.py": "4c1d50a42ab84c4fcd11547acc229762efa488665c9f796fd49944b8abe097b3",
+      "phase2_experiment/config.py": "2bf14130874542e721976b933b8cd3535b73c7db32ccdd548cb1da350ba4e43b",
+      "phase2_experiment/evaluator.py": "452103713ada2b4c3ea3634c636998a9547cf897ca171dca5f76beabffc418b4",
+      "phase2_experiment/runner.py": "89f7c0a3137b87869f992aa776c02c825cdb2d350d816d6bfd602414303e7572",
+      "phase2_experiment/schemas.py": "826b4dd67f1da516c4bdcc68eb475649d899955168389521deab5fb318adb301",
+      "phase2_experiment/score_run.py": "01e5ab30a6b68471d1669f83e3c70d4a85cb962687dd69dd9fb221838ca78fd7",
+      "phase2_experiment/system_a.py": "3164de394c910fe39a28c4968fd2a3824294adfe8a4057415ff5183f139c1f36",
+      "phase2_experiment/system_b.py": "c628dca0fe5b0766bc9b083bb8cc085fabad96cd438a270bd599d902e1394d00"
+    },
+    "environment": {
+      "python": "3.13.2",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "packages": {
+        "pydantic": "2.14.1",
+        "scikit-learn": "1.9.1",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1"
+      }
+    }
+  },
+  "validation": {
+    "passed": 221,
+    "skipped": 4,
+    "subtests_passed": 30,
+    "note": "Four skips need absent upstream source data. Fake HTTP bridge covers all ten pilot pairs; it is not model inference."
+  },
+  "preflight": {
+    "pairs": 10,
+    "requests_for_both_arms": 30,
+    "estimated_input_tokens_total": 67427,
+    "maximum_generation_allowance_total": 122880,
+    "estimated_input_plus_max_generation_total": 190307,
+    "maximum_single_request_estimate": 7732,
+    "all_requests_pass_estimated_8k_guard": true,
+    "worst_allowance_fits_default_170k_run_budget": false
+  },
+  "preflight_report_sha256": "e6417cecb19e4d27b258e80d8635abbdef287b01444573bbc235fec28c1bfae6",
+  "budget_policy": {
+    "smoke_model_calls": 3,
+    "smoke_run_token_limit": 20000,
+    "pilot_model_calls": 30,
+    "pilot_run_token_limit": 170000,
+    "rolling_24h_workspace_limit": 180000,
+    "per_request_reservation": 8000,
+    "request_interval_seconds": 90,
+    "exact_tokenization": false,
+    "automatic_retries": 0,
+    "caveat": "Measure actual smoke usage and external organization allowance before running. Local budgets can halt an incomplete pilot."
+  },
+  "historic_gemini_results_preserved": true,
+  "committed_or_pushed_by_assistant": false
+}

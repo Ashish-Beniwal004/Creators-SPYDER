@@ -1,0 +1,513 @@
+{
+  "recorded_at_utc": "2026-10-30T09:33:44.551313+00:00",
+  "stage": "actual Groq pilot completed, scored and copied-bundle metrics reproduced",
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "mode": "experiment",
+  "run_id": "groq_pilot_01",
+  "started_at_utc": "2026-10-30T08:58:01.397856+00:00",
+  "finished_at_utc": "2026-10-30T09:29:53.888350+00:00",
+  "finished_at_ist": "2026-10-30T14:59:53.888350+05:30",
+  "expected_executions": 20,
+  "completed_executions": 20,
+  "failed_executions": 0,
+  "missing_executions": 0,
+  "paired_cases": 10,
+  "provider_requests_sent": 30,
+  "model_reported_ids": [
+    "openai/gpt-oss-120b"
+  ],
+  "usage": {
+    "prompt_tokens": 30956,
+    "completion_tokens": 11635,
+    "total_tokens": 42591
+  },
+  "reasoning_tokens_included_in_completion": 7941,
+  "maximum_reported_request_tokens": 2037,
+  "same_decision_pairs": 10,
+  "arms": {
+    "system_a_rag_only": {
+      "coverage": {
+        "expected": 10,
+        "completed": 10,
+        "failed": 0,
+        "missing_result_records": 0
+      },
+      "binary_metrics_completed_only": {
+        "total_cases": 10,
+        "true_positives": 4,
+        "false_positives": 0,
+        "true_negatives": 5,
+        "false_negatives": 1,
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1_score": 0.8889,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "accuracy_ci_95": [
+          0.5959,
+          0.9821
+        ],
+        "precision_ci_95": [
+          0.5101,
+          1.0
+        ],
+        "recall_ci_95": [
+          0.3755,
+          0.9638
+        ],
+        "specificity_ci_95": [
+          0.5655,
+          1.0
+        ]
+      },
+      "decisions": {
+        "Supported": 4,
+        "Insufficient Evidence": 6
+      },
+      "calls": {
+        "attempted_model_calls": 10,
+        "requested_tool_calls": 0,
+        "provider_requests_sent": 10,
+        "accepted_tool_calls": 0,
+        "unaccepted_tool_calls": 0,
+        "completed_tool_calls": 0,
+        "tool_call_validity_rate": null
+      },
+      "provider_reported_usage": {
+        "queue_time": 2.926587327,
+        "prompt_tokens": 8737,
+        "prompt_time": 1.181370752,
+        "completion_tokens": 4627,
+        "completion_time": 9.788593356,
+        "total_tokens": 13364,
+        "total_time": 10.969964108
+      },
+      "per_condition": {
+        "alias_ambiguity": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "clean_evidence": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "distractors": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "missing_evidence": {
+          "total_cases": 2,
+          "true_positives": 0,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 1,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.0945,
+            0.9055
+          ],
+          "precision_ci_95": null,
+          "recall_ci_95": [
+            0.0,
+            0.7935
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "mixed_difficulty": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        }
+      }
+    },
+    "system_b_rag_verification": {
+      "coverage": {
+        "expected": 10,
+        "completed": 10,
+        "failed": 0,
+        "missing_result_records": 0
+      },
+      "binary_metrics_completed_only": {
+        "total_cases": 10,
+        "true_positives": 4,
+        "false_positives": 0,
+        "true_negatives": 5,
+        "false_negatives": 1,
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1_score": 0.8889,
+        "specificity": 1.0,
+        "false_positive_rate": 0.0,
+        "accuracy_ci_95": [
+          0.5959,
+          0.9821
+        ],
+        "precision_ci_95": [
+          0.5101,
+          1.0
+        ],
+        "recall_ci_95": [
+          0.3755,
+          0.9638
+        ],
+        "specificity_ci_95": [
+          0.5655,
+          1.0
+        ]
+      },
+      "decisions": {
+        "Supported": 4,
+        "Insufficient Evidence": 6
+      },
+      "calls": {
+        "attempted_model_calls": 20,
+        "requested_tool_calls": 10,
+        "provider_requests_sent": 20,
+        "accepted_tool_calls": 10,
+        "unaccepted_tool_calls": 0,
+        "completed_tool_calls": 10,
+        "tool_call_validity_rate": 1.0
+      },
+      "provider_reported_usage": {
+        "queue_time": 6.307320510999999,
+        "prompt_tokens": 22219,
+        "prompt_time": 1.2986597129999997,
+        "completion_tokens": 7008,
+        "completion_time": 14.763909788000001,
+        "total_tokens": 29227,
+        "total_time": 16.062569501
+      },
+      "per_condition": {
+        "alias_ambiguity": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "clean_evidence": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "distractors": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "missing_evidence": {
+          "total_cases": 2,
+          "true_positives": 0,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 1,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.0945,
+            0.9055
+          ],
+          "precision_ci_95": null,
+          "recall_ci_95": [
+            0.0,
+            0.7935
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "mixed_difficulty": {
+          "total_cases": 2,
+          "true_positives": 1,
+          "false_positives": 0,
+          "true_negatives": 1,
+          "false_negatives": 0,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "specificity": 1.0,
+          "false_positive_rate": 0.0,
+          "accuracy_ci_95": [
+            0.3424,
+            1.0
+          ],
+          "precision_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "recall_ci_95": [
+            0.2065,
+            1.0
+          ],
+          "specificity_ci_95": [
+            0.2065,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "smoke": {
+    "successful_run": "groq_smoke_02",
+    "completed_executions": 2,
+    "requests": 3,
+    "reported_tokens": 2199,
+    "failed_prior_run": "groq_smoke_01",
+    "prior_error": "HTTP 403 / security-filter code 1010; fixed application User-Agent",
+    "prior_failed_requests": 1,
+    "unknown_usage_reservation": 8000,
+    "model_access_diagnostic_get_requests": 2
+  },
+  "workspace_groq_totals": {
+    "http_generation_attempts_including_blocked_smoke": 34,
+    "successful_generation_responses": 33,
+    "reported_tokens": 44790,
+    "ledger_charged_including_unknown_usage": 52790,
+    "external_organization_usage_known": false
+  },
+  "offline_checks": {
+    "passed": 221,
+    "skipped": 4,
+    "subtests_passed": 30,
+    "note": "After User-Agent regression assertion. Four skips require absent upstream graph."
+  },
+  "reproduction": {
+    "copied_native_run_scored_successfully": true,
+    "serialized_metrics_equal_to_original": true,
+    "source_files_hash_verified": 30,
+    "source_changed_during_pilot": false,
+    "manifest_sha256": "4c285437b00fe3c6b87b9399619eb309748a2b11a7ca13cf2df74917b729f65a",
+    "report_sha256": "6b2a27c70e4edf2af2b06d6f3f78316b4b3bd4bea47e1d8f43f176de3ab641af"
+  },
+  "manual_review": {
+    "system_a_rag_only": {
+      "rated_executions": 0,
+      "reviewed_positive_assertions": 0,
+      "positive_support_assessments": {},
+      "decisively_reviewed_positive_assertions": 0,
+      "manual_unsupported_assertion_rate": null,
+      "three_way_reference_count": 0,
+      "three_way_accuracy": null
+    },
+    "system_b_rag_verification": {
+      "rated_executions": 0,
+      "reviewed_positive_assertions": 0,
+      "positive_support_assessments": {},
+      "decisively_reviewed_positive_assertions": 0,
+      "manual_unsupported_assertion_rate": null,
+      "three_way_reference_count": 0,
+      "three_way_accuracy": null
+    }
+  },
+  "interpretation": [
+    "No observed binary improvement from verification; both arms made the same ten decisions.",
+    "Shared binary false negative: missing_evidence; retrieved CDRs lack a usable joint-burglary link. Human evidence review is pending.",
+    "Retrieval relevance is a generation-rule diagnostic for only three eligible pairs, not complete-corpus evidentiary recall.",
+    "Single sampled run on a tiny synthetic development pilot; no held-out, stability or significance claim.",
+    "Saved-output scoring reproduced; new API generations need not be identical."
+  ],
+  "gemini_results_pooled": false,
+  "committed_by_assistant": false,
+  "pushed_by_assistant": false,
+  "github_submission_status": "User review, commit and manual push still required",
+  "final_checks": {
+    "secret_scan_files": 44,
+    "actual_key_matches": 0,
+    "key_files_ignored_and_untracked": [
+      ".groq_api_key",
+      ".gemini_api_key"
+    ],
+    "bundle_files_hash_verified": 24,
+    "bundle_size_bytes": 547913,
+    "main_frozen_manifest_entries_matched": 15,
+    "public_frozen_manifest_entries_matched": 6,
+    "whitespace_checks_passed": true,
+    "note": "These checks followed final documentation and packaging. No source change followed the 221-pass validation."
+  }
+}

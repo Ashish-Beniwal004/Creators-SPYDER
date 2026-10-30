@@ -1,0 +1,9 @@
+# Exact installed versions for this checkpoint; no installation was performed.
+pydantic==2.14.1
+pydantic_core==2.50.1
+scikit-learn==1.9.1
+numpy==2.5.4
+scipy==1.18.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+pytest==9.2.0

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "evidence_review/pair_01.md": "db533ca82cf8f4c1bd2325c5c7e415faba5aa2da7b1c405c4f630808c7392e31",
+    "evidence_review/pair_02.md": "b556e16e1c599030859e8cb198661474cc4527318b82e40dab13b51150c9fe1c",
+    "evidence_review/pair_03.md": "72aa0af85ebb280e831d9c99e76d0ae4a620c43d9550412b69de66664c469b2f",
+    "evidence_review/pair_04.md": "2469a9b9aef40deb4691e6f5bbeec099921e5b3ebfe57a5bd77e72cd1af6b7c8",
+    "evidence_review/pair_05.md": "4560d5054e15f9967daf6c2a2bdc138b77b82833aa7120abf9e037797c207d5a",
+    "evidence_review/pair_06.md": "500252b642002813a625abf7b2da12239363d6e385c308ff19b0e6d4570a5213",
+    "evidence_review/pair_07.md": "981f683a1d746f772589f2771fb25df3545a450d3bf8e235e8ac1454b61031e4",
+    "evidence_review/pair_08.md": "b3f698eff5ed549b94881f2d02b1c49638c5a2b9f9a98bc5196a22973a5640a5",
+    "evidence_review/pair_09.md": "9b2695c1c79f9c83593f7355d81bae78e27e8fe6f1e13cb81cd4df7c1041efce",
+    "evidence_review/pair_10.md": "9cac57b373b256adde6e1d45018fcc6fdb480edc2d62b9cf3ead29601fb8b7d7",
+    "evidence_review/README.md": "5a2a21026c60d3389d20fd2e7815e56c59944907f99d197d7f8743ab0ec1a763",
+    "groq_pilot_01/config.json": "a63bb20bc1ba9a7e54821fcc1009d1aa7cf15d75cbf4ab2e6181323ea9eb642a",
+    "groq_pilot_01/errors.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "groq_pilot_01/manifest.json": "4c285437b00fe3c6b87b9399619eb309748a2b11a7ca13cf2df74917b729f65a",
+    "groq_pilot_01/results.jsonl": "dc68ed37d7b3990742cacf8dfd23a7b5484e773aba8429cf7e35a8737cdbd777",
+    "groq_pilot_01/retrieval.jsonl": "c3022adb4df21e6cb3c22b845225835f1bb3d9aff94d4cbea2fd7140f28e4f03",
+    "groq_pilot_01/system_a_rag_only_outputs.json": "b7ece309c8ab6ad6a949cc3915c35302f5b7922499bad746bdd33f9c486b2943",
+    "groq_pilot_01/system_b_rag_verification_outputs.json": "6a0058d3f4d7742466dffdaa2896f57a16947b3b6dd2f04ffdb7edb0e33c4826",
+    "groq_pilot_01/traces.jsonl": "d6dea00f319278eaa1a5c964868e89fcc2018ec702e1b35ccca6717e128db15f",
+    "README.md": "71a7f4c916ba64da0ea36b19b3a5c6dcf6077c424d719a55c01361aae861a113",
+    "requirements-tested.txt": "63ccc15eca3ac38818dfd64767273a55b525ba9623acdeff5fb626491a74ad51",
+    "scores/report.json": "6b2a27c70e4edf2af2b06d6f3f78316b4b3bd4bea47e1d8f43f176de3ab641af",
+    "scores/review_template.csv": "521228c21c9efa1d3263f8cd6c9bffd14cd4d7b36e4279faa720be54a250ea8a",
+    "source_manifest.json": "2419717052c5011135f37762729d8e57de4125ead02fc5e013b5705743156295"
+  },
+  "scope": "Exact local handoff copy; excludes this hash index"
+}
