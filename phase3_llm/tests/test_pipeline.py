@@ -228,7 +228,9 @@ class RunnerTests(unittest.TestCase):
         model = demo_model()
         model_type = type("FakeLiveModel", (), {"metadata": property(lambda self: {"provider": "offline_test_double"}),
                                              "respond": lambda self, req, emit: model.respond(req, emit)})
-        with patch("phase3_llm.gemini.GeminiModel", return_value=model_type()), patch("sys.stdout", new_callable=io.StringIO):
+        with patch("phase3_llm.gemini.GeminiModel", return_value=model_type()), \
+                patch.dict("os.environ", {"GEMINI_API_KEY": "offline-test-key"}), \
+                patch("sys.stdout", new_callable=io.StringIO):
             code = main(["--provider", "gemini", "--mode", "smoke", "--allow-live", "--smoke-arm", ARMS[1],
                          "--output-dir", str(self.path), "--max-model-calls", "2"])
         manifest = json.loads((self.path / "manifest.json").read_text())
@@ -242,7 +244,9 @@ class RunnerTests(unittest.TestCase):
         # An offline stand-in for the live adapter, used only in this test.
         model_type = type("FakeLiveModel", (), {"metadata": property(lambda self: {"provider": "offline_test_double"}),
                                              "respond": lambda self, req, emit: model.respond(req, emit)})
-        with patch("phase3_llm.gemini.GeminiModel", return_value=model_type()), patch("sys.stdout", new_callable=io.StringIO):
+        with patch("phase3_llm.gemini.GeminiModel", return_value=model_type()), \
+                patch.dict("os.environ", {"GEMINI_API_KEY": "offline-test-key"}), \
+                patch("sys.stdout", new_callable=io.StringIO):
             code = main(["--provider", "gemini", "--mode", "smoke", "--allow-live", "--output-dir", str(self.path), "--max-model-calls", "3"])
         manifest = json.loads((self.path / "manifest.json").read_text())
         self.assertEqual(code, 0)
