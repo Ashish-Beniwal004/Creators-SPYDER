@@ -810,6 +810,50 @@ def test_supported_requires_burglary_not_non_burglary_incident():
         assert result.evidence_class == "insufficient"
 
 
+@pytest.mark.parametrize(
+    ("text_content", "expected"),
+    [
+        pytest.param(
+            "Theft from a parked vehicle; property was removed.",
+            False,
+            id="vehicle-theft",
+        ),
+        pytest.param(
+            "INCIDENT REPORT: Theft from construction site container in Sector-Central-East.\nEntry Method: Cut padlock on construction site container.",
+            True,
+            id="construction-site-container-burglary",
+        ),
+        pytest.param(
+            "Property inventory mentions a construction site container. Entry Method: Cut padlock on a detached storage shed.",
+            False,
+            id="unrelated-container-and-padlock",
+        ),
+        pytest.param(
+            "Residential burglary report; rear door forced open and entry confirmed.",
+            True,
+            id="completed-forced-entry-burglary",
+        ),
+        pytest.param(
+            "A shop owner reported a missing tablet. No signs of damage were observed.",
+            False,
+            id="non-burglary-without-entry-evidence",
+        ),
+    ],
+)
+def test_extract_document_facts_classifies_burglary_scope(text_content, expected):
+    doc = SanitizedRetrievalDocument(
+        doc_id="DOC_IR_99999994",
+        doc_type="incident_report",
+        timestamp="2020-03-12 18:00:00",
+        text_content=text_content,
+        metadata={},
+    )
+
+    facts = extract_document_facts(doc)
+
+    assert facts["is_burglary_incident"] is expected
+
+
 def test_supported_requires_joint_participation_not_mere_presence():
     """
     Mere presence of two people in a document (where one is suspect and the other is a reporting

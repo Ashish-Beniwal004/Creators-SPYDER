@@ -247,6 +247,21 @@ def test_provenance_reconciliation_1to1(corpus_data):
         assert p["ground_truth_case_id"].startswith("PILOT_CASE_")
 
 
+def test_provenance_case_ids_match_pilot_manifest(corpus_data):
+    """Verify provenance case IDs exactly match the frozen pilot manifest."""
+    manifest_path = os.path.join(VAULT_DIR, "pilot_manifest.json")
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+
+    manifest_case_ids = {case["case_id"] for case in manifest["cases"]}
+    provenance_case_ids = {
+        provenance["ground_truth_case_id"]
+        for provenance in corpus_data["provenances"]
+    }
+
+    assert provenance_case_ids == manifest_case_ids
+
+
 def test_condition_clean_evidence(corpus_data):
     """Verify clean evidence implementation for Case 01 and Case 02."""
     docs = corpus_data["retrieval_docs"]

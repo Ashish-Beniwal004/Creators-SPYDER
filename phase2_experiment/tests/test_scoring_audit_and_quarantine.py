@@ -95,6 +95,31 @@ def test_frozen_output_and_benchmark_hashes_unchanged():
             assert actual == expected_hash, f"Vault hash mismatch for {os.path.basename(path)}!\nExpected: {expected_hash}\nActual:   {actual}"
 
 
+def test_artifact_hash_manifests_match_files():
+    """Verify every declared artifact hash and size in both repository manifests."""
+    manifest_names = [
+        "phase2_artifact_hash_manifest.json",
+        "phase2_public_artifact_hash_manifest.json",
+    ]
+
+    for manifest_name in manifest_names:
+        manifest_path = os.path.join(REPO_ROOT, manifest_name)
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+
+        for artifact_path, entry in manifest["files"].items():
+            resolved_path = os.path.join(REPO_ROOT, artifact_path)
+            context = f"{manifest_name}: {artifact_path}"
+            assert os.path.isfile(resolved_path), f"Missing artifact ({context})"
+
+            with open(resolved_path, "rb") as f:
+                artifact_bytes = f.read()
+
+            actual_hash = hashlib.sha256(artifact_bytes).hexdigest()
+            assert actual_hash == entry["sha256"], f"SHA-256 mismatch ({context})"
+            assert len(artifact_bytes) == entry["size_bytes"], f"File size mismatch ({context})"
+
+
 
 
 def test_strict_quarantine_code_import_isolation():

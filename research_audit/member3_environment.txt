@@ -1,0 +1,19 @@
+# Tested on Windows, Python 3.13.2; snapshot from .venv, not a cross-platform lockfile.
+annotated-types==0.8.0
+cloudpickle==3.1.2
+colorama==0.4.6
+iniconfig==2.3.1
+joblib==1.6.0
+narwhals==2.28.0
+numpy==2.5.4
+packaging==26.3
+pluggy==1.7.0
+pydantic==2.14.1
+pydantic_core==2.50.1
+Pygments==2.21.0
+pytest==9.2.0
+scikit-learn==1.9.1
+scipy==1.18.1
+threadpoolctl==3.7.0
+typing-inspection==0.4.4
+typing_extensions==4.16.0

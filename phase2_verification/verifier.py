@@ -232,6 +232,11 @@ def determine_solved_status(text: str) -> str:
     return "unknown"
 
 
+def _alias_key(alias: str) -> str:
+    """Match spelling variants without changing the spelling shown in findings."""
+    return " ".join(alias.split()).casefold()
+
+
 def extract_document_facts(doc: SanitizedRetrievalDocument) -> Dict:
     """
     Extracts grounded evidential facts from a single validated retrieval document.
@@ -241,11 +246,24 @@ def extract_document_facts(doc: SanitizedRetrievalDocument) -> Dict:
     text = doc.text_content
     doc_type = doc.doc_type
 
-    is_field_interview = bool(re.search(r"field (?:interview|stop)|pedestrian stop", text, re.IGNORECASE))
+    is_field_interview = bool(re.search(
+        r"field (?:intelligence )?(?:interview|interrogation|stop)|pedestrian stop",
+        text, re.IGNORECASE,
+    ))
+    construction_container_burglary = bool(
+        re.search(
+            r"^\s*Entry Method:\s*cut\s+padlock\s+on\s+(?:the\s+)?construction\s+site\s+container\b",
+            text,
+            re.IGNORECASE | re.MULTILINE,
+        )
+    )
     is_burglary = (
         doc_type == "incident_report"
         and not is_field_interview
-        and bool(re.search(r"burglar|burglary|break-in|theft|forced lock|pried|jimmied|cut open", text, re.IGNORECASE))
+        and (
+            bool(re.search(r"burglar|burglary|break-in|forced lock|pried|jimmied|cut open", text, re.IGNORECASE))
+            or construction_container_burglary
+        )
     )
     in_window = is_within_evaluation_window(doc)
     solved_status = determine_solved_status(text) if is_burglary else "not_applicable"
@@ -260,6 +278,7 @@ def extract_document_facts(doc: SanitizedRetrievalDocument) -> Dict:
         "entities_mentioned": set(re.findall(r"OID#\d+", text)),
         "aliases_mentioned": set(),
         "alias_resolutions": {},  # alias -> canonical_entity
+        "alias_candidates": [],  # retain competing attributions instead of last-write wins
         "co_suspects": [],
         "cdr_pair": None,
         "incident_id": None,
@@ -267,36 +286,35 @@ def extract_document_facts(doc: SanitizedRetrievalDocument) -> Dict:
         "incident_exclusions": [], # list of (entity, matched_text)
     }
 
-    # Extract alias attribution patterns
-    # Pattern 1: 'OID#xxxx uses the active street moniker "The Wire"'
-    for ent, al in re.findall(
+    # Explicit attributions only; never infer identity from proximity or a suspect list.
+    alias_patterns = [
         r"(OID#\d+)\s+uses\s+(?:the\s+active\s+street\s+)?moniker\s+['\"]([^'\"]+)['\"]",
-        text,
-        re.IGNORECASE,
-    ):
-        clean_al = al.strip()
-        facts["alias_resolutions"][clean_al] = ent.strip()
-        facts["aliases_mentioned"].add(clean_al)
-
-    # Pattern 2: 'lists OID#xxxx under the established moniker "The Locksmith"'
-    for ent, al in re.findall(
         r"lists\s+(OID#\d+)\s+under\s+(?:the\s+established\s+)?moniker\s+['\"]([^'\"]+)['\"]",
-        text,
-        re.IGNORECASE,
-    ):
-        clean_al = al.strip()
-        facts["alias_resolutions"][clean_al] = ent.strip()
-        facts["aliases_mentioned"].add(clean_al)
-
-    # Pattern 3: 'OID#xxxx also known as / known by the moniker "..."'
-    for ent, al in re.findall(
         r"(OID#\d+)\s+(?:also\s+)?known\s+(?:by\s+the\s+moniker\s+|as\s+)['\"]([^'\"]+)['\"]",
-        text,
-        re.IGNORECASE,
-    ):
-        clean_al = al.strip()
-        facts["alias_resolutions"][clean_al] = ent.strip()
-        facts["aliases_mentioned"].add(clean_al)
+        r"(OID#\d+)\s+operates\s+under\s+(?:the\s+)?(?:street\s+)?moniker\s+['\"]([^'\"]+)['\"]",
+    ]
+    for pattern in alias_patterns:
+        for ent, al in re.findall(pattern, text, re.IGNORECASE):
+            facts["alias_candidates"].append((al.strip(), ent.upper()))
+
+    # This field-record form refers to 'subject' rather than repeating the ID.
+    # Resolve it only in a single-entity interview with an explicit verified subject.
+    verified = re.findall(r"\bVerified subject\s+(OID#\d+)\b", text)
+    if is_field_interview and len(facts["entities_mentioned"]) == 1 and len(set(verified)) == 1:
+        for al in re.findall(
+            r"(?:^|[.\n])\s*Departmental intelligence confirms subject operates under "
+            r"(?:the )?(?:street )?moniker ['\"]([^'\"]+)['\"]",
+            text, re.IGNORECASE,
+        ):
+            facts["alias_candidates"].append((al.strip(), verified[0]))
+
+    candidates_by_key = {}
+    for al, ent in facts["alias_candidates"]:
+        facts["aliases_mentioned"].add(al)
+        candidates_by_key.setdefault(_alias_key(al), set()).add(ent)
+    for al, ent in facts["alias_candidates"]:
+        if len(candidates_by_key[_alias_key(al)]) == 1:
+            facts["alias_resolutions"][al] = ent
 
     # Check for global exclusions (e.g. continuous custodial detention spanning evaluation window)
     for pattern in GLOBAL_EXCLUSION_PATTERNS:
@@ -445,11 +463,27 @@ class HypothesisVerifier:
 
         # Aggregate known alias resolutions in cited evidence
         alias_resolutions: Dict[str, Tuple[str, str]] = {}  # alias -> (canonical_entity, resolving_doc_id)
+        candidates_by_key = {}
         for df in doc_facts:
-            for al, ent in df["alias_resolutions"].items():
-                alias_resolutions[al] = (ent, df["doc_id"])
+            for al, ent in df["alias_candidates"]:
+                candidates_by_key.setdefault(_alias_key(al), set()).add((ent, df["doc_id"]))
+        for df in doc_facts:
+            for al in df["aliases_mentioned"]:
+                candidates = candidates_by_key.get(_alias_key(al), set())
+                if len({ent for ent, _ in candidates}) == 1:
+                    alias_resolutions[al] = sorted(candidates)[0]
 
         findings: List[VerificationFinding] = []
+        for df in doc_facts:
+            conflicting = sorted({al for al, _ in df["alias_candidates"]
+                                  if len({ent for ent, _ in candidates_by_key[_alias_key(al)]}) > 1})
+            if conflicting:
+                findings.append(VerificationFinding(
+                    doc_id=df["doc_id"], doc_type=df["doc_type"],
+                    finding_type="conflicting_alias_attribution",
+                    entities_mentioned=sorted(df["entities_mentioned"]), aliases_mentioned=conflicting,
+                    summary=f"Conflicting alias attributions in cited evidence for {', '.join(conflicting)}; identity left unresolved.",
+                ))
         global_contradictions: List[Dict] = []
         incident_contradictions: List[Dict] = []
         cleared_incidents: Set[str] = set()

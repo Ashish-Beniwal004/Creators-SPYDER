@@ -96,10 +96,8 @@ def compute_descriptive_metrics(y_true: List[int], y_pred: List[int]) -> Descrip
     specificity = tn / (tn + fp) if (tn + fp) > 0 else None
     false_positive_rate = fp / (fp + tn) if (fp + tn) > 0 else None
 
-    if precision is not None and recall is not None and (precision + recall) > 0:
-        f1 = (2 * precision * recall) / (precision + recall)
-    else:
-        f1 = None
+    f1_denominator = 2 * tp + fp + fn
+    f1 = 2 * tp / f1_denominator if f1_denominator else None
 
     return DescriptiveMetrics(
         total_cases=total,
@@ -159,7 +157,7 @@ def compute_mcnemar_test(n10: int, n01: int) -> Dict[str, Any]:
         "mcnemar_chi2": round(chi2, 4),
         "p_value": round(p_val, 6),
         "statistically_significant": p_val < 0.05,
-        "assumptions": "Paired nominal 2x2 data; independent bernoulli trials across disjoint network components."
+        "assumptions": "Paired nominal 2x2 data; independent cases are required. Reused entities/components may violate this assumption."
     }
 
 
@@ -450,8 +448,9 @@ def evaluate_pilot_runs(
         f"Recall={metrics_a.recall:.2f}, Specificity={metrics_a.specificity:.2f}, F1={f1_a_str}\n"
         f"- System B (RAG + Verifier): Accuracy={metrics_b.accuracy:.2f}, Precision={prec_b_str}, "
         f"Recall={metrics_b.recall:.2f}, Specificity={metrics_b.specificity:.2f}, F1={f1_b_str}\n"
-        f"Key observation: System B completely eliminates False Positives induced by unverified aliases "
-        f"(Cases 04, 10) and prevents ungrounded relationship inference from CDR communication alone (Case 05)."
+        f"False positives: A={metrics_a.false_positives}, B={metrics_b.false_positives}. "
+        f"False negatives: A={metrics_a.false_negatives}, B={metrics_b.false_negatives}. "
+        f"Binary non-positive includes both Unsupported and Insufficient Evidence."
     )
 
     report = PilotScoringReport(
@@ -465,9 +464,9 @@ def evaluate_pilot_runs(
         summary_findings=summary
     )
 
-    rep_file = report_output_file or os.path.join(out_dir, "pilot_scoring_report.json")
-    with open(rep_file, "w", encoding="utf-8") as f:
-        f.write(report.model_dump_json(indent=2))
+    if report_output_file is not None:
+        with open(report_output_file, "x", encoding="utf-8") as f:
+            f.write(report.model_dump_json(indent=2))
 
     return report
 
@@ -707,15 +706,14 @@ def evaluate_full_test_runs(
         },
         "audit_takeaways": {
             "system_a_unsound_findings": (
-                "Of System A's 160 positive predictions, 82 cited ONLY CallDetailRecords (CDRs), claiming relationship "
-                "based on phone contact without proof of a solved burglary offense. Another 60 positive predictions "
-                "cited independent reports, distractors, or incomplete alias records that do not substantiate joint burglary. "
-                "Only 18 positive predictions (all in distractors condition) cited a genuine qualifying joint burglary report."
+                f"Verifier-consistent positive citations: {adv_a['sound_positive_predictions']} / "
+                f"{adv_a['total_positive_predictions']}. This is an automated consistency check, "
+                "not independent human adjudication."
             ),
             "system_b_sound_findings": (
-                "100% (40 / 40) of System B's positive predictions cited verified joint solved burglary incident reports "
-                "cleared by arrest within the evaluation window. In the remaining 160 cases, System B correctly returned "
-                "'Insufficient Evidence' rather than making ungrounded accusations."
+                f"Verifier-consistent positive citations: {adv_b['sound_positive_predictions']} / "
+                f"{adv_b['total_positive_predictions']}. Binary false negatives: {metrics_b.false_negatives}. "
+                "Using the same verifier for inference and scoring is not independent validation."
             )
         }
     }
@@ -756,9 +754,9 @@ def evaluate_full_test_runs(
     )
 
     # Save scoring report
-    rep_file = report_output_file or os.path.join(out_dir, "full_test_scoring_report.json")
-    with open(rep_file, "w", encoding="utf-8") as f:
-        f.write(report.model_dump_json(indent=2))
+    if report_output_file is not None:
+        with open(report_output_file, "x", encoding="utf-8") as f:
+            f.write(report.model_dump_json(indent=2))
 
     return report
 
@@ -772,13 +770,14 @@ if __name__ == "__main__":
         default="pilot",
         help="Select dataset to evaluate ('pilot' or 'full_test', default: 'pilot')"
     )
+    parser.add_argument("--output", help="New report path; existing files are never overwritten")
     args = parser.parse_args()
 
     print("=" * 70)
     print(f"SPYDER: Evaluator Execution Service ({args.dataset.upper()})")
     print("=" * 70)
     if args.dataset == "full_test":
-        rep = evaluate_full_test_runs()
+        rep = evaluate_full_test_runs(report_output_file=args.output)
     else:
-        rep = evaluate_pilot_runs()
+        rep = evaluate_pilot_runs(report_output_file=args.output)
     print("\n" + rep.summary_findings + "\n")
