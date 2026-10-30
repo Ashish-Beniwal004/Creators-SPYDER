@@ -34,6 +34,8 @@ scratch/
 # Logs and local configurations
 *.log
 .env
+/.gemini_api_key
+/.groq_api_key
 local_config.py
 # Run artifacts are retained locally for review; publish selected reviewed runs explicitly.
 /experiment_runs/

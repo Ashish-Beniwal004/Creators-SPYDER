@@ -10,14 +10,10 @@ import time
 from urllib import error, request
 
 from .contracts import ToolCall
-from .model import EventSink, ModelReply, ModelRequest
+from .model import EventSink, ModelReply, ModelRequest, ProviderError
 from .prompts import COMMON_INSTRUCTIONS, DECISION_SCHEMA, STAGE_INSTRUCTIONS, VERIFIER_TOOL
 
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/interactions"
-
-
-class ProviderError(RuntimeError):
-    pass
 
 
 class _NoRedirect(request.HTTPRedirectHandler):
@@ -46,7 +42,7 @@ def _post_json(payload: dict, api_key: str, timeout: float) -> dict:
 
 class GeminiModel:
     def __init__(self, api_key: str, *, model: str = "gemini-3.8-flash", thinking: str = "medium",
-                 max_output_tokens: int = 4096, timeout: float = 60, request_interval: float = 15,
+                 max_output_tokens: int = 4096, timeout: float = 300, request_interval: float = 35,
                  transport=None):
         if not isinstance(api_key, str) or not api_key.strip():
             raise ValueError("Set GEMINI_API_KEY locally before using Gemini")

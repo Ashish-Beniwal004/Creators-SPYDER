@@ -9,6 +9,11 @@ from .prompts import COMMON_INSTRUCTIONS, STAGE_INSTRUCTIONS
 EventSink = Callable[[str, dict], None]
 
 
+class ProviderError(RuntimeError):
+    """Provider or quota failure: stop the run without fabricating a decision."""
+    pass
+
+
 @dataclass(frozen=True)
 class ModelReply:
     text: str = ""
