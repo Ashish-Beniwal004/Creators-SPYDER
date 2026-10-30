@@ -125,7 +125,8 @@ def score_run(*, run_dir, labels_path, pairs_path, corpus_path, output_dir,
 
     pairs_doc = read_json(pairs_path)
     require(set(pairs_doc) <= {"pairs", "total_pairs", "description"}, "Unexpected target file fields")
-    pairs = pairs_doc["pairs"]
+    # TargetPair.ids in the runner canonicalizes entity order within each pair.
+    pairs = [list(pair_key(pair)) for pair in pairs_doc["pairs"]]
     ordered_keys = [pair_key(p) for p in pairs]
     require(len(set(ordered_keys)) == len(pairs) > 0, "Duplicate or empty target cohort")
     require("total_pairs" not in pairs_doc or pairs_doc["total_pairs"] == len(pairs), "Target count differs")
@@ -214,6 +215,8 @@ def score_run(*, run_dir, labels_path, pairs_path, corpus_path, output_dir,
                 if type(value) in (int, float) and math.isfinite(value):
                     usage[arm][name] += value
     require(sum(t["model_request"] for t in trace_counts.values()) == manifest["attempted_model_calls"], "Attempted calls differ from traces")
+    if "provider_requests_sent" in manifest:
+        require(sum(t["provider_request"] for t in trace_counts.values()) == manifest["provider_requests_sent"], "Sent requests differ from traces")
 
     by_arm = {a: {p: o for (ar, p), o in completed.items() if ar == a} for a in ARMS}
     paired = set(by_arm[ARMS[0]]) & set(by_arm[ARMS[1]])
@@ -237,6 +240,7 @@ def score_run(*, run_dir, labels_path, pairs_path, corpus_path, output_dir,
             "verifier_consistency_on_positive_citations": {"consistent": consistent, "positive_assertions": positives,
                                                          "rate": ratio(consistent, positives), "independent_validation": False},
             "calls": {"attempted_model_calls": counts["model_request"], "requested_tool_calls": requested,
+                      "provider_requests_sent": counts["provider_request"],
                       "accepted_tool_calls": accepted, "unaccepted_tool_calls": requested - accepted,
                       "completed_tool_calls": counts["tool_result"], "tool_call_validity_rate": ratio(accepted, requested)},
             "provider_reported_usage": dict(usage[arm]),
@@ -265,6 +269,7 @@ def score_run(*, run_dir, labels_path, pairs_path, corpus_path, output_dir,
     report = {
         "scored_at": datetime.now(timezone.utc).isoformat(), "run_id": manifest["run_id"],
         "run_status": manifest["status"], "mode": config["mode"],
+        "model": config["model"], "dataset": config.get("dataset", {}), "top_k": config["top_k"],
         "complete_experiment_run": config["mode"] == "experiment" and manifest["status"] == "completed",
         "input_sha256": {name: file_hash(path) for name, path in inputs.items()},
         "scorer_sha256": file_hash(__file__), "verifier_sha256": file_hash(Path(__file__).parents[1] / "phase2_verification" / "verifier.py"),

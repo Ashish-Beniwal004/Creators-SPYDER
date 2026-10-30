@@ -205,6 +205,65 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(manifest["attempted_model_calls"], 0)
         self.assertEqual(len((self.path / "results.jsonl").read_text().splitlines()), 8)
 
+    def test_provider_failure_stops_run_without_consuming_remaining_quota(self):
+        model = demo_model()
+        model._replies[(demo_cases()[0].pair.ids, "baseline")] = ProviderError("Simulated HTTP 429")
+        manifest = self.run_mock(model=model)
+        self.assertEqual(manifest["attempted_model_calls"], 1)
+        self.assertEqual(manifest["failed_executions"], 1)
+        self.assertEqual(manifest["unattempted_executions"], 7)
+        self.assertEqual(manifest["stop_reason"], "ProviderError")
+        self.assertFalse(manifest["exports_available"])
+
+    def test_smoke_pair_limit_cannot_truncate_an_experiment(self):
+        with patch("sys.stderr", new_callable=io.StringIO), self.assertRaises(SystemExit) as exc:
+            main(["--provider", "gemini", "--mode", "experiment", "--allow-live", "--smoke-pairs", "1"])
+        self.assertEqual(exc.exception.code, 2)
+
+    def test_single_arm_cannot_be_reported_as_a_paired_experiment(self):
+        with self.assertRaisesRegex(ValueError, "Single-arm"):
+            self.run_mock(arms=(ARMS[1],))
+
+    def test_verifier_only_smoke_avoids_repeating_successful_baseline(self):
+        model = demo_model()
+        model_type = type("FakeLiveModel", (), {"metadata": property(lambda self: {"provider": "offline_test_double"}),
+                                             "respond": lambda self, req, emit: model.respond(req, emit)})
+        with patch("phase3_llm.gemini.GeminiModel", return_value=model_type()), patch("sys.stdout", new_callable=io.StringIO):
+            code = main(["--provider", "gemini", "--mode", "smoke", "--allow-live", "--smoke-arm", ARMS[1],
+                         "--output-dir", str(self.path), "--max-model-calls", "2"])
+        manifest = json.loads((self.path / "manifest.json").read_text())
+        self.assertEqual(code, 0)
+        self.assertEqual(manifest["expected_executions"], 1)
+        self.assertEqual(manifest["attempted_model_calls"], 2)
+        self.assertEqual(manifest["parameters"]["arms"], [ARMS[1]])
+
+    def test_smoke_defaults_to_one_pair_without_making_real_requests(self):
+        model = demo_model()
+        # An offline stand-in for the live adapter, used only in this test.
+        model_type = type("FakeLiveModel", (), {"metadata": property(lambda self: {"provider": "offline_test_double"}),
+                                             "respond": lambda self, req, emit: model.respond(req, emit)})
+        with patch("phase3_llm.gemini.GeminiModel", return_value=model_type()), patch("sys.stdout", new_callable=io.StringIO):
+            code = main(["--provider", "gemini", "--mode", "smoke", "--allow-live", "--output-dir", str(self.path), "--max-model-calls", "3"])
+        manifest = json.loads((self.path / "manifest.json").read_text())
+        self.assertEqual(code, 0)
+        self.assertEqual(manifest["expected_executions"], 2)
+        self.assertEqual(manifest["attempted_model_calls"], 3)
+        self.assertFalse(manifest["parameters"]["scientific_results"])
+
+    def test_explicit_key_file_is_read_without_putting_key_in_run_artifacts(self):
+        key_path = Path(self.tmp.name) / "key"
+        key_path.write_text("private-file-test-key\n", encoding="utf-8")
+        model = demo_model()
+        model_type = type("FakeLiveModel", (), {"metadata": property(lambda self: {"provider": "offline_test_double"}),
+                                             "respond": lambda self, req, emit: model.respond(req, emit)})
+        with patch("phase3_llm.gemini.GeminiModel", return_value=model_type()) as adapter, patch("sys.stdout", new_callable=io.StringIO):
+            code = main(["--provider", "gemini", "--mode", "smoke", "--allow-live", "--api-key-file", str(key_path),
+                         "--output-dir", str(self.path), "--max-model-calls", "3"])
+        self.assertEqual(code, 0)
+        self.assertEqual(adapter.call_args.args[0], "private-file-test-key")
+        for artifact in self.path.iterdir():
+            self.assertNotIn("private-file-test-key", artifact.read_text())
+
     def test_interruption_preserves_a_manifest_and_existing_trace(self):
         model = demo_model()
         model._replies[(demo_cases()[0].pair.ids, "baseline")] = KeyboardInterrupt()
