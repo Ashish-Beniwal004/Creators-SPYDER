@@ -1,157 +1,90 @@
-# LLM integration and bounded experiment runner
+# Bounded LLM integration and experiment runner
 
-Workstream: Member 1. The existing deterministic systems, verifier rules, datasets
-and historical result files are preserved. This package adds the two LLM control
-flows and writes its own run artifacts.
+Current live provider: **Groq / `openai/gpt-oss-120b`**. Use the
+[pilot runbook](../PILOT_RUNBOOK.md) for smoke, experiment and scoring commands.
+**Live Groq smoke passed:** two executions, three requests, 2,199 tokens.
+**The ten-pair pilot is complete:** 20 executions, zero failures, 30 requests,
+42,591 tokens. Both arms: binary accuracy 0.90, F1 0.8889; no observed improvement
+from verification. See the [actual report](../MID_SUBMISSION_PROGRESS.md) and
+[reproducibility bundle](../research_audit/groq_checkpoint_20261030/README.md).
+Earlier Gemini results remain separate.
+Offline validation: **221 passed, 4 skipped, 30 subtests passed**.
+The same suite and saved-output scoring pass from a clean committed-source export
+without key files. See [closeout evidence](../research_audit/CHECKPOINT_CLOSEOUT_20261030.json).
 
-## Start here: offline demonstration
-
-From the repository root, using Python 3.10 or newer:
+## Offline start
 
 ```powershell
-python -B -m unittest discover -s phase3_llm/tests -v
 python -B -m phase3_llm.runner
+python -B -m unittest discover -s phase3_llm/tests -p test_pipeline.py -q
+.venv/Scripts/python.exe -B -m unittest discover -s phase3_llm/tests -p test_groq.py -q
 ```
 
-The default run needs only Python's standard library. It makes **no network
-requests**, reads no benchmark labels, and uses four fictional pairs with scripted
-model/verifier responses. Expected summary: **8 completed case-arm executions,
-0 failures, 12 scripted model calls**. This demonstrates software behavior;
-it is **not an LLM experiment, a quality benchmark, or evidence of verification gains**.
+Default invocation uses fictional evidence and scripted responses: eight completed
+executions, twelve scripted responses, no key/network. The Groq test file includes
+the actual repository-service bridge, so it needs the existing requirements in
+`.venv`. Fake-HTTP/scripted checks are not model experiments.
 
-The command prints the unique output folder under `experiment_runs/`. To choose a
-review location, pass `--output-dir experiment_runs/my_mock_review`; it must not
-already exist. All generated run folders are ignored by Git so they can be reviewed
-before selecting artifacts for publication. No commit or push is needed to run it.
+## Components
 
-## What each file does
+| File | Role |
+|---|---|
+| `contracts.py`, `prompts.py` | Public evidence/decision/tool contracts and common instructions |
+| `model.py` | Provider protocol, requests/replies and shared ProviderError |
+| `groq.py` | Standard-library Groq adapter; native verifier call, then strict final JSON |
+| `quota.py` | Shared local token ledger, reservation, pacing and lock |
+| `preflight.py` | Offline sizing of the actual pilot requests |
+| `services.py` | Existing read-only retrieval/verifier adapters and unlabelled pair loading |
+| `systems.py`, `runner.py` | Bounded two-arm execution, failures, traces and manifests |
+| `fixtures.py` | Fictional software/API smoke inputs |
+| `gemini.py` | Previous provider retained for historical reproducibility; no automatic fallback |
 
-| File | Responsibility |
-| --- | --- |
-| `contracts.py` | Strict public pair, evidence, decision, and tool-call validation |
-| `prompts.py` | Common evidence rules, stage instructions and JSON schemas |
-| `model.py` | Model request/reply protocol and scripted offline model |
-| `fixtures.py` | Four fictional examples and a scripted fixture verifier |
-| `gemini.py` | Standard-library Gemini Interactions REST adapter |
-| `services.py` | Lazy adapters to the existing retriever and verifier; unlabelled pair loading |
-| `systems.py` | Baseline and single-verification control flows, call budget |
-| `runner.py` | CLI, shared retrieval, logging, manifests and compatible exports |
-| `tests/test_pipeline.py` | Offline behavior, failures, isolation and Gemini payload checks |
+Both arms share one initial top-k retrieval. A uses one model response without
+tools. B selects arguments for one allowed verifier call, receives its result and
+returns a final model decision. The model's answer is retained even on disagreement.
+No additional retrieval or tool call is allowed. This is bounded required tool use,
+not autonomous search. Evidence budgets match; model-call counts differ (A=1, B=2).
 
-## Comparison and declared policies
+## Groq configuration
 
-1. The controller retrieves **once per pair** and passes the same ordered evidence
-   to both arms. It uses the existing lexical retriever for corpus runs.
-2. Arm A asks the model for a structured final decision, with no tools.
-3. Arm B requires the model to supply arguments for the single allowed verifier,
-   validates them, executes it, then asks the model for a final decision. There is
-   no second retrieval or second tool call. This is bounded, required tool use,
-   not a measurement of autonomous search or tool selection.
-4. Both arms share the same task/evidence instructions. A phone call alone does
-   not establish joint burglary; lack of evidence normally means Insufficient Evidence.
-5. The final model answer is **not overwritten by the verifier**. Agreement is
-   observed/logged, not enforced. `support_gate: observe_only` is recorded in the
-   manifest; unsupported model assertions must be assessed by the scorer/reviewer.
-6. Missing retrieval produces an explicit controller Insufficient Evidence record
-   in both arms, with `decision_origin: controller_empty_retrieval`, zero model calls,
-   and a trace event. Report these separately from actual model responses.
-7. Parse/API/tool errors are failed executions, never fabricated evidence decisions.
-   Failed attempts count toward the model-call limit. Automatic retries are disabled.
-8. The baseline normally makes one model request and the verification arm two.
-   This is an equal-initial-evidence comparison, not an equal-compute comparison.
+Use `--provider groq --api-key-file .groq_api_key --allow-live` with smoke or experiment
+mode. The root key filename is ignored by Git. `GROQ_API_KEY` is also supported.
+Defaults: medium reasoning, 4096 maximum completion tokens, 300-second timeout,
+90-second spacing and 170k per-run tokens. Reasoning text is hidden without disabling
+reasoning. Tool and strict-JSON stages are separate, following Groq's restrictions.
+No built-in search/browser/code-execution tools or unsupported `store` field are sent.
+An application User-Agent avoids the security-filter rejection observed with
+Python's default header. The checkpoint explicitly selects 65-second spacing;
+90 seconds remains the reusable adapter default.
 
-## Run artifacts and scoring handoff
+The ledger reserves 8k per request and substitutes valid reported usage. Unknown
+usage remains reserved. Its rolling 24-hour workspace cap is 180k; minimum spacing
+is 65 seconds. Input sizing is an estimate, not exact tokenization. External account
+usage is invisible. Budgets may stop the run before completion. Never delete the
+ledger to reset accounting or start concurrent runners. No automatic retry, input
+truncation, reasoning reduction or provider fallback occurs. See the runbook for
+budget assumptions and smoke-based review before the full experiment.
 
-Each folder contains:
+## Artifacts and scoring
 
-- `config.json`: mode, model settings, dataset metadata, source commit/dirty state,
-  implementation hashes, prompt/schema hash, call budget and declared policies.
-- `retrieval.jsonl`: the exact initial evidence shared by both arms, once per pair.
-- `traces.jsonl`: normalized model requests/responses, raw provider bodies/responses,
-  usage when supplied, tool acceptance/rejection/results and comparisons.
-- `results.jsonl`: one envelope per attempted execution; completed records contain
-  `output`, failed records contain an error and **no relationship decision**.
-- `errors.jsonl`: failed executions, including their pair, arm, type and message.
-- `manifest.json`: completion/failure/unattempted counts, attempted calls, artifact
-  hashes and whether scoring exports are available. Also written on Ctrl+C.
+Each new run stores `config.json`, shared `retrieval.jsonl`, `traces.jsonl`,
+`results.jsonl`, `errors.jsonl` and a hashed `manifest.json`. Metadata records the
+provider/model, prompt/data/code hashes, source/merge/dirty state and environment.
+Traces retain actual provider usage, selected rate headers and quota events.
+Manifests distinguish model attempts from provider HTTP requests sent. Failures
+have no business verdict. Empty retrieval is a logged, zero-call controller decision.
+Existing run folders and historical output paths are protected; complete runs also
+receive compatible per-arm JSON exports. Nothing is committed or pushed automatically.
 
-Only when **every execution completes**, the runner writes
-`system_a_rag_only_outputs.json` and `system_b_rag_verification_outputs.json`.
-They preserve the existing `ArmRunResult` / `SystemCaseOutput` field layout for
-Member 3's evaluator. Run metadata explicitly identifies `phase3_llm`, provider
-and mode. These arm names do not imply that the historical heuristics were used.
-Incomplete runs have no compatible exports, preventing accidental scoring of a
-silently reduced sample. No scores are computed by this package.
+Use [the native scorer](../phase2_experiment/SCORING.md) after inference. It handles
+partial runs with coverage and identifies model/provider explicitly. Never pool
+different models into one A/B result. Human-review fields remain blank until real
+reviewers assess the evidence; shared-verifier consistency is not independent truth.
 
-Review secrets and provider content before explicitly adding selected run artifacts
-to Git. Authentication headers and API keys are not logged. Do not submit mock
-or fictional-fixture smoke outputs as scientific results.
-
-## Gemini: optional live smoke test
-
-The adapter uses the REST Interactions API directly, so it needs no SDK install.
-It is implemented against official documentation and checked with fake HTTP
-responses, but **has not been validated against a live account**.
-
-Configure `GEMINI_API_KEY` in your local environment without pasting it into chat,
-source code or a shell command submitted through the assistant. Confirm account
-quota/budget before running the following explicitly live command:
-
-```powershell
-python -B -m phase3_llm.runner --provider gemini --mode smoke --allow-live --max-model-calls 12
-```
-
-This uses fictional evidence and the scripted fixture verifier. It exercises actual
-model output/tool calls once access exists; it is an API smoke test, not a real
-verifier evaluation. Default model is `gemini-3.8-flash`, thinking `medium`, output
-limit 4096 tokens per request (including thinking), timeout 60 seconds, minimum
-request spacing 15 seconds. These can be overridden via `--help`. Account-specific
-quotas can require slower spacing. Rate-limit failures are logged with no retries.
-Raise the output allowance before the frozen experiment if development smoke tests
-show truncation; never silently reduce reasoning or switch model on failed cases.
-
-Only the custom verifier tool is exposed. No search/code-execution built-ins are
-enabled. The stateless flow preserves the provider's original steps/signatures and
-call ID across the tool response; `store` is false. Provider usage remains in the
-raw response trace. No hard dollar-budget guarantee is provided; the runner limits
-requests and per-request output instead.
-
-Official references checked October 28, 2026:
-
-- [Function calling and stateless history](https://ai.google.dev/gemini-api/docs/function-calling)
-- [Structured final output](https://ai.google.dev/gemini-api/docs/structured-output)
-- [Interactions REST reference](https://ai.google.dev/api/interactions-api)
-
-## Connect teammates' audited corpus and verifier
-
-Corpus integration needs the existing `requirements.txt` environment. It imports
-the current `EvidenceRetriever` and `HypothesisVerifier` lazily. It does not load
-ground-truth JSON files or internal provenance. Member 3 can repair the verifier
-without changing this adapter if its documented signature remains stable.
-
-Once the dataset/verifier handoffs and model smoke test are ready:
-
-```powershell
-python -B -m phase3_llm.runner --provider gemini --mode experiment --dataset corpus --corpus PATH_TO_AUDITED_JSONL --pairs PATH_TO_UNLABELLED_PAIRS_JSON --dataset-version PILOT_VERSION --allow-live --max-model-calls 40
-```
-
-Replace the uppercase placeholders with the approved paths/version. Pair input
-uses the existing `{"pairs": [["OID#1", "OID#2"]], "total_pairs": 1}` format;
-case manifests, labels, extra fields, duplicate pairs and mismatching counts are
-rejected. Paths/version are explicit: the CLI does not assume current benchmark
-data has been audited. The run does not itself certify dataset validity.
-
-Member 3 should score the completed exports **after inference**, joining labels
-by pair and writing reports into a separate destination. Record the independent
-evidence audit, failed-run coverage and verifier/model disagreements. Existing
-evaluator defaults point at historical outputs; never invoke those defaults to
-score a new run. There is no automatic resume or provider fallback in this version.
-
-## Validation limits
-
-- Offline tests and scripted demonstration can run now, with no external packages.
-- The existing full pytest suite and real repository-service bridge need dependencies
-  absent in this checkout's active Python environment; they have not been rerun here.
-- Live Gemini authentication, availability, quota, payload acceptance and model quality
-  remain unverified until a live smoke test is authorized and configured.
-- Groq GPT-OSS 120B remains the planned alternative; no Groq adapter is implemented.
+Live Groq baseline JSON and all ten real verifier/tool/final round-trips passed.
+Saved-output metrics were reproduced from the copied bundle. Independent evidence
+review remains pending; verifier consistency is not a substitute for it.
+The absent upstream graph, full-corpus text cues and small synthetic pilot limit
+generalization. Historical Gemini workflow instructions are archived under
+`research_audit/`; current live commands use Groq. Review keys/provider content and
+hidden scoring material before selecting any artifacts for publication.

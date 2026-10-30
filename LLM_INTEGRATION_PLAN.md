@@ -1,5 +1,27 @@
 # Member 1: LLM Integration and Experiment Runner
 
+**October 30 provider change:** The user selected **Groq / openai/gpt-oss-120b**
+for a fresh ten-pair comparison after Gemini latency/HTTP 503 interrupted its
+pilot. The Groq adapter, shared conservative token ledger and native scorer bridge
+are implemented: **221 passed, 4 skipped**. Live smoke passed with three requests
+and 2,199 tokens. The ten-pair pilot completed with 65-second spacing: **20
+executions, zero failures, 30 requests, 42,591 tokens**. Both arms achieved
+**90% binary accuracy and 0.8889 F1**, with no measured verification gain.
+The copied saved-output bundle reproduces the scores. Final local commits and a
+clean committed-source export are verified; independent human ratings are not
+measured. Current results: [MID_SUBMISSION_PROGRESS.md](MID_SUBMISSION_PROGRESS.md).
+The root `.groq_api_key` remains ignored. Use
+[PILOT_RUNBOOK.md](PILOT_RUNBOOK.md). Earlier Gemini plans/results below are
+historical and will not be pooled with the new model.
+
+**October 29 status:** Member 3's committed changes (`d7ec222`, including Member 2)
+are merged locally into `feat/llm-integration-runner`, with the merge left
+uncommitted for review. Combined tests: **206 passed, 4 skipped**. The real pilot
+corpus, runner, verifier and scorer pass the offline integration check. Live access
+is not yet configured; the user requires **free tier only**. Current setup and
+execution instructions are in [PILOT_RUNBOOK.md](PILOT_RUNBOOK.md). The original
+October 28 planning snapshot below is retained as historical context.
+
 **Date:** October 28, 2026 (IST)  
 **Repository inspected:** `88d353d`, `release/curated-project-handoff`  
 **Checkpoint:** October 30 night  

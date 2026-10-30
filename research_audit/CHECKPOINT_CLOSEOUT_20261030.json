@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-10-30T10:09:05.425088+00:00",
+  "validated_commit": "172ee21af1f1fbb1e1d8a800c54c53317828c861",
+  "validation_method": "git archive HEAD into a new temporary directory outside the workspace; same installed environment; no untracked worktree files or API key files available",
+  "python": "3.13.2",
+  "test_exit_code": 0,
+  "test_summary": "221 passed, 4 skipped, 30 subtests passed in 13.04s",
+  "reproduction": {
+    "bundle_hashes_verified": 24,
+    "source_hashes_verified": 30,
+    "serialized_metrics_match": true,
+    "paired_cases": 10,
+    "api_calls": 0
+  },
+  "environment_scope": "Clean committed-source export, not an independently installed machine or second dependency environment",
+  "additional_live_api_calls": 0,
+  "pushes_by_assistant": 0,
+  "review_type": "assistant-assisted qualitative; independent human ratings not measured",
+  "initial_clean_export_failure": {
+    "commit": "9da2105195345293212acf82ad08f46fab13b7d7",
+    "failed": 2,
+    "passed": 219,
+    "skipped": 4,
+    "reason": "Two mocked Gemini smoke CLI tests relied on the ignored local credential file. Runtime inference and saved results were unaffected.",
+    "resolution": "Test-only fixture patch supplies an explicit dummy GEMINI_API_KEY; the passing clean-export commit is recorded above."
+  }
+}

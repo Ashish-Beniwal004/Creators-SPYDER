@@ -36,6 +36,8 @@ scratch/
 .env
 /.gemini_api_key
 /.groq_api_key
+# Team handoff is shared separately, not published with the repository.
+/M4_HANDOFF.md
 local_config.py
 # Run artifacts are retained locally for review; publish selected reviewed runs explicitly.
 /experiment_runs/

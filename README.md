@@ -1,6 +1,6 @@
 # SPYDER: Evidence-Grounded Agentic Criminal Network Investigation
 
-[![Tests](https://img.shields.io/badge/pytest-120%20passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/pytest-221%20passed%2C%204%20skipped-brightgreen.svg)]()
 [![Python](https://img.shields.io/badge/python-3.12%20%7C%203.13%20%7C%203.14-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/benchmark-frozen%20%26%20hash--verified-success.svg)]()
@@ -13,6 +13,27 @@
 > **Software License:** [MIT License](LICENSE) (original SPYDER code only)
 
 ---
+
+## Current checkpoint work — October 30, 2026
+
+**Start with [MID_SUBMISSION_PROGRESS.md](MID_SUBMISSION_PROGRESS.md)** for
+implemented progress, actual experiment results, limitations and the final timeline.
+The [checkpoint data policy](CHECKPOINT_DATA_POLICY.md) explains the development
+evaluation scope and the separation between inference and scoring inputs.
+
+The new `phase3_llm` pipeline uses **Groq / openai/gpt-oss-120b** for the
+paired pilot. **The real ten-pair experiment completed:** 20 executions, zero
+failures, 30 requests and 42,591 tokens. Both arms achieved 90% binary accuracy
+and 0.8889 F1; no verification gain was observed on this small development pilot.
+The [mid-submission report](MID_SUBMISSION_PROGRESS.md) covers actual results,
+limitations. The [saved-output bundle](research_audit/groq_checkpoint_20261030/README.md)
+was rescored successfully without API calls.
+Use [PILOT_RUNBOOK.md](PILOT_RUNBOOK.md)
+and [the LLM package README](phase3_llm/README.md) for current commands.
+Earlier Gemini attempts produced one complete paired case before provider errors;
+they remain separate and are not combined with Groq results. Historical deterministic
+architecture/results below describe the original benchmark. The new LLM verifier
+arm records the model's final decision without forcibly replacing it with the tool verdict.
 
 ## 1. What SPYDER Investigates
 

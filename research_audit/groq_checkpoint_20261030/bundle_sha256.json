@@ -19,11 +19,11 @@
     "groq_pilot_01/system_a_rag_only_outputs.json": "b7ece309c8ab6ad6a949cc3915c35302f5b7922499bad746bdd33f9c486b2943",
     "groq_pilot_01/system_b_rag_verification_outputs.json": "6a0058d3f4d7742466dffdaa2896f57a16947b3b6dd2f04ffdb7edb0e33c4826",
     "groq_pilot_01/traces.jsonl": "d6dea00f319278eaa1a5c964868e89fcc2018ec702e1b35ccca6717e128db15f",
-    "README.md": "71a7f4c916ba64da0ea36b19b3a5c6dcf6077c424d719a55c01361aae861a113",
+    "README.md": "a6801f61faa32e198d28932aec8eaf90cd600331cd5d54b06434e881c65d1e7c",
     "requirements-tested.txt": "63ccc15eca3ac38818dfd64767273a55b525ba9623acdeff5fb626491a74ad51",
     "scores/report.json": "6b2a27c70e4edf2af2b06d6f3f78316b4b3bd4bea47e1d8f43f176de3ab641af",
     "scores/review_template.csv": "521228c21c9efa1d3263f8cd6c9bffd14cd4d7b36e4279faa720be54a250ea8a",
     "source_manifest.json": "2419717052c5011135f37762729d8e57de4125ead02fc5e013b5705743156295"
   },
-  "scope": "Exact local handoff copy; excludes this hash index"
+  "scope": "Exact reviewed publication copy; excludes this hash index"
 }

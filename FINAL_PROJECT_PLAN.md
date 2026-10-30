@@ -1,5 +1,31 @@
 # SPYDER: Final Execution Plan for the Mid-Submission
 
+**October 30 update:** The next experiment uses **Groq / openai/gpt-oss-120b**
+on all ten pilot pairs. Adapter/quota/scoring integration passes **221 tests with
+4 skips**. The full ten-pair Groq pilot completed: **20 executions, 0 failures,
+30 requests, 42,591 tokens**. Both arms: **90% binary accuracy, 0.8889 F1**;
+no verification gain was observed. Results were reproduced from the copied bundle.
+See [MID_SUBMISSION_PROGRESS.md](MID_SUBMISSION_PROGRESS.md) for all nine required
+items, evidence review and submission scope. The earlier Gemini partial
+run remains separate. Current setup, budgets and commands: [PILOT_RUNBOOK.md](PILOT_RUNBOOK.md).
+Do not treat the historical status snapshots below as live Groq results.
+
+**Final checkpoint handoff:** M1-M3 technical work is complete for this checkpoint.
+Local commits are organized by merge, runtime, offline checks, results and docs.
+A clean Git export passes 221 tests (4 skipped) and reproduces the saved scores
+without credentials. See [MID_SUBMISSION_PROGRESS.md](MID_SUBMISSION_PROGRESS.md)
+and [the evidence review](research_audit/OCT30_ASSISTANT_EVIDENCE_REVIEW.md) for
+current results and limitations. Independent human review is not measured.
+
+**October 29 implementation update:** Member 1's runner and Member 2/3's audited
+pilot, verifier fixes and scorer are now integrated locally on
+`feat/llm-integration-runner`; the merge awaits review/commit. Combined checks:
+**206 passed, 4 skipped**, with an actual-corpus offline integration check. No live
+LLM results exist yet. Access must remain **free tier only**. Follow
+[PILOT_RUNBOOK.md](PILOT_RUNBOOK.md) for the next actions. The repository audit
+below describes the original October 28 checkout; its statements about missing
+dependencies/unimplemented components are historical, not the current status.
+
 **Updated:** October 28, 2026 (IST)  
 **Repository reviewed:** `release/curated-project-handoff`, commit `88d353d2f834a696fd8e8ad48652814d3afe7f6a`  
 **Mid-submission:** October 30 night, 2026  

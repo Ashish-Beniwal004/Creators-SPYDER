@@ -25,8 +25,8 @@ The first blocked smoke retains an 8k unknown-usage local reservation.
 No key, hidden label file, generation provenance or quota ledger was copied here.
 The run metadata captures the pre-commit working tree: its recorded base HEAD
 alone does not contain the implementation. Code commit `9544f85` includes the
-recorded source files; compare code hashes and use root `M4_HANDOFF.md` for final
-branch/commit/push status. The full local source snapshot is retained under
+recorded source files; compare code hashes. The current result summary and
+repository reference are in root `MID_SUBMISSION_PROGRESS.md`. The full local source snapshot is retained under
 `experiment_runs/groq_checkpoint_20261030/frozen_code`.
 
 ## Reproduce saved-output metrics - no API calls
@@ -65,7 +65,7 @@ independent human judgment.
 
 This tiny synthetic development pilot has no demonstrated verification gain,
 no repeat-run stability result and no broad generalization/significance claim.
-Earlier Gemini outputs are separate. Local commits are being finalized; the user
-reviews, pushes and submits. Final status is in root `M4_HANDOFF.md`.
+Earlier Gemini outputs are separate. The integration branch contains the current
+code and selected result bundle; record its exact commit for reproduction.
 Preserve native run files; if review documents change later, refresh the bundle's
 hash index before publication and retain the original score report.
