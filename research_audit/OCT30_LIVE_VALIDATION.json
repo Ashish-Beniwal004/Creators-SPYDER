@@ -1,0 +1,133 @@
+{
+  "recorded_at_utc": "2026-10-30T03:27:43.890495+00:00",
+  "user_timezone": "Asia/Calcutta",
+  "user_constraint": "Free tier only; no billing enabled by assistant",
+  "reported_limits": {
+    "requests_per_minute": 5,
+    "requests_per_day": 20,
+    "input_tokens_per_minute_conservative": 250000
+  },
+  "daily_reset_on_2026_10_30_ist": "12:30",
+  "runs": [
+    {
+      "run_dir": "experiment_runs/live_smoke_20261030_01",
+      "mode": "smoke",
+      "arms": null,
+      "status": "incomplete",
+      "attempted_model_calls": 1,
+      "completed_executions": 0,
+      "failed_executions": 1,
+      "unattempted_executions": 1,
+      "errors": [
+        {
+          "type": "ProviderError",
+          "message": "Gemini transport failure (TimeoutError); no automatic retry was made"
+        }
+      ],
+      "manifest_sha256": "e226ea14c83518ade3fee0f71ceb210fd6511c114589e4baa849c3965f86e88b"
+    },
+    {
+      "run_dir": "experiment_runs/live_smoke_20261030_02",
+      "mode": "smoke",
+      "arms": null,
+      "status": "incomplete",
+      "attempted_model_calls": 2,
+      "completed_executions": 1,
+      "failed_executions": 1,
+      "unattempted_executions": 0,
+      "errors": [
+        {
+          "type": "ProviderError",
+          "message": "Gemini transport failure (TimeoutError); no automatic retry was made"
+        }
+      ],
+      "manifest_sha256": "a8962e00acabd4fc22f6fff73834d5c44f9ff64e32b70032626ebcdc7fdae12a"
+    },
+    {
+      "run_dir": "experiment_runs/live_tool_smoke_20261030_03",
+      "mode": "smoke",
+      "arms": [
+        "system_b_rag_verification"
+      ],
+      "status": "incomplete",
+      "attempted_model_calls": 1,
+      "completed_executions": 0,
+      "failed_executions": 1,
+      "unattempted_executions": 0,
+      "errors": [
+        {
+          "type": "ProviderError",
+          "message": "Gemini HTTP 503; no automatic retry was made"
+        }
+      ],
+      "manifest_sha256": "1ecd3c7e29c58c45a5e21533747ba00c9426ea265add262f2abba230b27c0701"
+    },
+    {
+      "run_dir": "experiment_runs/live_tool_smoke_20261030_04",
+      "mode": "smoke",
+      "arms": [
+        "system_b_rag_verification"
+      ],
+      "status": "completed",
+      "attempted_model_calls": 2,
+      "completed_executions": 1,
+      "failed_executions": 0,
+      "unattempted_executions": 0,
+      "errors": [],
+      "manifest_sha256": "e3b17f6e53ddaa45b531b30ebe268d907dda65fe8a9bb5a864bce3f35804945e"
+    },
+    {
+      "run_dir": "experiment_runs/checkpoint_20261030/group_1_run",
+      "mode": "experiment",
+      "arms": [
+        "system_a_rag_only",
+        "system_b_rag_verification"
+      ],
+      "status": "incomplete",
+      "attempted_model_calls": 4,
+      "completed_executions": 2,
+      "failed_executions": 1,
+      "unattempted_executions": 5,
+      "errors": [
+        {
+          "type": "ProviderError",
+          "message": "Gemini HTTP 503; no automatic retry was made"
+        }
+      ],
+      "manifest_sha256": "31c818f81818681667930618810e563b66efae4d6843a1c48dd8b6349253b427"
+    }
+  ],
+  "total_local_inference_attempts_current_window": 10,
+  "budget_note": "Count timeouts and HTTP errors conservatively; external project usage is not programmatically visible. Last user dashboard confirmation was 3/20 after the first two runs.",
+  "pilot_group_1": {
+    "expected_pairs": 4,
+    "paired_completed": 1,
+    "run_status": "incomplete",
+    "coverage": {
+      "system_a_rag_only": {
+        "expected": 4,
+        "completed": 1,
+        "failed": 1,
+        "missing_result_records": 2
+      },
+      "system_b_rag_verification": {
+        "expected": 4,
+        "completed": 1,
+        "failed": 0,
+        "missing_result_records": 3
+      }
+    },
+    "completed_pair_result": "Both arms Supported on the one completed pair; no comparative-quality claim is justified at N=1.",
+    "manual_review_completed": false,
+    "score_report_sha256": "47f85bc080af9ae4c0f83a838dd81c8f99bf6f9697d425813f50fae6f1044588"
+  },
+  "next_step": "No further inference requested in this turn after group_1 HTTP 503. Preserve completed/failed attempts; reassess service availability and remaining dashboard quota. Group_2 has six predeclared pairs and requires 18 requests after reset.",
+  "group_2_started": false,
+  "code_tests": {
+    "passed": 210,
+    "skipped": 4,
+    "subtests_passed": 25
+  },
+  "code_frozen_before_experiment": true,
+  "committed_or_pushed_by_assistant": false
+}
